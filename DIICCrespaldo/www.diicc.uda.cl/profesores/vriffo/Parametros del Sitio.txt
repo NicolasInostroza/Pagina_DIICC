@@ -1,0 +1,20 @@
+Servidor:10.17.17.35
+Usuario:diicc
+contraseña: diicc.2022
+puerto:22
+Directorio raíz: /var/www/carlos/www.diicc.uda.cl/profesores/vriffo
+
+
+
+
+
+
+Datos pasados no utiles
+Nombre de servidor: Sitio DIICC (puede colocar el nombre que usted quiera)
+Conectar usando: SFTP
+Dirección: 10.16.30.35 (10.17.17.15)
+Puerto: 22
+Nombre de usuario: root
+Contraseña: italia9002
+Directorio raíz: /var/www/html/sitiodiicc/web-diicc/profesores/vriffo/
+URL: http://www.diicc.uda.cl/profesores/vriffo/

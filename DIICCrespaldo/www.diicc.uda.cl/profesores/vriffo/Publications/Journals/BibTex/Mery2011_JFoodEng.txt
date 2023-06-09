@@ -1,0 +1,10 @@
+@ARTICLE{Mery2011,
+  author = {D. Mery and I. Lillo and H. Loebel and V. Riffo and A. Soto and A.
+	Cipriano and J.M. Aguilera},
+  title = {Automated Fish Bone Detection Using X-ray Testing},
+  journal = {Journal of Food Engineering},
+  year = {2011},
+  volume = {105},
+  pages = {485-492},
+  number = {3}
+}

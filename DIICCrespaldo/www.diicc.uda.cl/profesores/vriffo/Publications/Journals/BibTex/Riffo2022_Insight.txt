@@ -1,0 +1,10 @@
+@ARTICLE{Riffo2022_Insight,
+  author = {Riffo, Vladimir and Pieringer, Christian and Flores, Sebastian and Carrasco, Carlos},
+  title = {Object Recognition Using Tactile Sensing in a Robotic Gripper},
+  journal = {Insight - Non-Destructive Testing and Condition Monitoring},
+  year = {2022},
+  month = {july},
+  volume = {64},
+  pages = {383--392},
+  number = {7}
+}

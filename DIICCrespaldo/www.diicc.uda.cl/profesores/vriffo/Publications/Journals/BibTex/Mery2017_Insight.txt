@@ -1,0 +1,11 @@
+@article {Mery2017_Insight,
+author = "Mery, D and Riffo, V and Zuccar, I and Pieringer, C",
+title = "Object recognition in X-ray testing using an efficient search algorithm in multiple views",
+journal = "Insight - Non-Destructive Testing and Condition Monitoring",
+volume = "59",
+number = "2",
+year = "2017",
+pages = "85-92",
+issn = "1354-2575",
+doi = "10.1784/insi.2017.59.2.85",
+}

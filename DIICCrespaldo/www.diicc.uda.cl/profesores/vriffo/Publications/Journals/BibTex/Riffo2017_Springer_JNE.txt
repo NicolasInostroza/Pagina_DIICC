@@ -1,0 +1,12 @@
+@ARTICLE{Riffo2017,
+  author = {Riffo, Vladimir and Flores, Sebastian and Mery, Domingo},
+  title = {Threat Objects Detection in X-ray Images Using an Active Vision Approach},
+  journal = {Journal of Nondestructive Evaluation},
+  year = {2017},
+  volume = {36},
+  pages = {44},
+  number = {3},
+  doi = {10.1007/s10921-017-0419-3},
+  issn = {1573-4862},
+  url = {http://dx.doi.org/10.1007/s10921-017-0419-3}
+}

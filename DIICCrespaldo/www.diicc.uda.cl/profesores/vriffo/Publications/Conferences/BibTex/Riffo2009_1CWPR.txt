@@ -1,0 +1,10 @@
+@ARTICLE{Riffo2009_1CWPR,
+  author = {V. Riffo and T. Schmidt and D. Mery},
+  title = {Propuesta Novedosa de Reconocimiento Dinámico de Firmas},
+  journal = {Proceeding of First Chilean Workshop on Pattern Recognition: Theory and Applications (CWPR 2009)},
+  year = {2009},
+  pages = {44--51},
+  isbn = {978-956-319-966-6},
+  month = {November},
+  organization = {Universidad de Santiago, Santiago, Chile}
+}

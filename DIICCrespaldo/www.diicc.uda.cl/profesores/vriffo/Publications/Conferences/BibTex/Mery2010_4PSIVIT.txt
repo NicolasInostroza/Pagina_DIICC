@@ -1,0 +1,7 @@
+@inproceedings{Mery2010_4PSIVT,
+  author = {Domingo Mery and I. Lillo and H. Loebel and V. Riffo and A. Soto and A. Cipriano and J.M. Aguilera},
+  booktitle = {4th Pacific-Rim Symposium on Image and Video Technology (PSIVT2010), Singapore, Nov. 14-17, 2010},
+  title = {Automated Detection of Fish Bones in Salmon Fillets using X-ray Testing},
+  year = {2010},
+  pages = {46--51}
+}

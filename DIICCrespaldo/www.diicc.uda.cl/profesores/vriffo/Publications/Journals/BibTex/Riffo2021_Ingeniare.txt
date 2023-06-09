@@ -1,0 +1,9 @@
+@ARTICLE{Riffo2021_Ingeniare,
+  author = {V. Riffo and D. Rojas},
+  title = {Wear inspection in electrical contact using instance segmentation},
+  journal = {Ingeniare. Revista chilena de ingenier\'ia},
+  year = {2021},
+  volume = {29},
+  pages = {495--504},
+  number = {3}
+}

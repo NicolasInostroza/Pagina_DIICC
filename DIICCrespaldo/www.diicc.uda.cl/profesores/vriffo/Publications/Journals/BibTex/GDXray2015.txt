@@ -1,0 +1,15 @@
+@ARTICLE{GDXray2015,
+  author = {Mery, Domingo and Riffo, Vladimir and Zscherpel, Uwe and Mondrag{\'o}n,
+	German and Lillo, Iv{\'a}n and Zuccar, Irene and Lobel, Hans and
+	Carrasco, Miguel},
+  title = {GDXray: The Database of X-ray Images for Nondestructive Testing},
+  journal = {Journal of Nondestructive Evaluation},
+  year = {2015},
+  volume = {34},
+  pages = {42},
+  number = {4},
+  month = {Nov},
+  day = {13},
+  doi = {10.1007/s10921-015-0315-7},
+  issn = {1573-4862},
+}

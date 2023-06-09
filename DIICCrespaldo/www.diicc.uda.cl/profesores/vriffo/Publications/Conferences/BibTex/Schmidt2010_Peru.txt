@@ -1,0 +1,10 @@
+@inproceedings{Schmidt2010_Peru,
+  author = {T. Schmidt and V. Riffo and D. Mery and B. Peralta},
+  title = {Dynamic Signature Recognition and Classification with Computer Vision Algorithms},
+  booktitle = {Proceedings of the IX International Conference of the Peruvian Computing Society Conference},
+  address = {Trujillo, Peru},
+  month = {October},
+  note = {(in Spanish)},
+  year = {2010},
+  organization = {Peruvian Computing Society}
+}

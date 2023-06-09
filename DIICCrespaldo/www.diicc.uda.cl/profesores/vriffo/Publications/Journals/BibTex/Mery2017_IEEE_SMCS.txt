@@ -1,0 +1,12 @@
+@ARTICLE{Mery2017_IEEE_SMCS,
+author={D. Mery and E. Svec and M. Arias and V. Riffo and J. M. Saavedra and S. Banerjee},
+journal={IEEE Transactions on Systems, Man, and Cybernetics: Systems},
+title={Modern Computer Vision Techniques for X-Ray Testing in Baggage Inspection},
+year={2017},
+volume={47},
+number={4},
+pages={682-692},
+doi={10.1109/TSMC.2016.2628381},
+ISSN={2168-2216},
+month={April},
+}

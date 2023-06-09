@@ -1,0 +1,9 @@
+@ARTICLE{Riffo2012_Insight,
+  author = {V. Riffo and D. Mery},
+  title = {Active X-ray Testing of Complex Objects},
+  journal = {Insight - Non-Destructive Testing and Condition Monitoring},
+  year = {2012},
+  volume = {54},
+  pages = {28--35},
+  number = {1}
+}

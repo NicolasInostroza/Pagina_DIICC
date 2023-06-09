@@ -1,0 +1,16 @@
+@Article{Riffo2019,
+author="Riffo, Vladimir
+and Godoy, Ivan
+and Mery, Domingo",
+title="Handgun Detection in Single-Spectrum Multiple X-ray Views Based on 3D Object Recognition",
+journal="Journal of Nondestructive Evaluation",
+year="2019",
+month="Jul",
+day="06",
+volume="38",
+number="3",
+pages="66",
+issn="1573-4862",
+doi="10.1007/s10921-019-0602-9",
+}
+

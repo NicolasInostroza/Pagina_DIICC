@@ -1,0 +1,10 @@
+@Article{Riffo2022_Measurement,
+  author  = {Vladimir Riffo and Rodrigo Hidalgo},
+  journal = {Measurement},
+  title   = {Active inspection of objects to detect possible damage and measure their volume using 3D reconstruction},
+  year    = {2022},
+  issn    = {0263-2241},
+  pages   = {111541},
+  volume  = {199},
+  doi     = {https://doi.org/10.1016/j.measurement.2022.111541}
+}

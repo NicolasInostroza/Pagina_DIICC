@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Ingeniero de Sistema" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D8D8D8 }
+      th.style1 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D8D8D8 }
+      td.style2 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D8D8D8 }
+      th.style2 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:2px solid #000000 !important; border-right:2px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D8D8D8 }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D8D8D8 }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:2px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#D8D8D8 }
+      td.style4 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style4 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style5 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style6 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style6 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style7 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style8 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style9 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style9 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style10 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style10 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style11 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      td.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      th.style12 { vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF }
+      table.sheet0 col.col0 { width:120.64444306pt }
+      table.sheet0 col.col1 { width:89.46666564pt }
+      table.sheet0 col.col2 { width:174.18888689pt }
+      table.sheet0 col.col3 { width:98.95555442pt }
+      table.sheet0 col.col4 { width:87.43333233pt }
+      table.sheet0 tr { height:15pt }
+      table.sheet0 tr.row0 { height:30pt }
+      table.sheet0 tr.row1 { height:52.5pt }
+      table.sheet0 tr.row2 { height:60.5pt }
+      table.sheet0 tr.row4 { height:50pt }
+      table.sheet0 tr.row5 { height:10pt }
+      table.sheet0 tr.row6 { height:15pt; display:none; visibility:hidden }
+      table.sheet0 tr.row10 { height:16.5pt }
+      table.sheet0 tr.row12 { height:32.5pt }
+      table.sheet0 tr.row14 { height:4pt }
+      table.sheet0 tr.row18 { height:29.5pt }
+      table.sheet0 tr.row19 { height:11pt }
+      table.sheet0 tr.row20 { height:59pt }
+      table.sheet0 tr.row21 { height:69.5pt }
+      table.sheet0 tr.row22 { height:14.5pt; display:none; visibility:hidden }
+      table.sheet0 tr.row23 { height:14.5pt; display:none; visibility:hidden }
+      table.sheet0 tr.row24 { height:56pt }
+      table.sheet0 tr.row28 { height:54.5pt }
+      table.sheet0 tr.row29 { height:10.5pt; display:none; visibility:hidden }
+      table.sheet0 tr.row30 { height:15pt; display:none; visibility:hidden }
+      table.sheet0 tr.row44 { height:22.5pt }
+      table.sheet0 tr.row45 { height:36pt }
+      table.sheet0 tr.row47 { height:37.5pt }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="section-header"><h2><span class="highlight-text">Programa de Proyectos de Magíster en Informática y Ciencias de la Computación</span></h2>
+    </div>
+<style>
+@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style1 s">Área de Investigación</td>
+            <td class="column1 style2 s">Investigador</td>
+            <td class="column2 style2 s">Título</td>
+            <td class="column3 style3 s">Tipo de Fondo</td>
+            <td class="column4 style2 s">Año de Ejecución</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style12 s style8" rowspan="7">Ingeniería de Software</td>
+            <td class="column1 style12 s style8" rowspan="5">Dante Carrizo</td>
+            <td class="column2 style4 s">Mejora del proceso de educción
+                de requisitos software por medio
+                de evidencia empírica (1º Parte)</td>
+            <td class="column3 style5 s">DIUDA2010</td>
+            <td class="column4 style5 n">2010</td>
+          </tr>
+          <tr class="row2">
+            <td class="column2 style6 s">Mejora Del Proceso De Educción
+                De Requisitos Software Por Medio
+                De Evidencia Empírica (2ª parte)</td>
+            <td class="column3 style7 s">DIUDA2012</td>
+            <td class="column4 style7 n">2012</td>
+          </tr>
+          <tr class="row3">
+            <td class="column2 style9 s style9">Fortalecimiento de Capacidades para la
+                Transferencia Tecnológica de la DIDET de la Universidad de Atacama</td>
+            <td class="column3 style8 s style8">CORFO OTL</td>
+            <td class="column4 style8 n style8">2015</td>
+          </tr>
+          <tr class="row7">
+            <td class="column2 style9 s style9">Reducción de brechas entre las propuestas científicas y las prácticas de la industria latinoamericana en Ingeniería de Requisitos</td>
+            <td class="column3 style8 s style8">DIUDA2014</td>
+            <td class="column4 style8 s style8">2015-2016</td>
+          </tr>
+          <tr class="row11">
+            <td class="column2 style9 s style9">An ICT platform for sustainable energy ecosystem in smart Cities</td>
+            <td class="column3 style8 s style8">CONICYT ERANET-LAC</td>
+            <td class="column4 style8 n style8">2016</td>
+          </tr>
+          <tr class="row15">
+            <td class="column1 style8 s style8">Héctor Cornide</td>
+            <td class="column2 style9 s style9">Estudio etnográfico sobre prácticas
+                de la industria desarrolladora de
+                software en Chile</td>
+            <td class="column3 style8 s style8">DIUDA2015</td>
+            <td class="column4 style8 s style8">2016-2017</td>
+          </tr>
+          <tr class="row19">
+            <td class="column1 style8 s style8">John Castro</td>
+            <td class="column2 style9 s style9">Trazabilidad de habilidades en equipos ágiles de ingeniería de software, utilizando técnicas de análisis multimodal de aprendizaje</td>
+            <td class="column3 style8 s style8">DIUDA</td>
+            <td class="column4 style8 n style8">2018</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style11 s style11">Gestión de Tecnologías
+                de Información</td>
+            <td class="column1 style8 s style8">Alejandro Cataldo</td>
+            <td class="column2 style9 s style9">Evaluación de la usabilidad de
+                aplicaciones móviles multi-plataforma</td>
+            <td class="column3 style8 s style8">DIUDA</td>
+            <td class="column4 style8 n style8">2016</td>
+          </tr>
+          <tr class="row24">
+            <td class="column0 style8 s style8" rowspan="6">Inteligencia de Máquinas</td>
+            <td class="column1 style8 s style8" rowspan="5">Vladimir Riffo</td>
+            <td class="column2 style9 s style9">Factores que afectan la adopción a nivel organizacional de tecnologías de información en pequeñas empresas:
+                un estudio cualitativo exploratorio inicial</td>
+            <td class="column3 style8 s style8">DIUDA2012</td>
+            <td class="column4 style8 s style8">2013-2014</td>
+          </tr>
+          <tr class="row27">
+            <td class="column2 style9 s style9">&nbsp;Validación de la detección de objetos
+                peligrosos en imágenes de rayos X
+                usando reconstrucción 3D</td>
+            <td class="column3 style8 s style8">DIUDA2014</td>
+            <td class="column4 style8 s style8">2015-2016</td>
+          </tr>
+          <tr class="row31">
+            <td class="column2 style9 s style9">Uso de la visión por computador para
+                la detección de desperfectos en objetos</td>
+            <td class="column3 style8 s style8">DIUDA</td>
+            <td class="column4 style8 n style8">2017</td>
+          </tr>
+          <tr class="row35">
+            <td class="column2 style9 s style9">Inspección del Desgaste en Contactos
+                Eléctricos Usando Segmentación por Instancias</td>
+            <td class="column3 style8 s style8">DIUDA</td>
+            <td class="column4 style8 n style8">2019</td>
+          </tr>
+          <tr class="row39">
+            <td class="column2 style9 s style9">Inspección automática de frutas en centros de empaquetado,
+                usando algoritmos de machine learning
+                y machine vision</td>
+            <td class="column3 style8 s style8">FONDEF IDEA</td>
+            <td class="column4 style8 n style8">2022</td>
+          </tr>
+          <tr class="row43">
+            <td class="column1 style8 s style8">Wilson Castillo</td>
+            <td class="column2 style9 s style9">Levantamiento de microclimas aplicando
+                inteligencia artificial y utilizando estación meteorológica portátil mediante tecnología dron en el valle de Copiapó</td>
+            <td class="column3 style8 s style8">FIUDA2030</td>
+            <td class="column4 style8 n style8">2022</td>
+          </tr>
+          <!--<tr class="row46">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>
+          <tr class="row47">
+            <td class="column0">&nbsp;</td>
+            <td class="column1">&nbsp;</td>
+            <td class="column2">&nbsp;</td>
+            <td class="column3">&nbsp;</td>
+            <td class="column4">&nbsp;</td>
+          </tr>-->
+        </tbody>
+    </table>
+  </body>
+</html>

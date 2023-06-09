@@ -1,0 +1,6 @@
+@inproceedings{Mery2013_NDT,
+  author = {Domingo Mery and V. Riffo},
+  title = {Automated Object Recognition in Baggage Screening using Multiple X-ray Views},
+  booktitle = {52nd Annual Conference of the British Institute for Non-Destructive Testing. Telford, UK, Sep. 10-12},
+  year = {2013}
+}

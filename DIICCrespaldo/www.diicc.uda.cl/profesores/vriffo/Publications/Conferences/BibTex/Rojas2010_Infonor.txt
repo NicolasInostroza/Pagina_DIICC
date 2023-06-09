@@ -1,0 +1,8 @@
+@ARTICLE{Rojas2010_Infonor,
+  author = {V. Rojas and K. Carvajal and V. Riffo},
+  title = {Sistema de Escaneo de Superficies Mediante Proyección de Líneas Láser},
+  journal = {INFONOR-Chile 2010},
+  year = {2010},
+  month = {November},
+  organization = {Universidad de Atacama, Atacama, Chile}
+}

@@ -1,0 +1,12 @@
+@ARTICLE{Riffo2022_JOM,
+  author = {Riffo, Vladimir and Pulgar, Alejandro},
+  title = {Predictive Model of the Percentage of Copper in the Matte of the
+	Teniente Converter Through an Artificial Neural Network},
+  journal = {JOM},
+  year = {2022},
+  volume = {74},
+  issue = {2},
+  issn = {1543-1851},
+  url = {https://doi.org/10.1007/s11837-021-05052-8},
+  pages = {396--404}
+}

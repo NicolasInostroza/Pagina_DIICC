@@ -1,0 +1,9 @@
+@article{Mery2013_Insight,
+  author = {D. Mery and G. Mondragon and V. Riffo and I. Zuccar},	
+  title = {Detection of regular objects in baggage using multiple {X-ray} views},
+  journal = {Insight - Non-Destructive Testing and Condition Monitoring},
+  year = {2013},
+  volume = {55},
+  pages = {16--21},		
+  number = {1},  
+}

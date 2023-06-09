@@ -1,0 +1,10 @@
+@article{Mery2014_MaterEval,
+  author = {Mery, Domingo and Riffo, Vladimir},
+  title = {Automated Object Recognition Using Multiple X-ray Views},
+  journal = {Materials Evaluation},
+  number = {11},
+  volume = {72},
+  year = {2014},
+  pages = {1362-1372},
+  Editor = {The American Society for Nondestructive Testing, Inc.}
+}

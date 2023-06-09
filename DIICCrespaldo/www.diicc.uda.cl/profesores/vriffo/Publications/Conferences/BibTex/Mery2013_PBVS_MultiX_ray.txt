@@ -1,0 +1,7 @@
+@inproceedings{Mery2013_PBVS_MultiX_ray,
+  booktitle = {Proceedings of 9th IEEE CVPR workshop on Perception Beyond the Visible Spectrum (PBVS'2013), Jun. 24th, Portland, USA},
+  year = {2013},
+  pages = {1--7},
+  title = {Automated X-ray object recognition using an efficient search algorithm in multiple views},
+  author = {D. Mery and V. Riffo and I. Zuccar and C. Pieringer}
+}
