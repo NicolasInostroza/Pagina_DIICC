@@ -39,13 +39,13 @@
                                     border: 1px solid black;
                                 }
                             </style>
-                            <h2><?php echo utf8_encode($mostrar['Nombre']); ?></h2>
-                            <h5><?php echo utf8_encode($mostrar['cargo']);?></h5>
-                            <p><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                            <h2><?php echo $mostrar['Nombre']; ?></h2>
+                            <h5><?php echo $mostrar['cargo'];?></h5>
+                            <p><?php echo $mostrar['descripcion']; ?></p>
                             <ul>
-                                <li><span>Grado Académico: </span><?php echo utf8_encode($mostrar['grado_academico']); ?>
+                                <li><span>Grado Académico: </span><?php echo $mostrar['grado_academico']; ?>
                                 </li>
-                                <li><span>Áreas de interés: </span><?php echo utf8_encode($mostrar['area_interes']); ?>
+                                <li><span>Áreas de interés: </span><?php echo $mostrar['area_interes']; ?>
                                 </li>
                             </ul>
 
@@ -109,8 +109,8 @@
                             while ($row = $res->fetch_assoc()) {
                             ?>
                                 <tr align="center">
-                                    <td><?php echo utf8_encode($row['titulo']); ?></td>
-                                    <td><?php echo utf8_encode($row['revision']); ?></td>
+                                    <td><?php echo $row['titulo']; ?></td>
+                                    <td><?php echo $row['revision']; ?></td>
                                     <td><?php echo $row['fecha']; ?></td>
                                     <td><a href="<?php echo $row['acceso']; ?>">Ver Artículo</a></td>
                                 </tr>
