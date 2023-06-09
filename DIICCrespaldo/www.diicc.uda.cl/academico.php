@@ -28,7 +28,7 @@
                     <div class="row-flex">
 
                         <div class="col teacher-details-img">
-                            <img alt="teacher" style="width: 100%;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                            <img alt="teacher" class="wid100" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
                         </div>
 
                         <div class="col teacher-details-content">
@@ -96,7 +96,7 @@
                             if ($res->num_rows != 0){
                         ?>
                         <h3>Artículos</h3>
-                        <table class="table" style="width: 100%">
+                        <table class="table wid100">
                             <thead class="table-dark">
                                 <tr align="center">
                                     <th>Título</th>
