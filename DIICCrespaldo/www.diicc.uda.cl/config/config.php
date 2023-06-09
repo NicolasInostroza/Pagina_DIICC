@@ -3,7 +3,7 @@
 shell_exec("ssh -f -L 127.0.0.1:3307:127.0.0.1:3306 diicc@10.17.17.35 sleep 60 >> /var/www/carlos/https://paginadiicc.uda.cl/logfile"); 
 $servidor = "127.0.0.1";
 $usuario  = "root";
-$password = "1234";
+$password = "";
 $database = "paginadiicc";
 
 // // Crear conexión
