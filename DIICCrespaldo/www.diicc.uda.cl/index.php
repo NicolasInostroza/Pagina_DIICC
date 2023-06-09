@@ -168,7 +168,6 @@
                                                     <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
                                                     <div class="d-flex flex-row justify-content-between">
                                                         <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                                            <!--<p class="card-text"><small class="text-muted"><?php# echo "correo: ",$mostrar['correo']; ?></small></p>-->
                                                     </div>    
                                                 </div>
                                             </div>
