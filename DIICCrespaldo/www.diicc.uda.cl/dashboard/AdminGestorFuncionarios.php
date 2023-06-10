@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <script>
+        function seguro(){
+            return confirm("¿Desea eliminar a este usuario?");
+        }
+    </script>
+</head>
 <?php
 
 	session_start();
@@ -84,7 +91,7 @@
                             ?>
                                 <tr >
                                     <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo utf8_encode($mostrar['Nombre']); ?></small></p>
+                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
                                     </td>
                                     <td>
                                         <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
@@ -100,7 +107,7 @@
                                     <td>
                                         <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
                                             <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarF.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/academicos/eliminar.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-x-circle"></i></a>
+                                            <a class="btn btn-danger" href="../database/academicos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
                                         </div>
                                     </td>
                                 </tr>
