@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <script>
+        function seguro(){
+            return confirm("¿Desea eliminar este evento?");
+        }
+    </script>
+</head>
 <?php
 
 session_start();
@@ -108,7 +115,7 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                                 <tr>
 
                                     <td>
-                                        <h4 style="text-align: center;"><?php echo utf8_encode($mostrar['nombre']); ?> </h4>
+                                        <h4 style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
                                     </td>
                                     <td>
                                         <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
@@ -121,12 +128,12 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                                         <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_termino']; ?></small></p>
                                     </td>
                                     <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo utf8_encode($mostrar['lugar']); ?></small></p>
+                                        <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['lugar']; ?></small></p>
                                     </td>
                                     <td>
                                         <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
                                             <a class="btn btn-secondary" style="color:seagreen;" href="../dashboard/modificarE.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/eventos/eliminar.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-x-circle"></i></a>
+                                            <a class="btn btn-danger" href="../database/eventos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
                                         </div>
                                     </td>
                                 </tr>
