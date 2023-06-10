@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <script>
+        function seguro(){
+            return confirm("¿Desea eliminar esta bolsa?");
+        }
+    </script>
+</head>
 <?php
 
 	session_start();
@@ -100,7 +107,7 @@
                                     <td>
                                         <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
                                             <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarT.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/trabajo/eliminar.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-x-circle"></i></a>
+                                            <a class="btn btn-danger" href="../database/trabajo/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
                                         </div>
                                     </td>
                                 </tr>
