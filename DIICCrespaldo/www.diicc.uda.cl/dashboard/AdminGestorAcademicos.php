@@ -106,7 +106,7 @@
                             ?>
                                 <tr >
                                     <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo utf8_encode($mostrar['Nombre']); ?></small></p>
+                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
                                     </td>
                                     <td>
                                         <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
