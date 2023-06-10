@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <script>
+        function seguro(){
+            return confirm("¿Desea eliminar este proyecto?");
+        }
+    </script>
+</head>
 <?php
 
 	session_start();
@@ -35,30 +42,31 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 style="text-align:center;" class="modal-title" id="exampleModalLabel">Nuevo Proyecto</h5>
+                                    <h5 style="text-align:center;" class="modal-title" id="exampleModalLabel">Nuevo Proyecto académico</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
-                                    </button> kkk
+                                    </button>
                                 </div>
-                                 <div class="modal-body">
+                                <div class="modal-body">
                                     <form action="../database/proyectosa/crear.php" method="POST" enctype="multipart/form-data">
-                                     <div style="margin-left: 110px;" class="form-field "><br>
-                                         <input   name="img" type="file" required>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="nombre" name="nombre" class="input-text js-input" placeholder="Nombre" type="text" required>
-                     
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="año" name="year" class="input-text js-input" placeholder="Año" type="text" required>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="link" name="link" class="input-text js-input" placeholder="Link" type="text" required>
-                                    </div>
-                                    <div style="margin-top:30px; text-align: center;" class="container-ingresar">
-                                        <button type="submit" class="btn">Ingresar</button>
-                                    </div>
-                                </form>
+                                        <div style="margin-left: 110px;" class="form-field "><br>
+                                            <input   name="img" type="file" required>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="nombre" name="nombre" class="input-text js-input" placeholder="Nombre" type="text" required>
+                        
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="año" name="year" class="input-text js-input" placeholder="Año" type="text" required>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="link" name="link" class="input-text js-input" placeholder="Link" type="text" required>
+                                        </div>
+                                        <div style="margin-top:30px; text-align: center;" class="container-ingresar">
+                                            <button type="submit" class="btn">Ingresar</button>
+                                        </div>
+                                    </form>
+                                    
                                 </div>
                                 
                             </div>
@@ -77,20 +85,17 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from project-academic ORDER BY id DESC"; // mejorar query falta nombre del que subio la noticia
+                            $sql = "select * from proyectosa ORDER BY id DESC"; // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
-                            $query = "SELECT * FROM `projectacademic` ORDER BY id DESC";
-                            $result = mysqli_query($conexion, $query);
-
-                            while ($mostrar = mysqli_fetch_array($result)) {
+                            while ($mostrar = mysqli_fetch_array($resultado)) {
                             ?>
                                 <tr>
                                     <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file ,$mostrar["img_path"]); ?>></td>
                                     <td>
-                                        <h4 class="card-title" style="text-align: center;"><?php echo utf8_encode($mostrar['nombre']); ?> </h4>
+                                        <h4 class="card-title" style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
                                     </td>
                                     <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['year']; ?></small></p>
                                     </td>
                                     <td>
                                         <p class="card-text" style="text-align: center;"><a href="<?php echo  $mostrar['link']; ?>"><i class="bi bi-link-45deg"></i></a></p>
@@ -98,7 +103,7 @@
                                     <td>
                                         <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
                                             <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarPR.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/proyectos/eliminar.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-x-circle"></i></a>
+                                            <a class="btn btn-danger" href="../database/proyectosa/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
                                         </div>
                                     </td>
                                 </tr>

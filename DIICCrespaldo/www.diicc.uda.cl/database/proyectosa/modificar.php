@@ -14,7 +14,7 @@ if (!empty($_FILES['img'])){
 	$file_tmp = $_FILES['img']['tmp_name'];
 	$file_type = $_FILES['img']['type'];
 	$file_ext = strtolower(end(explode('.', $_FILES['img']['name'])));
-	$file_path = wp_normalize_path($_SESSION['root']."/img/upload/proyectos/").$file_name;
+	$file_path = wp_normalize_path($_SESSION['root']."/img/upload/proyectosa/").$file_name;
 
 	$extensions = array("jpeg", "jpg", "png");
 
@@ -24,8 +24,8 @@ if (!empty($_FILES['img'])){
 
 	if (empty($errors) == true) {
 		copy($file_tmp, $file_path);
-		$image = "img/upload/proyectos/" . $file_name;
-		$sql = "UPDATE `proyectos` SET `img_path` = '{$image}' WHERE `proyectos`.`id` = {$id};";
+		$image = "img/upload/proyectosa/" . $file_name;
+		$sql = "UPDATE `proyectosa` SET `img_path` = '{$image}' WHERE `proyectosa`.`id` = {$id};";
 		$result = $conexion->query($sql);
 	} else {
 		$errors[] = "No se pudo subir la imagen";
@@ -33,9 +33,9 @@ if (!empty($_FILES['img'])){
 	
 }
 
-$sql = 'UPDATE proyectacademic SET nombre= \'%s\',fecha =  \'%s\',link=\'%s\' WHERE id = %s';
+$sql = 'UPDATE proyectosa SET nombre= \'%s\',year =  \'%s\',link=\'%s\' WHERE id = %s';
 $sql = sprintf($sql, $_POST['nombre'], $_POST['year'],$_POST['link'], $id);
 $result = $conexion->query($sql);
 
-header(sprintf('Location:%s', fromroot($file, "dashboard/AdminGestorProyectos.php", True)));
+header(sprintf('Location:%s', fromroot($file, "dashboard/AdminGestorProyectosa.php", True)));
 ?>

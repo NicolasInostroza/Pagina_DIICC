@@ -15,7 +15,7 @@ if (!empty($_FILES['img'])){
 	$file_tmp = $_FILES['img']['tmp_name'];
 	$file_type = $_FILES['img']['type'];
 	$file_ext = strtolower(end(explode('.', $_FILES['img']['name'])));
-	$file_path = wp_normalize_path($_SESSION['root']."/img/upload/proyectos/").$file_name;
+	$file_path = wp_normalize_path($_SESSION['root']."/img/upload/proyectosa/").$file_name;
 
 	$extensions = array("jpeg", "jpg", "png");
 
@@ -25,13 +25,13 @@ if (!empty($_FILES['img'])){
 
 	if (empty($errors) == true) {
 		copy($file_tmp, $file_path);
-		$image = "img/upload/proyectos/" . $file_name;
+		$image = "img/upload/proyectosa/" . $file_name;
 	}
 }
 
-$sql = 'INSERT INTO projectacademic(nombre,fecha,img_path ,link) VALUES (\'%s\', \'%s\', \'%s\', \'%s\')';
+$sql = 'INSERT INTO proyectosa (nombre,year,img_path ,link) VALUES (\'%s\', \'%s\', \'%s\', \'%s\')';
 $sql = sprintf($sql, $_POST['nombre'], $_POST['year'], $image,$_POST['link']);
 $result = $conexion->query($sql);
 
-header(sprintf('Location:%s', fromroot($file, "dashboard/AdminGestorProyectos.php", True)));
+header(sprintf('Location:%s', fromroot($file, "dashboard/AdminGestorProyectosa.php", True)));
 ?>
