@@ -7,7 +7,7 @@ $password = "juan0814";
 $database = "paginadiicc";
 
 // // Crear conexión
-$conexion = mysqli_connect($servidor, $usuario, $password, $database, 3306);
+$conexion = mysqli_connect($servidor, $usuario, $password, $database, 3307);
 
 
 // if (!mysqli_set_charset($conn, "utf8mb4")) {
