@@ -85,50 +85,6 @@
                         </div>
 
                     </div>
-                        
-                    <div class="row-md-5 row-sm-5 row-xs-12 bg-primary ">
-                        <?php
-                            $query1 = "SELECT `nombre`, `fecha`,`descripcion`, `img_path`, `link` FROM `projectacademic` WHERE id_academico=%s ORDER BY fecha DESC";
-                            #escribir codigo2
-                            
-                            $res1 = $conexion->query(sprintf($query1,$_GET['id']));
-                            if ($res1->num_rows != 0) {
-                        ?>
-                        <h3>Proyectos</h3>
-                        <table class="table" style="width: 100%; color:black;">
-                            <thead class="table-dark">
-                                <tr align="center">
-                                    <th>Título</th>
-                                    <th>Base de Datos</th>
-                                    <th>Fecha de Publicación</th>
-                                    <th>Ver proyecto</th>
-                                </tr>
-                            </thead>
-                            <?php
-                            while ($row1 = $res1->fetch_assoc()) {
-                            ?>
-                                <tr align="center">
-                                    <td><?php echo utf8_encode($row1['nombre']); ?></td>
-                                    <td><?php echo utf8_encode($row1['descripcion']); ?></td>
-                                    <td><?php echo $row1['fecha']; ?></td>
-                                    <td><a href="<?php echo $row1['link']; ?>">Ver Proyecto</a></td>
-                                </tr>
-                            <?php
-                            } ?>
-                        </table>
-                        <?php
-                            } ?>
-                        <!--<div class="col-4 bg-danger border" style="display:flex; align-items:center; height:50%;">
-                            <p>funciona todo con tablas?</p>
-                        </div>
-                        <div class="col-4 bg-warning border">
-                            <p>donde esta esto</p>
-                        </div>
-                        <div class="col-4 bg-danger " style="">
-                            <p>ddd</p>
-                        </div>-->
-                    </div>
-                       
                     <div class="row-md-5 row-sm-5 row-xs-12">
                         <!-- escribir codigo 1 -->
 
