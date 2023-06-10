@@ -5,6 +5,8 @@
 			<a href="AdminGestorNoticias.php">Noticias</a>
 			<a href="AdminGestorPublicaciones.php">Publicaciones</a>
             <a href="AdminGestorProyectos.php">Proyectos</a>
+            <a href="AdminGestorProyectosa.php">Proyectos Academicos</a>
+
             <a href="AdminGestorBT.php">Bolsa de trabajo</a>
             <a href="AdminGestorAcademicos.php">Academicos</a>
             <a href="AdminGestorFuncionarios.php">Funcionarios</a>
