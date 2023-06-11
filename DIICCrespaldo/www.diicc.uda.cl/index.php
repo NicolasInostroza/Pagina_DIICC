@@ -128,6 +128,10 @@
                 <h2>NOTICIAS</h2>
             </div>                
         </div> 
+
+        <!-- Panel de noticias 2.0-->
+        <?php include_once "include/slider_noticias.php"; ?>
+
          <!-- Panel de noticias -->
             
         <div class="container">
