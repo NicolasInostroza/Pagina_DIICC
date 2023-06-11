@@ -95,6 +95,21 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                            <div>
+                                <label>Nombre:</label>
+                                <input type="text" name="nombre">
+                                
+                                
+                                <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorEventos.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+
+                            </div>
+                            
+                            
+                        </form>
+                    </div><br>
                     <table class="table">
                         <thead style="background-color: steelblue;">
                             <tr style="height: 40px;">
@@ -108,37 +123,83 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from eventos ORDER BY fecha DESC"; // mejorar query falta nombre del que subio la noticia
-                            $resultado = mysqli_query($conexion, $sql);
-                            while ($mostrar = mysqli_fetch_array($resultado)) {
+                            if(isset($_POST['enviar'])){
+                                $nombre=$_POST['nombre'];
+                                
+                                if(empty($_POST['nombre'])){
+                                    $sql="SELECT * from eventos where nombre like '%".$nombre."%' ORDER BY fecha DESC ";
+                                }else{
+                                    
+                                    if(!empty($_POST['nombre'])){
+                                        $sql="SELECT * from eventos where nombre like '%".$nombre."%' ORDER BY fecha DESC ";
+                                    }
+                                }
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr>
+
+                                        <td>
+                                            <h4 style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_inicio']; ?></small></p>
+                                        </td>
+
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_termino']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['lugar']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary" style="color:seagreen;" href="../dashboard/modificarE.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/eventos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php 
+                                }
+                            }else{
+                                $sql = "select * from eventos ORDER BY fecha DESC"; // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr>
+
+                                        <td>
+                                            <h4 style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_inicio']; ?></small></p>
+                                        </td>
+
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_termino']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['lugar']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary" style="color:seagreen;" href="../dashboard/modificarE.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/eventos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            <?php    
+                                }
+                            }
                             ?>
-                                <tr>
-
-                                    <td>
-                                        <h4 style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
-                                    </td>
-                                    <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_inicio']; ?></small></p>
-                                    </td>
-
-                                    <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_termino']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['lugar']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
-                                            <a class="btn btn-secondary" style="color:seagreen;" href="../dashboard/modificarE.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/eventos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php } ?>
                         </tbody>
+                        
                     </table>
                 </div>
             </section>
