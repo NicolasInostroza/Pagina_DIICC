@@ -71,6 +71,21 @@
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                            <div>
+                                <label>Nombre:</label>
+                                <input type="text" name="Nombre">
+                                
+                                
+                                <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorFuncionarios.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+
+                            </div>
+                            
+                            
+                        </form>
+                    </div><br>
                     <table class="table">
                         <thead   >
                             <tr style="height: 40px; ">
@@ -85,36 +100,77 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from funcionarios where es_academico = 0 order by Nombre";
-                            $resultado = mysqli_query($conexion, $sql);
-                            while ($mostrar = mysqli_fetch_array($resultado)) {
+                            if(isset($_POST['enviar'])){
+                                $nombre=$_POST['Nombre'];
+                                
+                                if(empty($_POST['Nombre'])){
+                                    $sql="SELECT * from funcionarios where Nombre like '%".$nombre."%' and es_academico = 0 order by Nombre";
+                                }else{
+                                    
+                                    if(!empty($_POST['Nombre'])){
+                                        $sql="SELECT * from funcionarios where Nombre like '%".$nombre."%' and es_academico = 0 order by Nombre";
+                                    }
+                                }
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr >
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['cargo']; ?></small></p>
+                                        </td>
+                                        
+                                        <td style="text-align: center; "><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></td>
+                                        
+                                        
+                                    
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarF.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/funcionarios/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php 
+                                }
+                            }else{
+                                $sql = "select * from funcionarios where es_academico = 0 order by Nombre";
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr >
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['cargo']; ?></small></p>
+                                        </td>
+                                        
+                                        <td style="text-align: center; "><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></td>
+                                        
+                                        
+                                    
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarF.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/funcionarios/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            <?php    
+                                }
+                            }
                             ?>
-                                <tr >
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['cargo']; ?></small></p>
-                                    </td>
-                                     
-                                    <td style="text-align: center; "><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></td>
-                                    
-                                    
-                                   
-                                    <td>
-                                        <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
-                                            <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarF.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/funcionarios/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            <?php } ?>
-                            
                         </tbody>
+                        
                     </table>
                     
                 </div>
