@@ -55,37 +55,54 @@
                                             <input style="width: 200px; text-align:center;" id="nombre" name="nombre" class="input-text js-input" placeholder="Nombre" type="text" required>
                      
                                         </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="correo" name="correo" class="input-text js-input" placeholder="Correo" type="text" required>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="fono" name="fono" class="input-text js-input" placeholder="Fono" type="text" required>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="cargo" name="cargo" class="input-text js-input" placeholder="Cargo" type="text" required>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <textarea style="width: 200px; text-align:center;" id="descripcion" name="descripcion" placeholder="Descripcion" required></textarea>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="grado_academico" name="grado_academico" class="input-text js-input" placeholder="Grado Academico" type="text" required>
-                                    </div>
-                                    <div class="form-field  " style="text-align:center; margin-top: 5px;">
-                                        <input style="width: 200px; text-align:center;" id="area_interes" name="area_interes" class="input-text js-input" placeholder="Area de interes" type="text" required>
-                                    </div>
-                                     <div style="margin-left: 110px;" class="form-field "><br>
-                                         <input name="img" type="file" required>
-                                    </div>
-                                    <div style="margin-top:30px; text-align: center;" class="container-ingresar">
-                                        <button type="submit" class="btn">Ingresar</button>
-                                    </div>
-                                </form>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="correo" name="correo" class="input-text js-input" placeholder="Correo" type="text" required>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="fono" name="fono" class="input-text js-input" placeholder="Fono" type="text" required>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="cargo" name="cargo" class="input-text js-input" placeholder="Cargo" type="text" required>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <textarea style="width: 200px; text-align:center;" id="descripcion" name="descripcion" placeholder="Descripcion" required></textarea>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="grado_academico" name="grado_academico" class="input-text js-input" placeholder="Grado Academico" type="text" required>
+                                        </div>
+                                        <div class="form-field  " style="text-align:center; margin-top: 5px;">
+                                            <input style="width: 200px; text-align:center;" id="area_interes" name="area_interes" class="input-text js-input" placeholder="Area de interes" type="text" required>
+                                        </div>
+                                        <div style="margin-left: 110px;" class="form-field "><br>
+                                            <input name="img" type="file" required>
+                                        </div>
+                                        <div style="margin-top:30px; text-align: center;" class="container-ingresar">
+                                            <button type="submit" class="btn">Ingresar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <table class="table">
+                <div>
+                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                        <div>
+                            <label>Nombre:</label>
+                            <input type="text" name="Nombre">
+                            
+                            
+                            <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                            <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorAcademicos.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+
+                        </div>
+                        
+                        
+                    </form>
+                </div><br>
+                <div>
+                    
+                    <table class="table">
                         <thead   >
                             <tr style="height: 40px; ">
                                 <th scope="col">Nombre</th>
@@ -100,43 +117,86 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from funcionarios where es_academico = 1 order by Nombre"; // mejorar query falta nombre del que subio la noticia
-                            $resultado = mysqli_query($conexion, $sql);
-                            while ($mostrar = mysqli_fetch_array($resultado)) {
-                            ?>
-                                <tr >
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center; width: 50px;"><small class="text-muted"><?php echo $mostrar['fono']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['cargo']; ?></small></p>
-                                    </td>
-
-                                    <td style="text-align: center; "><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></td>                                    
+                            if(isset($_POST['enviar'])){
+                                $nombre=$_POST['Nombre'];
+                                
+                                if(empty($_POST['Nombre'])){
+                                    $sql="SELECT * FROM funcionarios WHERE Nombre like '%".$nombre."%' and es_academico = 1 order by Nombre";
+                                }else{
                                     
-                                   
-                                    <td>
-                                        <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
-                                            <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarA.php?id=<?php echo $mostrar['id'] ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/academicos/eliminar.php?id=<?php echo $mostrar['id'] ?> " onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    if(!empty($_POST['Nombre'])){
+                                        $sql="SELECT * FROM funcionarios WHERE Nombre like '%".$nombre."%' and es_academico = 1 order by Nombre";
+                                    }
+                                }
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr >
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center; width: 50px;"><small class="text-muted"><?php echo $mostrar['fono']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['cargo']; ?></small></p>
+                                        </td>
 
-                            <?php } ?>
-                            
+                                        <td style="text-align: center; "><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></td>                                    
+                                        
+                                    
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarA.php?id=<?php echo $mostrar['id'] ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/academicos/eliminar.php?id=<?php echo $mostrar['id'] ?> " onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php 
+                                }
+                            }else{
+                                $sql = "select * from funcionarios where es_academico = 1 order by Nombre"; // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr >
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['Nombre']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['correo']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center; width: 50px;"><small class="text-muted"><?php echo $mostrar['fono']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['cargo']; ?></small></p>
+                                        </td>
+
+                                        <td style="text-align: center; "><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></td>                                    
+                                        
+                                    
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarA.php?id=<?php echo $mostrar['id'] ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/academicos/eliminar.php?id=<?php echo $mostrar['id'] ?> " onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            <?php    
+                                }
+                            }
+                            ?>
                         </tbody>
+                        
                     </table>
                     
                 </div>
                     
-                </div>
+                
             </section>
         </div>
     </div>
