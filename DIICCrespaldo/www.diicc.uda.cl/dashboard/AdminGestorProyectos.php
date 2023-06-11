@@ -72,6 +72,21 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                        <div>
+                            <label>Nombre:</label>
+                            <input type="text" name="nombre">
+                            
+                            
+                            <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                            <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorProyectos.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+
+                        </div>
+                        
+                        
+                    </form>
+                </div><br>
                     <table class="table">
                         <thead style="background-color: steelblue;">
                             <tr style="height: 40px;">
@@ -84,30 +99,69 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from proyectos ORDER BY year DESC"; // mejorar query falta nombre del que subio la noticia
-                            $resultado = mysqli_query($conexion, $sql);
-                            while ($mostrar = mysqli_fetch_array($resultado)) {
+                            if(isset($_POST['enviar'])){
+                                $nombre=$_POST['nombre'];
+                                
+                                if(empty($_POST['nombre'])){
+                                    $sql="SELECT * from proyectos where nombre like '%".$nombre."%' ORDER BY year DESC ";
+                                }else{
+                                    
+                                    if(!empty($_POST['nombre'])){
+                                        $sql="SELECT * from proyectos where nombre like '%".$nombre."%' ORDER BY year DESC ";
+                                    }
+                                }
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr>
+                                        <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file ,$mostrar["img_path"]); ?>></td>
+                                        <td>
+                                            <h4 class="card-title" style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['year']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><a href="<?php echo  $mostrar['link']; ?>"><i class="bi bi-link-45deg"></i></a></p>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarPR.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/proyectos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php 
+                                }
+                            }else{
+                                $sql = "select * from proyectos ORDER BY year DESC"; // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr>
+                                        <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file ,$mostrar["img_path"]); ?>></td>
+                                        <td>
+                                            <h4 class="card-title" style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['year']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p class="card-text" style="text-align: center;"><a href="<?php echo  $mostrar['link']; ?>"><i class="bi bi-link-45deg"></i></a></p>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarPR.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/proyectos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            <?php    
+                                }
+                            }
                             ?>
-                                <tr>
-                                    <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file ,$mostrar["img_path"]); ?>></td>
-                                    <td>
-                                        <h4 class="card-title" style="text-align: center;"><?php echo $mostrar['nombre']; ?> </h4>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><small class="text-muted"><?php echo $mostrar['year']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <p class="card-text" style="text-align: center;"><a href="<?php echo  $mostrar['link']; ?>"><i class="bi bi-link-45deg"></i></a></p>
-                                    </td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
-                                            <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarPR.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/proyectos/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php } ?>
                         </tbody>
+                        
                     </table>
                 </div>
             </section>
