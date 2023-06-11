@@ -108,7 +108,7 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from eventos ORDER BY id DESC"; // mejorar query falta nombre del que subio la noticia
+                            $sql = "select * from eventos ORDER BY fecha DESC"; // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
                             while ($mostrar = mysqli_fetch_array($resultado)) {
                             ?>

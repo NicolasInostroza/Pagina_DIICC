@@ -100,7 +100,7 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from funcionarios where es_academico = 1"; // mejorar query falta nombre del que subio la noticia
+                            $sql = "select * from funcionarios where es_academico = 1 order by Nombre"; // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
                             while ($mostrar = mysqli_fetch_array($resultado)) {
                             ?>

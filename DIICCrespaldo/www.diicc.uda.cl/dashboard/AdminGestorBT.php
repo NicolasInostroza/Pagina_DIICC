@@ -86,7 +86,7 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from trabajos ORDER BY id DESC"; // mejorar query falta nombre del que subio la noticia
+                            $sql = "select * from trabajos ORDER BY fecha DESC"; // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
                             while ($mostrar = mysqli_fetch_array($resultado)) {
                             ?>
