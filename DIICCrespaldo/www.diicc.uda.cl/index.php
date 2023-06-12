@@ -148,7 +148,7 @@
                             <div class="notice-left">
                         
                                 <?php
-                                    $sql = "SELECT titulo,descripcion,img_path FROM noticias ORDER BY id DESC LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                    $sql = "SELECT titulo,descripcion,img_path,fecha FROM noticias ORDER BY id DESC LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
                                     $resultado = mysqli_query($conexion, $sql);
                                                
                                     while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
