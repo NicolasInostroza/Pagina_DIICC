@@ -37,6 +37,10 @@ include_once "../include/dashboard/head.php";
                                 <span class="input-group-addon" id="basic-addon2"><i class="bi bi-fonts"></i></span>
                                 <input type="text" name='nombre' class="form-control" placeholder="Nombre" aria-describedby="basic-addon1" <?php echo sprintf('value="%s"',  $mostrar['nombre']); ?>>
                             </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon4"><i class="bi bi-link-45deg"></i></span>
+                                <input  class="form-control" name="descripcion" placeholder="Descripcion" <?php echo sprintf('value="%s"',  $mostrar['descripcion']); ?>>
+                            </div>
                            <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon3"><i class="bi bi-calendar-plus"></i></span>
                                 <input type="number" class="form-control" name='year' placeholder="Año" <?php echo sprintf('value="%s"', $mostrar['year'])?>>

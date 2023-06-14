@@ -130,7 +130,7 @@
                             <div class="col">
                                 <div class="collapse multi-collapse" id="multiCollapseExample2">
                                     <?php
-                                        $query = "SELECT `nombre`, `year`, `link` FROM `proyectos` WHERE id_academicos=%s ORDER BY 'year' DESC";
+                                        $query = "SELECT `nombre`, `descripcion`, `year`, `link` FROM `proyectos` WHERE id_academicos=%s ORDER BY 'year' DESC";
                                         
                                     
                                         $res = $conexion->query(sprintf($query,$_GET['id']));
@@ -141,6 +141,7 @@
                                             <thead class="table-dark">
                                                 <tr align="center">
                                                     <th>Título</th>
+                                                    <th>Descripción</th>
                                                     <th>Fecha de Publicación</th>
                                                     <th>Ver artículo</th>
                                                 </tr>
@@ -150,6 +151,7 @@
                                             ?>
                                                 <tr align="center">
                                                     <td><?php echo $row['nombre']; ?></td>
+                                                    <td><?php echo $row['descripcion']; ?></td>
                                                     <td><?php echo $row['year']; ?></td>
                                                     <td><a href="<?php echo $row['link']; ?>">Ver Proyecto</a></td>
                                                 </tr>
