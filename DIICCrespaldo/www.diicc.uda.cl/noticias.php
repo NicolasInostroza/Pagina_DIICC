@@ -63,9 +63,8 @@
                                     <p>Escrito por <?php echo $mostrar['correo']; ?> / <?php echo $mostrar['fecha']; ?></p>
                                 </div>
                                 <div class="blog-bottom">
-                                    <h2><?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">' . utf8_encode($mostrar['titulo']) . '</a>'; ?></h2>
+                                    <h2><?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">' . $mostrar['titulo'] . '</a>'; ?></h2>
                                     <!-- Ojos con el error de index del while si existen noticias -->
-                                    <?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">Leer más...</a>'; ?>
                                 </div>
                             </div>
                         </div>
