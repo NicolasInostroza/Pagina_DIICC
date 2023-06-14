@@ -37,7 +37,7 @@
 
     <!-- slider noticias -->
     
-
+    <link rel="stylesheet" href="css/slider.css">
 
 
 </head>
