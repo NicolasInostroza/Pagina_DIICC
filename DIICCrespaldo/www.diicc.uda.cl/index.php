@@ -280,7 +280,7 @@
                     </div>                
             </div>
         </div>
-                        <div class="wrapper">
+                        <!-- <div class="wrapper">
                             <div class="cols">
                                 <div class="col" ontouchstart="this.classList.toggle('hover');">
                                     <div class="container">
@@ -325,13 +325,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                                                               
 
 
 
-                    <!-- Card group -->
-                    <!-- <div class="container">
+                    
+                    <div class="container">
                         <div class="container" style = "margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
                             <div class="row" style="display: flex; align-items: center; justify-content: center; min-height: 1vh; background: white; flex-wrap: wrap;">
                                 <div class="card">
@@ -382,7 +382,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
   
          <!-- Testimonial Area Start -->
         <div class="testimonial-area pt-110 pb-105 text-center">
