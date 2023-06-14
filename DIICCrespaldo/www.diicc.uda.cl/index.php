@@ -11,7 +11,6 @@
     include_once "include/head.php";
 ?>
  <meta charset="UTF-8">
-<body>
 
     <body>
         <!-- Header -->
@@ -280,62 +279,111 @@
                         <h2>ÁREAS DE DESARROLLO</h2>
                     </div>                
             </div>
-
-            <div class="container">
-
-                <div class="container" style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
-                    <div class="row" style="display: flex; align-items: center; justify-content: center; min-height: 1vh; background: white; flex-wrap: wrap;">
-                        <div class="card">
-                            <div class="head">
-                                <div class="circle"></div>
-                                <div class="img">
-                                    <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
-                                </div>
-                            </div>
-
-                            <div class="description">
-                                <h3>Inteligencia de Máquinas</h3>
-                                <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
-                                </div>
-                            <div class="contact">
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="head">
-                                <div class="circle"></div>
-                                    <div class="img">
-                                        <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
+        </div>
+                        <div class="wrapper">
+                            <div class="cols">
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front" style="background-image: url(img/areas/SoftwareEngineering/img1.jpg);">
+                                            <div class="inner">
+                                                <p style="color: white;">Inteligencia de Máquinas</p>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                            </div>
-                            <div class="description">
-                                <h3>Ingeniería de Software</h3>
-                                <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
-                            </div>
-                            <div class="contact">
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="head">
-                                <div class="circle"></div>
-                                <div class="img">
-                                        <img src="img/areas/GestionTI/img1.jpg" alt="course">
+                                </div>
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front" style="background-image: url(img/areas/ArtificialIntelligent/img1.jpg);">
+                                            <div class="inner">
+                                                <p style="color: white;">Ingeniería de Software</p>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="container">
+                                        <div class="front" style="background-image: url(img/areas/GestionTI/img1.jpg);">
+                                            <div class="inner">
+                                                <p style="color: white;">Gestión TI</p>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="inner">
+                                                <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="description">
-                                <h3>Gestión TI</h3>
-                                <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
-                            </div>
-                            <div class="contact">
-                                
+                        </div>
+                                                              
+
+
+
+                    <!-- Card group -->
+                    <!-- <div class="container">
+                        <div class="container" style = "margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
+                            <div class="row" style="display: flex; align-items: center; justify-content: center; min-height: 1vh; background: white; flex-wrap: wrap;">
+                                <div class="card">
+                                    <div class="head">
+                                        <div class="circle"></div>
+                                        <div class="img">
+                                            <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
+                                        </div>
+                                    </div>
+
+                                    <div class="description">
+                                        <h3>Inteligencia de Máquinas</h3>
+                                        <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
+                                        </div>
+                                    <div class="contact">
+                                        
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="head">
+                                        <div class="circle"></div>
+                                            <div class="img">
+                                                <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
+                                            </div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Ingeniería de Software</h3>
+                                        <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
+                                    </div>
+                                    <div class="contact">
+                                        
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="head">
+                                        <div class="circle"></div>
+                                        <div class="img">
+                                                <img src="img/areas/GestionTI/img1.jpg" alt="course">
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Gestión TI</h3>
+                                        <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
+                                    </div>
+                                    <div class="contact">
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-          
+                    </div> -->
+  
          <!-- Testimonial Area Start -->
         <div class="testimonial-area pt-110 pb-105 text-center">
             <div class="container tres-columnas">
@@ -383,37 +431,6 @@
             </div>
         </div>
         <!-- Testimonial Area End -->
-
-        <!-- Testimonial Area Start -->
-       <!--<div class="testimonial-area pt-110 pb-105 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="testimonial-owl owl-theme owl-carousel">
-                        <div class="col-md-8 col-md-offset-2 col-sm-12">
-                            <div class="single-testimonial">
-                                <div class="testimonial-info">
-                                    <div class="testimonial-img">
-                                        <img src="img/academicos/code.jpg" alt="academicos">
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <h4>Code Club UDA</h4>
-                                        <p>Code Club UDA privilegió a niñas en talleres de fundamentos en programación de este 2022</p>
-                                        
-                                        <p>Iniciativa que impulsa el departamento de Ingeniería en Informática y Ciencias de la 
-                                            Computación desde el año 2014, para educar a escolares en lenguaje de programación en esta edición se 
-                                            impartió exclusivamente para niñas a fin de minimizar brechas de género que se perciben en la disciplina.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Testimonial Area End -->
-
-
        
 
 
