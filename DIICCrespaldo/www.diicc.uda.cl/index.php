@@ -414,7 +414,59 @@
         </div>-->
         <!-- Testimonial Area End -->
 
+         <!-- Blog Area Start -->
+         <div class="rowtrans">
+            <div class="rowtrans-title text-center">
+                <h2>ÚLTIMAS PUBLICACIONES Y TÉSIS</h2>
+            </div>                
+        </div> 
+         <div class="blog-area pt-50 pb-50">
+            <div class="container">
+                
+                <div class="row">
+                <?php
+                        $sql = "SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY fecha DESC LIMIT 3"; // mejorar query falta nombre del que subio la noticia
+                        $resultado = mysqli_query($conexion, $sql);
+                        while ($mostrar = mysqli_fetch_array($resultado)){
+                            echo sprintf(
+                                '
+                                <div class="col-md-4 col-sm-6 col-xs-12" >
+                                    <div class="single-blog" >
+                                        <div class="blog-img" >
+                                            <a href="%s"><img src="%s" alt="blog"></a>
+                                            <div class="blog-hover">
+                                                <a href="%s"><i class="fa fa-link"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content" ">
+                                            <div class="blog-top">
+                                                <p>Escrito por %s / %s</p>
+                                            </div>
+                                            <div class="blog-bottom">
+                                                <h2><a href="%s">%s</a></h2>
+                                                <a href="%s">Leer más...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                ',
+                                $mostrar['acceso'],
+                                fromroot($file, $mostrar["img_path"], true),
+                                utf8_encode($mostrar['acceso']),
+                                utf8_encode($mostrar['autor']),
+                                $mostrar['fecha'],
+                                $mostrar['acceso'],
+                                utf8_encode($mostrar['titulo']),
+                                $mostrar['acceso']
+                            );
+                        }
 
+                    ?>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Blog Area End --> 
        
 
 
@@ -509,60 +561,6 @@
             </div>
         </div>
         <!-- Event Area End -->
-        
-         <!-- Blog Area Start -->
-         <div class="rowtrans">
-            <div class="rowtrans-title text-center">
-                <h2>ÚLTIMAS PUBLICACIONES Y TÉSIS</h2>
-            </div>                
-        </div> 
-         <div class="blog-area pt-50 pb-50">
-            <div class="container">
-                
-                <div class="row">
-                <?php
-                        $sql = "SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY fecha DESC LIMIT 3"; // mejorar query falta nombre del que subio la noticia
-                        $resultado = mysqli_query($conexion, $sql);
-                        while ($mostrar = mysqli_fetch_array($resultado)){
-                            echo sprintf(
-                                '
-                                <div class="col-md-4 col-sm-6 col-xs-12" >
-                                    <div class="single-blog" >
-                                        <div class="blog-img" >
-                                            <a href="%s"><img src="%s" alt="blog"></a>
-                                            <div class="blog-hover">
-                                                <a href="%s"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="blog-content" ">
-                                            <div class="blog-top">
-                                                <p>Escrito por %s / %s</p>
-                                            </div>
-                                            <div class="blog-bottom">
-                                                <h2><a href="%s">%s</a></h2>
-                                                <a href="%s">Leer más...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                ',
-                                $mostrar['acceso'],
-                                fromroot($file, $mostrar["img_path"], true),
-                                utf8_encode($mostrar['acceso']),
-                                utf8_encode($mostrar['autor']),
-                                $mostrar['fecha'],
-                                $mostrar['acceso'],
-                                utf8_encode($mostrar['titulo']),
-                                $mostrar['acceso']
-                            );
-                        }
-
-                    ?>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Blog Area End -->
         
 
 

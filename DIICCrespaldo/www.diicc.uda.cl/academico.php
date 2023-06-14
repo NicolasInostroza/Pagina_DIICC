@@ -85,15 +85,8 @@
                         </div>
 
                     </div>
-                    <div class="row-md-5 row-sm-5 row-xs-12">
+                    <div class="row-md-5 row-sm-5 row-xs-12" style="margin-top: 30px; margin-left: 50px">
                         <!-- escribir codigo 1 -->
-                        <?php
-                            $query = "SELECT `titulo`, `revision`, `fecha`, `acceso` FROM `publicaciones` WHERE id_academico=%s ORDER BY fecha DESC";
-                            #escribir codigo2
-                            
-                            $res = $conexion->query(sprintf($query,$_GET['id']));
-                            if ($res->num_rows != 0){
-                        ?>
                         <p>
                             <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">ARTICULOS</a>
                             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">PROYECTOS</button>
@@ -101,6 +94,13 @@
                         <div class="row">
                             <div class="col">
                                 <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <?php
+                                    $query = "SELECT `titulo`, `revision`, `fecha`, `acceso` FROM `publicaciones` WHERE id_academico=%s ORDER BY fecha DESC";
+                                    #escribir codigo2
+                                    
+                                    $res = $conexion->query(sprintf($query,$_GET['id']));
+                                    if ($res->num_rows != 0){
+                                ?>
                                         <h3>Artículos</h3>
                                         <table class="table wid100">
                                             <thead class="table-dark">
@@ -124,14 +124,43 @@
                                             } ?>
                                     </table>
                                 </div>
+                                <?php
+                                } ?>
                             </div>
                             <div class="col">
                                 <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                    <?php
+                                        $query = "SELECT `nombre`, `year`, `link` FROM `proyectos` WHERE id_academicos=%s ORDER BY 'year' DESC";
+                                        
+                                    
+                                        $res = $conexion->query(sprintf($query,$_GET['id']));
+                                        if ($res->num_rows != 0){
+                                    ?>
+                                    <h3>Proyectos</h3>
+                                        <table class="table wid100">
+                                            <thead class="table-dark">
+                                                <tr align="center">
+                                                    <th>Título</th>
+                                                    <th>Fecha de Publicación</th>
+                                                    <th>Ver artículo</th>
+                                                </tr>
+                                            </thead>
+                                            <?php
+                                            while ($row = $res->fetch_assoc()) {
+                                            ?>
+                                                <tr align="center">
+                                                    <td><?php echo $row['nombre']; ?></td>
+                                                    <td><?php echo $row['year']; ?></td>
+                                                    <td><a href="<?php echo $row['link']; ?>">Ver Proyecto</a></td>
+                                                </tr>
+                                            <?php
+                                            } ?>
+                                    </table>
                                 </div>
+                                <?php
+                                }?>
                             </div>
                         </div>
-                        <?php
-                        } ?>
                     </div>
                 </div>
             </div>
