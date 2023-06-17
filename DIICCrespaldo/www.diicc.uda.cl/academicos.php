@@ -31,44 +31,9 @@
         </div>
         <!-- Banner Area End -->
         <!-- Teacher Start -->
-        <div class="teacher-area pt-150 pb-105">
-            <div class="container">
-                <div class="row teacher-grid">
-                <?php
-                    $sql = "SELECT * FROM funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
-                    $resultado = mysqli_query($conexion, $sql);
-                    $consecutivo = 1;
-                    while ($mostrar = mysqli_fetch_array($resultado)) {
-                ?>
-
-                        
-
-                   <!--<div class="col-md-3 colsm-4 col-xs-12">-->
-                        <div class="single-teacher mb-45">
-                            <div class="single-teacher-img">
-                                <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
-                            </div>
-                            <div class="single-teacher-content text-center">
-                                <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo utf8_encode($mostrar['Nombre']); ?></a></h2>
-                                <h4><?php echo utf8_encode($mostrar['cargo']);?></h4>
-                                <h4><?php echo utf8_decode($mostrar['correo']) ?></h4>
-                                <h4><?php echo utf8_decode($mostrar['fono']) ?></h4>
-
-                            </div>
-                            
-                        </div>
-                    <!--</div>-->
-                
-                <?php 
-                    $consecutivo++;
-            
-            } 
-            ?>
-                </div>
-            </div>
-        </div>
 
         <!-- nuevas tarjetas de academicos -->
+        <div id="espacio"></div>
         <section class="container">
             <div class="row active-with-click">
                 <?php
@@ -110,6 +75,8 @@
             ?>
             </div>
         </section>
+        <!--end teacher-->
+
         <!-- FOOTER -->
         <?php include_once "include/footer.php"; ?>
         <!-- FOOTER -->
