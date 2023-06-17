@@ -235,6 +235,7 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  box-shadow: 0px 0px 5px 0.1px rgb(155, 155, 155);
 }
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
@@ -339,7 +340,6 @@
   border-color: #c4cbf8;
 }
 #body_academicos {
-  background-color: #ECEFF1;
   color: #37474F;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
