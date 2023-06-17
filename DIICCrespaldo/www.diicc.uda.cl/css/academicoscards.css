@@ -288,54 +288,57 @@
   top: -32px;
 }
 .material-card.Teal h3 {
-  background-color: #009688;
+  background-color: #364c59;
 }
 .material-card.Teal h3:after {
-  border-top-color: #009688;
-  border-right-color: #009688;
+  border-top-color: #364c59;
+  border-right-color: #364c59;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
 .material-card.Teal h3:before {
   border-top-color: transparent;
-  border-right-color: #004d40;
-  border-bottom-color: #004d40;
+  border-right-color: #25353e;
+  border-bottom-color: #25353e;
   border-left-color: transparent;
 }
 .material-card.Teal.mc-active h3:before {
   border-top-color: transparent;
-  border-right-color: #009688;
-  border-bottom-color: #009688;
+  border-right-color: #364c59;
+  border-bottom-color: #364c59;
   border-left-color: transparent;
 }
 .material-card.Teal.mc-active h3:after {
-  border-top-color: #004d40;
-  border-right-color: #004d40;
+  border-top-color: #25353e;
+  border-right-color: #25353e;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
 .material-card.Teal .mc-btn-action {
-  background-color: #009688;
+  width: 40px;
+  height: 40px;
+  background-color: #364c59;
+  position: absolute;
 }
 .material-card.Teal .mc-btn-action:hover {
-  background-color: #004d40;
+  background-color: #25353e;
 }
 .material-card.Teal .mc-footer h5 {
-  color: #004d40;
+  color: #bebebe;
 }
 .material-card.Teal .mc-footer a {
-  background-color: #004d40;
+  background-color: #25353e;
 }
 .material-card.Teal.mc-active .mc-content {
-  background-color: #e0f2f1;
+  background-color: #c4cbf8;
 }
 .material-card.Teal.mc-active .mc-footer {
-  background-color: #b2dfdb;
+  background-color: #364c59;
 }
 .material-card.Teal.mc-active .mc-btn-action {
-  border-color: #e0f2f1;
+  border-color: #c4cbf8;
 }
-body {
+#body_academicos {
   background-color: #ECEFF1;
   color: #37474F;
   font-family: 'Raleway', sans-serif;

@@ -9,7 +9,7 @@
     include_once "include/head.php";
 ?>
 
-    <body>
+    <body id="body_academicos">
         <!-- Header -->
         <?php include_once "include/header.php"; ?>
         <!-- Header Area End -->
