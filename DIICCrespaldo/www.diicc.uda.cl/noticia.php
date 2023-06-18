@@ -24,11 +24,12 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="blog-details">
-                            <div class="blog-details-img">
-                            <img src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></a>
-                            </div>
+                            
                             <div class="blog-details-content">
                                 <h2><?php echo $mostrar['titulo']; ?></h2>
+                                <div class="blog-details-img">
+                                    <img src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></a>
+                                </div>
                                 <h6>Escrito por <?php echo $mostrar['correo']; ?>  / <?php echo strftime('Publicado el %d/%m/%Y a las %I:%M %p', strtotime($mostrar['fecha'])); ?></h6>
                                 <p><?php echo $mostrar['descripcion']; ?></p>
                             </div>
