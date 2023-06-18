@@ -33,8 +33,8 @@ if (!empty($_FILES['img'])){
 	
 }
 
-$sql = 'UPDATE proyectos SET nombre= \'%s\',year =  \'%s\',link=\'%s\' WHERE id = %s';
-$sql = sprintf($sql, $_POST['nombre'], $_POST['year'],$_POST['link'], $_POST['descripcion'], $id);
+$query = 'UPDATE proyectos SET nombre= \'%s\', descripcion = \'%s\', year =  \'%s\',link=\'%s\' WHERE id = %s';
+$sql = sprintf($query, $_POST['nombre'], $_POST['descripcion'], $_POST['year'],$_POST['link'], $id);
 $result = $conexion->query($sql);
 
 header(sprintf('Location:%s', fromroot($file, "dashboard/AdminGestorProyectos.php", True)));
