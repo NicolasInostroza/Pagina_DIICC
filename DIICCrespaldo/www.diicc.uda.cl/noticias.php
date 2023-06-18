@@ -54,7 +54,7 @@
 
                     <!-- Título noticia1 -->
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog mb-60">
+                        <div class="single-blog mb-60 bg-warning">
                             <div class="blog-img">
                                 <?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
                             </div>
