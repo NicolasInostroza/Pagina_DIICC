@@ -129,15 +129,14 @@
         </div> 
          <!-- Panel de noticias -->
             
-        <div class="container">
+        <div class="container" id="MYcontainer">
             <div class="row">            
-                        
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div id="MYCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicadores -->
                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active" style="border:1px solid #254C5A;"></li>
-                        <li data-target="#myCarousel" data-slide-to="1" style="border:1px solid #254C5A;"></li>
-                        <li data-target="#myCarousel" data-slide-to="2" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#MYCarousel" data-slide-to="0" class="active" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#MYCarousel" data-slide-to="1" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#MYCarousel" data-slide-to="2" style="border:1px solid #254C5A;"></li>
                                                               
                     </ol>
 
@@ -147,7 +146,7 @@
                             <div class="notice-left">
                         
                                 <?php
-                                    $sql = "SELECT titulo,descripcion,img_path FROM noticias ORDER BY id DESC LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                    $sql = "SELECT titulo,descripcion,img_path,fecha FROM noticias ORDER BY id DESC LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
                                     $resultado = mysqli_query($conexion, $sql);
                                                
                                     while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
@@ -181,7 +180,7 @@
                             <div class="notice-left">
                         
                                 <?php
-                                $sql = "SELECT titulo,descripcion,img_path,correo FROM noticias WHERE id=10 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                $sql = "SELECT titulo,descripcion,img_path,correo,fecha FROM noticias WHERE id=10 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
                                 $resultado = mysqli_query($conexion, $sql);
                                    
                                 while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
@@ -218,7 +217,7 @@
                             <div class="notice-left">
                         
                                 <?php
-                                $sql = "SELECT titulo,descripcion,img_path,correo FROM noticias WHERE id=9 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                $sql = "SELECT titulo,descripcion,img_path,correo,fecha FROM noticias WHERE id=9 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
                                 $resultado = mysqli_query($conexion, $sql);
                    
                                     while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
@@ -253,11 +252,11 @@
                                 
                     </div> <!--cierre notice-->
                         <!-- Controles Izquierda y Derecha-->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <a class="left carousel-control" href="#MYCarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <a class="right carousel-control" href="#MYCarousel" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                             <span class="sr-only">Next</span>
                         </a>

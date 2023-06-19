@@ -31,35 +31,35 @@
         </div>
         <!-- Banner Area End -->
         <!-- Teacher Start -->
-        <div class="teacher-area pt-150 pb-105">
+        <div id="teacher-area" class="teacher-area pt-150 pb-105">
             <div class="container">
-                <div class="row teacher-grid">
+                <div id="teacher-carousel" class="row teacher-grid">
                 <?php
-                    $sql = "select * from funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
-                    $resultado = mysqli_query($conexion, $sql);
-                    $consecutivo = 1;
-                    while ($mostrar = mysqli_fetch_array($resultado)) {
+                $sql = "select * from funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
+                $resultado = mysqli_query($conexion, $sql);
+                $consecutivo = 1;
+                while ($mostrar = mysqli_fetch_array($resultado)) {
                 ?>
-
-                        
-                        <div class="single-teacher mb-45">
-                            <div class="single-teacher-img">
-                                <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
-                            </div>
-                            <div class="single-teacher-content text-center">
-                                <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></h2>
-                                <h4><?php echo ($mostrar['cargo']);?></h4>
-                                
-
-                            </div>
-                            
+                <div class="single-teacher mb-45">
+                    <div class="card-inner">
+                    <div class="card-front">
+                        <div class="single-teacher-img">
+                        <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src="<?php echo fromroot($file, $mostrar['img_path']); ?>"></a>
                         </div>
-                
-                <?php 
+                    </div>
+                    <div class="card-back">
+                        <div class="single-teacher-content text-center">
+                        <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></h2>
+                        <h4><?php echo ($mostrar['cargo']); ?></h4>
+                        <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <?php
                     $consecutivo++;
-            
-            } 
-            ?>
+                }
+                ?>
                 </div>
             </div>
         </div>
