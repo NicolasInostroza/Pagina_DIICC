@@ -23,11 +23,11 @@ include_once "../include/dashboard/head.php";
                 <div class="container-Noticias">
                     <div class="container-formulario">
                         <?php
-                        $sql = sprintf("select * from proyectosa where id=%s", $_GET['id']);
+                        $sql = sprintf("select * from proyectos where id=%s", $_GET['id']);
                         $resultado = mysqli_query($conexion, $sql);
                         $mostrar = mysqli_fetch_array($resultado);
                         ?>
-                        <form class="form" action="../database/proyectosa/modificar.php" method="post" enctype="multipart/form-data">
+                        <form class="form" action="../database/proyectos/modificar.php" method="post" enctype="multipart/form-data">
                             <input type="hidden" name='id' <?php echo sprintf('value="%s"', $_GET['id']); ?>>
                             <div class="input-group">
                                 <input class="form-control" type="file" name="img">
@@ -36,6 +36,10 @@ include_once "../include/dashboard/head.php";
                             <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon2"><i class="bi bi-fonts"></i></span>
                                 <input type="text" name='nombre' class="form-control" placeholder="Nombre" aria-describedby="basic-addon1" <?php echo sprintf('value="%s"',  $mostrar['nombre']); ?>>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon4"><i class="bi bi-link-45deg"></i></span>
+                                <input  class="form-control" name="descripcion" placeholder="Descripcion" <?php echo sprintf('value="%s"',  $mostrar['descripcion']); ?>>
                             </div>
                            <div class="input-group">
                                 <span class="input-group-addon" id="basic-addon3"><i class="bi bi-calendar-plus"></i></span>
