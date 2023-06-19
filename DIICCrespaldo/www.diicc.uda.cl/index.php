@@ -163,8 +163,8 @@
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="let card-body">
-                                                    <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                                    <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                                    <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                                    <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
                                                     <div class="d-flex flex-row justify-content-between">
                                                         <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
                                                     </div>    
@@ -197,8 +197,8 @@
                                             </div>
                                             <div class="col-md-9">
                                                 <div class="let card-body">
-                                                    <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                                    <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                                    <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                                    <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
                                                     <div class="d-flex flex-row justify-content-between">
                                                         <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
                                                         <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
@@ -234,8 +234,8 @@
                                                 </div>
                                                 <div class="col-md-9">
                                                     <div class="let card-body">
-                                                        <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                                        <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
                                                         <div class="d-flex flex-row justify-content-between">
                                                             <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
                                                                 <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
@@ -483,10 +483,10 @@
                                 ',
                                 strftime('%d',strtotime ($m['fecha'])),
                                 strftime('%B',strtotime($m['fecha'])),
-                                utf8_encode($m['nombre']),
+                                ($m['nombre']),
                                 $m['hora_inicio']->format('H:i'),
                                 $m['hora_termino']->format('H:i'),
-                                utf8_encode($m['lugar'])
+                                ($m['lugar'])
                             );
                         }
                         ?>
@@ -513,10 +513,10 @@
                                 ',
                                 strftime('%d',strtotime($m['fecha'])),
                                 strftime('%B',strtotime($m['fecha'])),
-                                utf8_encode($m['nombre']),
+                                ($m['nombre']),
                                 $m['hora_inicio']->format('H:i'),
                                 $m['hora_termino']->format('H:i'),
-                                utf8_encode($m['lugar'])
+                                ($m['lugar'])
                             );
                         }
                         ?>
@@ -564,11 +564,11 @@
                                 ',
                                 $mostrar['acceso'],
                                 fromroot($file, $mostrar["img_path"], true),
-                                utf8_encode($mostrar['acceso']),
-                                utf8_encode($mostrar['autor']),
+                                ($mostrar['acceso']),
+                                ($mostrar['autor']),
                                 $mostrar['fecha'],
                                 $mostrar['acceso'],
-                                utf8_encode($mostrar['titulo']),
+                                ($mostrar['titulo']),
                                 $mostrar['acceso']
                             );
                         }

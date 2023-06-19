@@ -42,21 +42,18 @@
                 ?>
 
                         
-
-                   <!--<div class="col-md-3 colsm-4 col-xs-12">-->
                         <div class="single-teacher mb-45">
                             <div class="single-teacher-img">
                                 <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
                             </div>
                             <div class="single-teacher-content text-center">
-                                <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo utf8_encode($mostrar['Nombre']); ?></a></h2>
-                                <h4><?php echo utf8_encode($mostrar['cargo']);?></h4>
+                                <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></h2>
+                                <h4><?php echo ($mostrar['cargo']);?></h4>
                                 
 
                             </div>
                             
                         </div>
-                    <!--</div>-->
                 
                 <?php 
                     $consecutivo++;
