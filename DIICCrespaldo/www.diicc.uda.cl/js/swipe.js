@@ -1,6 +1,7 @@
-const flipCards = document.querySelectorAll('.flip-card-inner');
-    flipCards.forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('flip');
-      });
-    });
+var teacherCards = document.querySelectorAll("#teacher-carousel .single-teacher");
+
+teacherCards.forEach(function(card) {
+  card.addEventListener("touchstart", function() {
+    this.querySelector(".card-inner").classList.toggle("flipped");
+  });
+});

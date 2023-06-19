@@ -31,16 +31,16 @@
         </div>
         <!-- Banner Area End -->
         <!-- Teacher Start -->
-        <div id="teacher-area" class="teacher-area pt-150 pb-105">
-            <div class="container">
-                <div id="teacher-carousel" class="row teacher-grid">
+        <div class="teacher-area pt-150 pb-105">
+            <div id="teacher-container" class="container">
+                <div class="row teacher-grid">
                 <?php
-                $sql = "select * from funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
+                $sql = "SELECT * FROM funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
                 $resultado = mysqli_query($conexion, $sql);
                 $consecutivo = 1;
                 while ($mostrar = mysqli_fetch_array($resultado)) {
                 ?>
-                <div class="single-teacher mb-45">
+                <div class="single-teacher mb-45" id="teacher-<?php echo $consecutivo; ?>">
                     <div class="card-inner">
                     <div class="card-front">
                         <div class="single-teacher-img">
@@ -51,18 +51,17 @@
                         <div class="single-teacher-content text-center">
                         <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></h2>
                         <h4><?php echo ($mostrar['cargo']); ?></h4>
-                        <a href="#" class="btn">Read More</a>
                         </div>
                     </div>
                     </div>
                 </div>
                 <?php
-                    $consecutivo++;
+                $consecutivo++;
                 }
                 ?>
                 </div>
             </div>
-        </div>
+            </div>
         <!-- FOOTER -->
         <?php include_once "include/footer.php"; ?>
         <!-- FOOTER -->

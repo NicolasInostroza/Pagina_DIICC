@@ -108,14 +108,6 @@
                         </div>
                     </div>
                 </div>
-                        <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>-->
             </div>
         </div>
         </section>
@@ -171,7 +163,6 @@
                                             </div>
                                         </div>
                                     </a>
-                                        <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->
                                     <?php } ?>
                             </div>
                         </div>
@@ -207,8 +198,7 @@
                                         </div>
                                     </a>
                                 <?php } ?>
-                            </div>
-                                    <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->     
+                            </div>  
                         </div>
                                     
                                 
@@ -243,7 +233,6 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->
                                     <?php } ?>
                             </div>
                     
@@ -266,9 +255,6 @@
             </div>
         </div>
         <!-- Notice End -->    
-           
-        
-        
         
         <!-- Courses Area Start -->
 
@@ -279,56 +265,6 @@
                     </div>                
             </div>
         </div>
-                        <!-- <div class="wrapper">
-                            <div class="cols">
-                                <div class="col" ontouchstart="this.classList.toggle('hover');">
-                                    <div class="container">
-                                        <div class="front" style="background-image: url(img/areas/SoftwareEngineering/img1.jpg);">
-                                            <div class="inner">
-                                                <p style="color: white;">Inteligencia de Máquinas</p>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="inner">
-                                                <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col" ontouchstart="this.classList.toggle('hover');">
-                                    <div class="container">
-                                        <div class="front" style="background-image: url(img/areas/ArtificialIntelligent/img1.jpg);">
-                                            <div class="inner">
-                                                <p style="color: white;">Ingeniería de Software</p>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="inner">
-                                                <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col" ontouchstart="this.classList.toggle('hover');">
-                                    <div class="container">
-                                        <div class="front" style="background-image: url(img/areas/GestionTI/img1.jpg);">
-                                            <div class="inner">
-                                                <p style="color: white;">Gestión TI</p>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="inner">
-                                                <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                                                              
-
-
-
                     
                     <div class="container">
                         <div class="container" style = "margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
