@@ -54,7 +54,7 @@
 
                     <!-- Título noticia1 -->
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-blog mb-60">
+                        <div class="single-blog mb-60 bg-warning">
                             <div class="blog-img">
                                 <?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
                             </div>
@@ -63,9 +63,11 @@
                                     <p>Escrito por <?php echo $mostrar['correo']; ?> / <?php echo $mostrar['fecha']; ?></p>
                                 </div>
                                 <div class="blog-bottom">
-                                    <h2><?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">' . utf8_encode($mostrar['titulo']) . '</a>'; ?></h2>
+                                    <?php
+                                    $titulocorte=substr($mostrar['titulo'] ,0,50);
+                                    ?>
+                                    <h2><?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">' . $titulocorte . '...</a>'; ?></h2>
                                     <!-- Ojos con el error de index del while si existen noticias -->
-                                    <?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">Leer más...</a>'; ?>
                                 </div>
                             </div>
                         </div>

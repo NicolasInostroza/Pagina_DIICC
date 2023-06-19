@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <script>
+        function seguro(){
+            return confirm("¿Desea eliminar esta noticia?");
+        }
+    </script>
+</head>
 <?php
 
 	session_start();
@@ -66,6 +73,21 @@
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                            <div>
+                                <label>Título:</label>
+                                <input type="text" name="titulo">
+                                
+                                
+                                <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorNoticias.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+
+                            </div>
+                            
+                            
+                        </form>
+                    </div><br>
                     <table class="table">
                         <thead style="background-color: steelblue;">
                             <tr style="height: 40px;">
@@ -78,31 +100,71 @@
                         </thead>
                         <tbody class="tbody">
                             <?php
-                            $sql = "select * from noticias ORDER BY id DESC"; // mejorar query falta nombre del que subio la noticia
-                            $resultado = mysqli_query($conexion, $sql);
-                            while ($mostrar = mysqli_fetch_array($resultado)) {
-                            ?>
-                                <tr>
-                                <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]);?>></td>
-                                    <td>
-                                        <h4 style="text-align: center;"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
-                                    </td>
-                                    <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                    </td>
+                            if(isset($_POST['enviar'])){
+                                $titulo=$_POST['titulo'];
+                                
+                                if(empty($_POST['titulo'])){
+                                    $sql="SELECT * from noticias where titulo like '%".$titulo."%' ORDER BY fecha DESC";
+                                }else{
+                                    
+                                    if(!empty($_POST['titulo'])){
+                                        $sql="SELECT * from noticias where titulo like '%".$titulo."%' ORDER BY fecha DESC";
+                                    }
+                                }
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr>
+                                        <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]);?>></td>
+                                        <td>
+                                            <h4 style="text-align: center;"><?php echo $mostrar['titulo']; ?> </h4>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                        </td>
 
-                                    <td>
-                                        <p style="text-align: center;"><small class="text-muted"><?php echo "Autor: ", $mostrar['correo']; ?></small></p>
-                                    </td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
-                                            <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarN.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
-                                            <a class="btn btn-danger" href="../database/noticias/eliminar.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-x-circle"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php } ?>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo "Autor: ", $mostrar['correo']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarN.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/noticias/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php 
+                                }
+                            }else{
+                                $sql = "select * from noticias ORDER BY fecha DESC"; // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                                while ($mostrar = mysqli_fetch_array($resultado)) {
+                                ?>
+                                    <tr>
+                                        <td style="text-align: center;"><img style="width: 150px; height: 150px; padding-left:25px;" src=<?php echo fromroot($file, $mostrar["img_path"]);?>></td>
+                                        <td>
+                                            <h4 style="text-align: center;"><?php echo $mostrar['titulo']; ?> </h4>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                        </td>
+
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo "Autor: ", $mostrar['correo']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" style="text-align: center;" role="group">
+                                                <a class="btn btn-secondary"style="color:seagreen;" href="../dashboard/modificarN.php?id=<?php echo $mostrar['id']; ?>"><i class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger" href="../database/noticias/eliminar.php?id=<?php echo $mostrar['id']; ?>" onclick="return seguro()"><i class="bi bi-x-circle"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                            <?php    
+                                }
+                            }
+                            ?>
                         </tbody>
+                        
                     </table>
                 </div>
             </section>

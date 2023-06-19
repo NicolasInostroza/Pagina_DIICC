@@ -24,13 +24,14 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="blog-details">
-                            <div class="blog-details-img">
-                            <img src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></a>
-                            </div>
+                            
                             <div class="blog-details-content">
-                                <h2><?php echo utf8_encode($mostrar['titulo']); ?></h2>
+                                <h2><?php echo $mostrar['titulo']; ?></h2>
+                                <div class="blog-details-img">
+                                    <img src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></a>
+                                </div>
                                 <h6>Escrito por <?php echo $mostrar['correo']; ?>  / <?php echo strftime('Publicado el %d/%m/%Y a las %I:%M %p', strtotime($mostrar['fecha'])); ?></h6>
-                                <p><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                <p><?php echo $mostrar['descripcion']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -58,7 +59,7 @@
                                                 <div class="panel-heading" role="tab" id="heading<?=$cont?>">
                                                     <h4 class="panel-title">
                                                         <a href="#collapse<?=$cont?>" data-toggle="collapse" data-parent="#accordion">
-                                                            <?php echo utf8_encode(strftime('%Y', strtotime($mostrar['fecha'])))?>
+                                                            <?php echo strftime('%Y', strtotime($mostrar['fecha']))?>
                                                         </a>
                                                     </h4>
                                                 </div>
@@ -72,8 +73,8 @@
                                                             ?>
                                                             <?php
                                                                 if (strftime('%Y', strtotime($mostrar['fecha']))==strftime('%Y', strtotime($mostrar2['fecha']))){
-                                                                    $titulo=utf8_encode($mostrar2['titulo']);
-                                                                    $titulocorte=substr($titulo,0,31);
+                                                                    $titulo=$mostrar2['titulo'];
+                                                                    $titulocorte=substr($titulo,0,30);
                                                             ?>
                                                             <br><h4><?php echo '<a href="noticia.php?id=' . $mostrar2["id"] . '">' . $titulocorte . '..</a>';?></h4><br>
                                                             <?php
