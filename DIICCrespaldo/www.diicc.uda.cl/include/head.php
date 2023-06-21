@@ -43,4 +43,7 @@
     <link rel="stylesheet" href="css/academicoscards.css">
     <script src="js/academicoscards.js"></script>
 
+    <!-- cards galerias -->
+    <link rel="stylesheet" href="css/galeriascards.css">
+
 </head>
