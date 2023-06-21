@@ -45,9 +45,9 @@
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <article class="material-card Teal">
                         <h3>
-                            <span><a id="enlace" href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo utf8_encode($mostrar['Nombre']); ?></a></span>
+                            <span><a id="enlace" href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></span>
                             <strong>
-                                <?php echo utf8_encode($mostrar['cargo']);?>
+                                <?php echo ($mostrar['cargo']);?>
                             </strong>
                         </h3>
                         <div class="mc-content">
@@ -55,15 +55,15 @@
                                 <img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>>
                             </div>
                             <div class="mc-description">
-                                <?php echo utf8_decode($mostrar['grado_academico']) ?>
+                                <?php echo ($mostrar['grado_academico']) ?>
                             </div>
                         </div>
                         <a class="mc-btn-action">
                             <i class="fa fa-bars"></i>
                         </a>
                         <div class="mc-footer">
-                            <h5><?php echo utf8_decode($mostrar['correo']) ?></h5>
-                            <h5>fono: <?php echo utf8_decode($mostrar['fono']) ?></h5>
+                            <h5><?php echo ($mostrar['correo']) ?></h5>
+                            <h5>fono: <?php echo ($mostrar['fono']) ?></h5>
                         </div>
                     </article>
                     <div id="espacio"></div>
