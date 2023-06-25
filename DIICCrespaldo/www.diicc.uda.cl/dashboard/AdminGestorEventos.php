@@ -54,7 +54,9 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                                             </div>
                                             <div class="form-field  " style="text-align:center; margin-top: 10px;">
                                                 <input style="width: 70%; text-align:center;" id="fecha" name="fecha" class="input-text js-input" placeholder="Fecha" type="date" required>
-
+                                            </div>
+                                            <div class="form-field  " style="text-align:center; margin-top: 10px;">
+                                                <input style="width: 70%; text-align:center;" id="descripcion" name="descripcion" class="input-text js-input" placeholder="Descripcion" type="text" required>
                                             </div>
                                             <div style="text-align: center; margin-top: 10px;" class="form-field">
                                                 <!--<label for="floatingSelect">Hora Inicio</label>-->
@@ -117,6 +119,7 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                                 <th scope="col">Fecha</th>
                                 <th scope="col">Hora de inicio</th>
                                 <th scope="col">Hora de termino</th>
+                                <th scope="col">Descripcion</th>
                                 <th scope="col">Lugar</th>
                                 <th scope="col">Accion</th>
                             </tr>
@@ -153,6 +156,9 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                                             <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_termino']; ?></small></p>
                                         </td>
                                         <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['descripcion']; ?></small></p>
+                                        </td>
+                                        <td>
                                             <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['lugar']; ?></small></p>
                                         </td>
                                         <td>
@@ -183,6 +189,9 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
 
                                         <td>
                                             <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['hora_termino']; ?></small></p>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['descripcion']; ?></small></p>
                                         </td>
                                         <td>
                                             <p style="text-align: center;"><small class="text-muted"><?php echo $mostrar['lugar']; ?></small></p>
