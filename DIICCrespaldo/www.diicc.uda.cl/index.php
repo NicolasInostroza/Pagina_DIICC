@@ -1,6 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="es">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+   body.modal-open {margin-right: 0px}
+   body {
+        padding-right: 0px !important;
+    }   
+</style>
 <?php
     session_start();
     $_SESSION['root'] = dirname(__FILE__);
@@ -499,61 +505,57 @@
                     ?>
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <?php 
-                        foreach(array_slice($data, 0 ,count($data)/2) as $m){ 
-                            echo sprintf(
-                                '
-                                <div class="single-event mb-35">
-                                    <div class="event-date">
-                                        <h3><a>%s<span>%s</span></a></h3>
+                        foreach(array_slice($data, 0 ,count($data)/2) as $m){  ?>
+                            <div class="single-event mb-35 ">
+                                    <div class="event-date" style="height:100px;">
+                                        <h3 style="padding: 5px 18px 11px;"><a><?php echo(strftime('%d',strtotime ($m['fecha'])))?><span><?php echo( strftime('%B',strtotime($m['fecha'])))?></span></a></h3>
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
-                                            <h4><a href="http://www.diicc.uda.cl/noticias.php">%s</a></h4>
+                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(utf8_encode($m['nombre'])) ?></a ></h4>
                                             <ul>
-                                                <li><i class="bi bi-clock-fill"></i>%s - %s</li>
-                                                <li><i class="bi bi-pin-map-fill"></i>%s</li>
+                                                <li><i class="bi bi-clock-fill"></i><?php echo( $m['hora_inicio']->format('H:i'))?> - <?php echo( $m['hora_termino']->format('H:i')) ?></li>
+                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( utf8_encode($m['lugar'])) ?></li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                ',
-                                strftime('%d',strtotime ($m['fecha'])),
-                                strftime('%B',strtotime($m['fecha'])),
-                                utf8_encode($m['nombre']),
-                                $m['hora_inicio']->format('H:i'),
-                                $m['hora_termino']->format('H:i'),
-                                utf8_encode($m['lugar'])
-                            );
+                                </div> <?php  include "imodal_evento.php"; ?>
+                                <?php
+
+                                strftime('%d',strtotime ($m['fecha']));
+                                strftime('%B',strtotime($m['fecha']));
+                                utf8_encode($m['nombre']);
+                                $m['hora_inicio']->format('H:i');
+                                $m['hora_termino']->format('H:i');
+                                utf8_encode($m['lugar']);
                         }
                         ?>
                     </div>
                     <div class="col-md-6 hidden-sm hidden-xs">
                     <?php 
-                        foreach(array_slice($data,count($data)/2) as $m){
-                            echo sprintf(
-                                '
-                                <div class="single-event mb-35">
-                                    <div class="event-date">
-                                        <h3><a>%s<span>%s</span></a></h3>
+                        foreach(array_slice($data,count($data)/2) as $m){ ?>
+                            <div class="single-event mb-35 ">
+                                    <div class="event-date" style="height:100px;">
+                                        <h3 style="padding: 5px 18px 11px;"><a><?php echo(strftime('%d',strtotime ($m['fecha'])))?><span><?php echo( strftime('%B',strtotime($m['fecha'])))?></span></a></h3>
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
-                                            <h4><a href="http://www.diicc.uda.cl/noticias.php">%s</a></h4>
+                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(utf8_encode($m['nombre'])) ?></a ></h4>
                                             <ul>
-                                                <li><i class="bi bi-clock-fill"></i>%s - %s</li>
-                                                <li><i class="bi bi-pin-map-fill"></i>%s</li>
+                                                <li><i class="bi bi-clock-fill"></i><?php echo( $m['hora_inicio']->format('H:i'))?> - <?php echo( $m['hora_termino']->format('H:i')) ?></li>
+                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( utf8_encode($m['lugar'])) ?></li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                ',
-                                strftime('%d',strtotime($m['fecha'])),
-                                strftime('%B',strtotime($m['fecha'])),
-                                utf8_encode($m['nombre']),
-                                $m['hora_inicio']->format('H:i'),
-                                $m['hora_termino']->format('H:i'),
-                                utf8_encode($m['lugar'])
-                            );
+                                </div> <?php  include "imodal_evento.php"; ?>
+                                <?php
+
+                                strftime('%d',strtotime ($m['fecha']));
+                                strftime('%B',strtotime($m['fecha']));
+                                utf8_encode($m['nombre']);
+                                $m['hora_inicio']->format('H:i');
+                                $m['hora_termino']->format('H:i');
+                                utf8_encode($m['lugar']);
                         }
                         ?>
                     </div>
