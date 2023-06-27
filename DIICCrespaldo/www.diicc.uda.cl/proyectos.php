@@ -40,37 +40,40 @@ else{
     <div class="blog-area pt-150 pb-150">
         <div class="container">
             <div class="row d-flex">
-                        <?php
+                <?php
                             date_default_timezone_set('UTC');
                             setlocale(LC_ALL, 'ES');
-                            $sql =  sprintf("SELECT * FROM `proyectos` ORDER BY year DESC LIMIT 10 OFFSET %d",$page*10);
+                            $sql =  sprintf("SELECT * FROM `proyectos` ORDER BY year DESC LIMIT 10 OFFSET %d",$page*10); // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
                             while ($mostrar = mysqli_fetch_array($resultado)) { ?>
 
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="single-blog mb-60">
-                                        <div class="blog-img">
-                                            <?php echo '<a href="' . $mostrar["link"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']); ?>>
-                                            <div class="blog-hover">
-                                                <i class="fa fa-link"></i>
+                                <div class="col-md-4 col-sm-8">
+                                    <div class="single-blog mb-60 text-center">
+                                            <div class="blog-img">
+                                                <?php echo '<a href="' . $mostrar["link"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']); ?>>
+                                                <div class="blog-hover">
+                                                    <i class="fa fa-link"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="blog-content">
-                                            <div class="blog-top">
-                                                <p><?php echo $mostrar['year']; ?></p>
+                                            <div class="blog-content">
+                                                <div class="blog-content" style="font-size: 15px; margin: 10px">
+                                                    <div class="badge badge-primary badge-sm"><?php echo $mostrar['year']; ?></div>
+                                                    <div class="card-title"><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></div>
+                                                    <p style="padding: 5px"><?php echo $mostrar['descripcion']; ?></p>
+                                                </div>
                                             </div>
                                             <div class="blog-bottom">
-                                                <h2><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></h2>
-                                                <?php echo '<a href="' . $mostrar["link"] . '">Seguir Leyendo</a>'; ?>
+                                            <?php echo '<a href="' . $mostrar["link"] . '"><span>LEER MÁS
+                                                    <img src="https://static3.avast.com/1/web/i/v2/components/arrow-m-right-orange.png" height="24">
+                                                </span>
+                                                </a>'; ?>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
-                            <?php } ?>
-
+                                <?php } ?>
                 <div class="row">
-                <div class="col-xs-12">
-                <div class="pagination">
+                    <div class="col-xs-12">
+                        <div class="pagination">
                         <ul>
                             <?php 
                             $total = mysqli_query($conexion, 'SELECT count(*) from proyectos;');
@@ -84,12 +87,9 @@ else{
                             
                             ?>
                         </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-                
-
-
             </div>
         </div>
     </div>
