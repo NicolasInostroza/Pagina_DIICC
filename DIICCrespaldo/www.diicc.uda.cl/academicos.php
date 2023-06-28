@@ -32,36 +32,40 @@
         <!-- Banner Area End -->
         <!-- Teacher Start -->
         <div class="teacher-area pt-150 pb-105">
-            <div id="teacher-container" class="container">
+            <div class="container">
                 <div class="row teacher-grid">
                 <?php
-                $sql = "SELECT * FROM funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
-                $resultado = mysqli_query($conexion, $sql);
-                $consecutivo = 1;
-                while ($mostrar = mysqli_fetch_array($resultado)) {
+                    $sql = "select * from funcionarios WHERE es_academico = 1 ORDER BY jerarquia DESC";
+                    $resultado = mysqli_query($conexion, $sql);
+                    $consecutivo = 1;
+                    while ($mostrar = mysqli_fetch_array($resultado)) {
                 ?>
-                <div class="single-teacher mb-45" id="teacher-<?php echo $consecutivo; ?>">
-                    <div class="card-inner">
-                    <div class="card-front">
-                        <div class="single-teacher-img">
-                        <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src="<?php echo fromroot($file, $mostrar['img_path']); ?>"></a>
+
+                        
+
+                   <!--<div class="col-md-3 colsm-4 col-xs-12">-->
+                        <div class="single-teacher mb-45">
+                            <div class="single-teacher-img">
+                                <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
+                            </div>
+                            <div class="single-teacher-content text-center">
+                                <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo $mostrar['Nombre']; ?></a></h2>
+                                <h4><?php echo $mostrar['cargo'];?></h4>
+                                
+
+                            </div>
+                            
                         </div>
-                    </div>
-                    <div class="card-back">
-                        <div class="single-teacher-content text-center">
-                        <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></h2>
-                        <h4><?php echo ($mostrar['cargo']); ?></h4>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <?php
-                $consecutivo++;
-                }
-                ?>
+                    <!--</div>-->
+                
+                <?php 
+                    $consecutivo++;
+            
+            } 
+            ?>
                 </div>
             </div>
-            </div>
+        </div>
         <!-- FOOTER -->
         <?php include_once "include/footer.php"; ?>
         <!-- FOOTER -->

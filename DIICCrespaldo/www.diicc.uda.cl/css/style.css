@@ -3720,3 +3720,186 @@ textarea {
     text-transform: capitalize;
     margin-bottom: 20px;
   }
+
+
+  #card-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1vh;
+    background: white;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  #card1:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #card2:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #card3:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #f107ba;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .flip-card-back {
+    background-color: #434343;
+    color: white;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .description {
+    padding: 20px;
+  }
+  
+  .description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .description p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .contact {
+    padding: 20px;
+  }
+
+
+  /* <--depto css--> */
+
+  .data{
+    color:white;
+    font-family:'Poppins',sans-serif;
+    font-weight:500;
+    text-align:centre;
+    letter-spacing:.5rem;
+    font-size:31px;
+  }
+
+  
+#mision-card:hover,
+#vision-card:hover {
+  height: 400px;
+}
+
+.card__top {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: #eee;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  background: #434343;
+  transition: 0.8s;
+}
+
+.card__top > h1 {
+  font-size: 24px;
+}
+
+.fas {
+  font-size: 50px;
+  text-align: center;
+}
+
+#mision-card:hover .card__top,
+#vision-card:hover .card__top {
+  background: #eee;
+  color: #364c59;
+}
+
+.card__bottom {
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 16px;
+  background: #364c59;
+}
+
+.card__bottom > p {
+  color: #eee;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.card__bottom a {
+  background: #fff;
+  color: #364c59;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: 0.5s;
+}
+
+.card__bottom a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+

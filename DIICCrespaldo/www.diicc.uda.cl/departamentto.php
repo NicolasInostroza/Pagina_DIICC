@@ -22,9 +22,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="banner-content-wrapper">
-
                             <div class="banner-content">
-                                <h2>DEPARTAMENTO</h2>
+                                <h2 class="data">DEPARTAMENTO</h2>
                             </div>
                         </div>
                     </div>
@@ -33,11 +32,59 @@
         </div>
     </div>
     <!--  Fin del Banner -->
+    <!-- https://codepen.io/FrankieDoodie/pen/dgVGad
+    https://codepen.io/harsh-vardhan/pen/byrmpB
+    https://codepen.io/vlt_dev/pen/jOxqKOQ
+    https://codepen.io/codu/pen/oNXPvZz -->
+
     <!-- Inicio de Historia -->
     <div class="historia-area pt-25 pb-70">
         <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="row">
+                    <!--MISION-->
+                        <div id="mision-card" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="card__top">
+                                <h1>Misión</h1>
+                            </div>
+                            <div class="card__bottom">
+                                <p>Cultivar el desarrollo de la ciencia de la computación e informática mediante la docencia de pre y postgrado, investigación aplicada y vinculación con la comunidad, formando profesionales e investigadores altamente calificados que se desempeñan tanto en el ámbito público como privado para contribuir al progreso de nuestra región y país. Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.</p>
+                            </div>
+                        </div>
+                        <div id="vision-card" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="card__top">
+                            
+                            <h1>Visión</h1>
+                            </div>
+                            <div class="card__bottom">
+                            <p>Ser un referente en las actividades de docencia de pre y postgrado, investigación aplicada, vinculación con el medio, innovación y transferencia tecnológica en la ciencia de la computación e informática de la macro zona norte, así como también a nivel nacional e internacional.</p>
+                            
+                            </div>
+                        </div>
+
+                    <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div id="mision-diicc" class="about-content">
+                            <h2>Misión</h2>
+                        </div>
+                        <p> Cultivar el desarrollo de la ciencia de la computación e informática mediante la docencia
+                            de pre y postgrado, investigación aplicada y vinculación con la comunidad, formando 
+                            profesionales e investigadores altamente calificados que se desempeñan tanto en el 
+                            ámbito público como privado para contribuir al progreso de nuestra región y país. 
+                            Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
+                        </p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div id="vision-diicc" class="about-content">
+                            <h2>Visión</h2>
+                        </div>
+                        <p>Ser un referente en las actividades de docencia de pre y postgrado, investigación aplicada, 
+                        vinculación con el medio, innovación y transferencia tecnológica en la ciencia de la computación 
+                        e informática de la macro zona norte, así como también a nivel nacional e internacional.
+                        </p>
+                    </div> -->
+                </div>
+                <!--FIN VISION-->
+
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="about-content">
                             <h2>Historia</h2>
@@ -97,8 +144,8 @@
                 </div>
                 <!--Mision y Vision de la Carrera,junto a los Lineamientos Estrategicos-->
 
-                <div class="row">
-                    <!--MISION-->
+                <!-- <div class="row">
+
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div id="mision-diicc" class="about-content">
                             <h2>Misión</h2>
@@ -110,8 +157,6 @@
                             Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
                         </p>
                     </div>
-                    <!--FIN MISION-->
-                    <!--VISION-->
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div id="vision-diicc" class="about-content">
                             <h2>Visión</h2>
@@ -121,8 +166,8 @@
                         e informática de la macro zona norte, así como también a nivel nacional e internacional.
                         </p>
                     </div>
-                </div>
-                <!--FIN VISION-->
+                </div> -->
+
                 <!--LINEAMIENTOS-->
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -168,11 +213,6 @@
                                 <li data-target="#myCarousel" data-slide-to="6"></li>
                                 <li data-target="#myCarousel" data-slide-to="7"></li>
                                 <li data-target="#myCarousel" data-slide-to="8"></li>
-                                <!--Diapositivas para las salas
-                                    <li data-target="#myCarousel" data-slide-to="5"></li>
-                                    <li data-target="#myCarousel" data-slide-to="6"></li>
-                                    <li data-target="#myCarousel" data-slide-to="7"></li>
-                                    -->
                             </ol>
 
                             <!-- Diapositivas -->
@@ -233,17 +273,6 @@
                                         <h4>Sala de Clases</h4>
                                     </div>
                                 </div>
-                                <!--Sala de Clases
-                                    <div class="item">
-                                        <img src="img/dpto/diicc1.jpg" alt="DIICC1" class="img-responsive">
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/dpto/diicc2.jpg" alt="DIICC2" class="img-responsive">
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/dpto/diicc3.jpg" alt="DIICC3" class="img-responsive">
-                                    </div>
-                                    -->
                             </div>
                             <!-- Controles Izquierda y Derecha-->
                             <a class="left carousel-control" href="#myCarousel" data-slide="prev">

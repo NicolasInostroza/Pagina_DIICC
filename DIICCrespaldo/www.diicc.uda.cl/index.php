@@ -265,8 +265,76 @@
                     </div>                
             </div>
         </div>
-                    
-                    <div class="container">
+
+        <div class="container">
+            <div class="row" id="card-row">
+                <div class="card" id="card1">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <div class="head">
+                        <div class="circle"></div>
+                        <div class="img">
+                        <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="flip-card-back">
+                    <div class="description">
+                        <h3>Inteligencia de Máquinas</h3>
+                        <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
+                    </div>
+                    <div class="contact">
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="card" id="card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <div class="head">
+                        <div class="circle"></div>
+                        <div class="img">
+                        <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="flip-card-back">
+                    <div class="description">
+                        <h3>Ingeniería de Software</h3>
+                        <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
+                    </div>
+                    <div class="contact">
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="card" id="card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <div class="head">
+                        <div class="circle"></div>
+                        <div class="img">
+                        <img src="img/areas/GestionTI/img1.jpg" alt="course">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="flip-card-back">
+                    <div class="description">
+                        <h3>Gestión TI</h3>
+                        <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
+                    </div>
+                    <div class="contact">
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+                    <!-- <div class="container">
                         <div class="container" style = "margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
                             <div class="row" style="display: flex; align-items: center; justify-content: center; min-height: 1vh; background: white; flex-wrap: wrap;">
                                 <div class="card">
@@ -317,7 +385,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
   
          <!-- Testimonial Area Start -->
         <div class="testimonial-area pt-110 pb-105 text-center">
