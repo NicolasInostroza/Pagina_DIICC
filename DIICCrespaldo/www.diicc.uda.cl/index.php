@@ -276,11 +276,14 @@
                         <div class="img">
                         <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
                         </div>
+                        <div style="padding-top: 280px; font-weight: bold;">
+                            <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Inteligencia de Máquinas</h3>
+                        </div>
                     </div>
                     </div>
                     <div class="flip-card-back">
                     <div class="description">
-                        <h3>Inteligencia de Máquinas</h3>
+
                         <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
                     </div>
                     <div class="contact">
@@ -297,11 +300,13 @@
                         <div class="img">
                         <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
                         </div>
+                        <div style="padding-top: 280px;">
+                            <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Ingeniería de Software</h3>
+                        </div>
                     </div>
                     </div>
                     <div class="flip-card-back">
                     <div class="description">
-                        <h3>Ingeniería de Software</h3>
                         <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
                     </div>
                     <div class="contact">
@@ -318,11 +323,15 @@
                         <div class="img">
                         <img src="img/areas/GestionTI/img1.jpg" alt="course">
                         </div>
+                        <div style="padding-top: 280px;">
+                            <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Gestión TI</h3>
+                        </div>
+                        
                     </div>
                     </div>
                     <div class="flip-card-back">
                     <div class="description">
-                        <h3>Gestión TI</h3>
+                        
                         <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
                     </div>
                     <div class="contact">
