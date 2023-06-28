@@ -130,7 +130,30 @@
             
             </div>
 
-            
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pagination">
+                        <ul>
+                            <?php 
+                            $total = mysqli_query($conexion, 'SELECT count(*) from noticias;');
+                            if ($page == 0){
+                                ++$page;
+                            }
+
+                           
+                                $page = $page + 1; 
+                                echo '<li><a href="noticias.php">1</a></li>';
+
+                               
+                            if ($resultado->num_rows != 0){
+                                echo sprintf('<li><a href="noticias.php?page=%d">%d</a></li>', $page, $page);
+                            }
+                            
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             
 
