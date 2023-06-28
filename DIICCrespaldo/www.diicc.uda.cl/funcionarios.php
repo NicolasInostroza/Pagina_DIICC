@@ -29,35 +29,51 @@
             </div>
         </div>    
 		<!-- Banner Area End -->
-        <!-- Teacher Start -->
-        <div class="teacher-area pt-150 pb-105">
-            <div class="container">
-                <div class="row">
-                    <?php
-                            $sql = "select * from funcionarios WHERE es_academico = 0";
-                            $resultado = mysqli_query($conexion, $sql);
-                            while($mostrar = mysqli_fetch_array($resultado)):
-                        ?>
-                        <div class="col-md-3 col-sm-4 col-xs-12">
-                            <div class="single-teacher mb-45">
-                                <div class="single-teacher-img">
-                                    <a><img src=<?php echo fromroot($file, $mostrar['img_path']);?> alt="teacher"></a>  
-                                </div>
-                                <div class="single-teacher-content text-center">
-                                    <h2><a><?php echo utf8_encode($mostrar['Nombre']);?></a></h2>
-                                    <h4><?php echo $mostrar['cargo'];?></h4>
-                                    <h4><?php echo $mostrar['correo'];?></h4>
-                                    <h4><?php echo $mostrar['fono'];?></h4>
-                                </div>
+        
+        <!-- nuevas tarjetas de administrativos -->
+        <div id="espacio"></div>
+        <section class="container">
+            <div class="row active-with-click">
+                <?php
+                    $sql = "SELECT * FROM funcionarios WHERE es_academico = 0";
+                    $resultado = mysqli_query($conexion, $sql);
+                    $consecutivo = 1;
+                    while ($mostrar = mysqli_fetch_array($resultado)) {
+                ?>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Teal">
+                        <h3>
+                            <span><a id="enlace" href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></span>
+                            <strong>
+                                <?php echo ($mostrar['cargo']);?>
+                            </strong>
+                        </h3>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>>
+                            </div>
+                            <div class="mc-description">
+                                <?php echo ($mostrar['grado_academico']) ?>
                             </div>
                         </div>
-                        <?php endwhile ?>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h5><?php echo ($mostrar['correo']) ?></h5>
+                            <h5>fono: <?php echo ($mostrar['fono']) ?></h5>
+                        </div>
+                    </article>
+                    <div id="espacio"></div>
                 </div>
+                <?php 
+                    $consecutivo++;
+            
+            } 
+            ?>
             </div>
-        </div>
-                    
-        
-        <!-- FOOTER -->
+        </section>
+
         <!-- FOOTER -->
         <?php include_once "include/footer.php"; ?>
         <!-- FOOTER -->
