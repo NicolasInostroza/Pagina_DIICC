@@ -6,7 +6,7 @@
     include_once "include/functions.php";
 
     $id = $_GET['id'];
-    $sql = "select * from noticias where id = {$id}";
+    $sql = "SELECT * FROM noticias WHERE id = {$id}";
     $resultado = mysqli_query($conexion,$sql);
     $mostrar = mysqli_fetch_array($resultado);
 ?>
