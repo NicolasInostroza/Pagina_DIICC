@@ -43,9 +43,59 @@
     <!-- Blog Start -->
     <div class="blog-area pt-50 pb-50">
         <div class="container">
-            <div class="row">
+            <div>
+                <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                    <div>
+                        <label>Buscar por año:</label>
+                        <input type="number" name="fecha">
+                        
+                        
+                        <input class="bb btn btn-primary" type="submit" name="enviar" value="BUSCAR">
+                        <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/noticias.php" class="bb btn btn-primary justify-content-end">Mostrar todo</a>
 
-                <?php
+                    </div>
+                    
+                    
+                </form>
+            </div><br>
+            <div class="row">
+            <?php
+            if(isset($_POST['enviar'])){
+                $fecha=$_POST['fecha'];
+                
+                if(empty($_POST['fecha'])){
+                    $sql = sprintf("SELECT * FROM noticias where YEAR(fecha)='$fecha' ORDER BY id DESC LIMIT 12 OFFSET %d",$page*12); 
+                }else{
+                    
+                    if(!empty($_POST['fecha'])){
+                        $sql = sprintf("SELECT * FROM noticias where YEAR(fecha)='$fecha' ORDER BY id DESC LIMIT 12 OFFSET %d",$page*12); 
+                    }
+                }
+                $resultado = mysqli_query($conexion, $sql);
+                while ($mostrar = mysqli_fetch_array($resultado)) {
+                ?>
+                <!-- Título noticia1 -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-blog mb-60 bg-warning">
+                            <div class="blog-img">
+                                <?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p>Escrito por <?php echo $mostrar['correo']; ?> / <?php echo $mostrar['fecha']; ?></p>
+                                </div>
+                                <div class="blog-bottom">
+                                    <?php
+                                    $titulocorte=substr($mostrar['titulo'] ,0,50);
+                                    ?>
+                                    <h2><?php echo '<a href="noticia.php?id=' . $mostrar["id"] . '">' . $titulocorte . '...</a>'; ?></h2>
+                                    <!-- Ojos con el error de index del while si existen noticias -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } 
+            }else{
                 $sql = sprintf("SELECT * FROM noticias ORDER BY id DESC LIMIT 12 OFFSET %d",$page*12); 
                 $resultado = mysqli_query($conexion, $sql);
                 while ($mostrar = mysqli_fetch_array($resultado)) {
@@ -73,35 +123,14 @@
                         </div>
                     </div>
 
-                <?php } ?>
+                <?php } 
+                
+            } ?> 
                 <!-- cierre del while -->
-
+            
             </div>
 
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="pagination">
-                        <ul>
-                            <?php 
-                            $total = mysqli_query($conexion, 'SELECT count(*) from noticias;');
-                            if ($page == 0){
-                                ++$page;
-                            }
-
-                           
-                                $page = $page + 1; 
-                                echo '<li><a href="noticias.php">1</a></li>';
-
-                               
-                            if ($resultado->num_rows != 0){
-                                echo sprintf('<li><a href="noticias.php?page=%d">%d</a></li>', $page, $page);
-                            }
-                            
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
 
             
 

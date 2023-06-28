@@ -40,4 +40,7 @@
 
 
 
+    <!-- cards galerias -->
+    <link rel="stylesheet" href="css/galeriascards.css">
+
 </head>

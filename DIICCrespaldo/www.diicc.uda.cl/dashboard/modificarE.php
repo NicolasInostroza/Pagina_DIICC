@@ -37,6 +37,10 @@ include_once "../include/dashboard/head.php";
                                 <span class="input-group-addon" id="basic-addon3"><i class="bi bi-calendar4-event"></i></span>
                                 <input type="date"  class="form-control" name="fecha" placeholder="fecha" <?php echo sprintf('value="%s"',  $mostrar['fecha']) ?>>
                             </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon4"><i class="bi bi-link-45deg"></i></span>
+                                <input  class="form-control" name="descripcion" placeholder="Descripcion" <?php echo sprintf('value="%s"',  $mostrar['descripcion']); ?>>
+                            </div>
                              <div class="input-group" style="width: 100%;">
                                 <select style="width: 100%; text-align:center;" class="form-select" name="hora_inicio" id="hora_inicio" aria-label="Floating label select example">
                                     <option value="8:00" selected>8:00</option>

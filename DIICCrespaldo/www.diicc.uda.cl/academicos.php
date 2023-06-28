@@ -40,24 +40,33 @@
                     $consecutivo = 1;
                     while ($mostrar = mysqli_fetch_array($resultado)) {
                 ?>
-
-                        
-
-                   <!--<div class="col-md-3 colsm-4 col-xs-12">-->
-                        <div class="single-teacher mb-45">
-                            <div class="single-teacher-img">
-                                <a href="academico.php?id=<?php echo $mostrar['id']; ?>"><img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>></a>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Teal">
+                        <h3>
+                            <span><a id="enlace" href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo ($mostrar['Nombre']); ?></a></span>
+                            <strong>
+                                <?php echo ($mostrar['cargo']);?>
+                            </strong>
+                        </h3>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img alt="teacher" src=<?php echo fromroot($file, $mostrar['img_path']);?>>
                             </div>
-                            <div class="single-teacher-content text-center">
-                                <h2><a href="academico.php?id=<?php echo $mostrar['id']; ?>"><?php echo $mostrar['Nombre']; ?></a></h2>
-                                <h4><?php echo $mostrar['cargo'];?></h4>
-                                
-
+                            <div class="mc-description">
+                                <?php echo ($mostrar['grado_academico']) ?>
                             </div>
                             
                         </div>
-                    <!--</div>-->
-                
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <h5><?php echo ($mostrar['correo']) ?></h5>
+                            <h5>fono: <?php echo ($mostrar['fono']) ?></h5>
+                        </div>
+                    </article>
+                    <div id="espacio"></div>
+                </div>
                 <?php 
                     $consecutivo++;
             
