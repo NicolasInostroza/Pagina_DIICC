@@ -33,9 +33,6 @@
                                 <h6>Escrito por <?php echo $mostrar['correo']; ?>  / <?php echo strftime('Publicado el %d/%m/%Y a las %I:%M %p', strtotime($mostrar['fecha'])); ?></h6>
                                 <p><?php echo $mostrar['descripcion']; ?></p>
                             </div>
-                            <div>
-                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/noticias.php"><p class="vuelve">< Volver a noticias</p></a>
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
