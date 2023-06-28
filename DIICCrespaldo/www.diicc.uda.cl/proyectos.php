@@ -56,10 +56,10 @@ else{
                                                 </div>
                                             </div>
                                             <div class="blog-content">
-                                                <div class="blog-content" style="font-size: 15px; margin: 10px">
-                                                    <div class="badge badge-primary badge-sm"><?php echo $mostrar['year']; ?></div>
-                                                    <div class="card-title"><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></div>
-                                                    <p style="padding: 5px"><?php echo $mostrar['descripcion']; ?></p>
+                                                <div class="blog-content" style="margin: 10px">
+                                                    <div class="badge badge-primary badge-sm" style="font-size: 15px"><?php echo $mostrar['year']; ?></div>
+                                                    <div class="card-title" style="font-size: 15px; padding-top: 8px"><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></div>
+                                                    <p style="padding: 5px; font-size: 20px"><?php echo $mostrar['descripcion']; ?></p>
                                                 </div>
                                             </div>
                                             <div class="blog-bottom">
