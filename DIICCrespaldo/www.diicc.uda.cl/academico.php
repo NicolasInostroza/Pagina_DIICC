@@ -8,9 +8,6 @@
     include_once "include/functions.php";
     include_once "include/head.php";
 ?>
-
-
-
     <body>
         <!-- Header -->
         <?php include_once "include/header.php"; ?>

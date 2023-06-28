@@ -74,3 +74,4 @@
 <script src=<?php echo fromroot($file, "js/main.js"); ?>></script>
 <script src=<?php echo fromroot($file, "js/jqueryjs"); ?>></script>
 <script src=<?php echo fromroot($file, "js/bootstrap.js"); ?>></script>
+<script src=<?php echo fromroot($file, "js/swipe.js"); ?>></script>

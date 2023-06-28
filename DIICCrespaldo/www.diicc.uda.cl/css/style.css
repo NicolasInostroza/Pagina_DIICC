@@ -17,10 +17,10 @@
     Dorado       : #dbcall
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
-	
+
     1. Default CSS
     2. Header CSS
     3. Slider CSS
@@ -54,7 +54,7 @@ body {
 	font-weight: 400;
 	line-height: normal;
     font-family: 'Montserrat', sans-serif;
-    /*font-family: 'Open Sans', sans-serif;*/ 
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 .clear{clear:both}
 .fix {overflow: hidden}
@@ -193,7 +193,7 @@ textarea {
 }
 #img_old, #img_new {
     width: 100%;
-   
+
 }
 
 /*#img_dpto img:hover{
@@ -528,7 +528,7 @@ textarea {
 .pl-140 { padding-left: 140px }
 .pl-150 { padding-left: 150px }
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .ptb-0 { padding: 0 }
 .ptb-10 { padding: 10px 0 }
@@ -548,7 +548,7 @@ textarea {
 .ptb-140 { padding: 140px 0 }
 .ptb-150 { padding: 150px 0 }
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .mtb-0 { margin: 0 }
 .mtb-10 { margin: 10px 0 }
@@ -678,7 +678,7 @@ textarea {
 }
 .main-menu ul li:hover > ul {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     visibility: visible;
 }
 .main-menu ul li ul li {
@@ -939,7 +939,7 @@ textarea {
     padding: 0 40px 0 10px;
     width: 100%;
 }
-#search-form > input::-moz-placeholder {color: #252525;} 
+#search-form > input::-moz-placeholder {color: #252525;}
 #search-form > input::-webkit-input-placeholder {color: #252525;}
 #search-form > button {
   background: #364c59 none repeat scroll 0 0;
@@ -1049,7 +1049,7 @@ textarea {
 /*----------------------------------------*/
 /*  3. Slider CSS
 /*----------------------------------------*/
-.slider-area, .single-banner {position: relative; overflow: hidden} 
+.slider-area, .single-banner {position: relative; overflow: hidden}
 .single-slide:after, .banner-area:after{
     position: absolute;
     left: 0;
@@ -1182,8 +1182,8 @@ textarea {
 }
 .slider-area .owl-item.active .slide-content h3 {-webkit-animation-delay: 500ms;animation-delay: 500ms}
 .slider-area .owl-item.active .slide-content h2 {-webkit-animation-delay: 750ms;animation-delay: 750ms}
-.slider-area .owl-item.active .slide-content p {-webkit-animation-delay: 1100ms;animation-delay: 1100ms}    
-.slider-area .owl-item.active .slide-content .banner-btn {-webkit-animation-delay: 1700ms;animation-delay: 1700ms}      
+.slider-area .owl-item.active .slide-content p {-webkit-animation-delay: 1100ms;animation-delay: 1100ms}
+.slider-area .owl-item.active .slide-content .banner-btn {-webkit-animation-delay: 1700ms;animation-delay: 1700ms}
 .owl-nav div {
     background: rgba(252, 196, 46, 0.64);
     color: #ddd;
@@ -1231,26 +1231,26 @@ textarea {
     position: relative;
     overflow: hidden;
   }
-  
+
   .slider-owl {
     display: flex;
     transition: transform 0.5s ease;
   }
-  
+
   .slider-owl .single-slide {
     flex: 0 0 100%;
   }
-  
+
   /* Agrega los estilos necesarios para cada diapositiva */
   /*.slider-owl .single-slide {
 
     /* Estilos de las diapositivas */
-  
+
   /* Agrega las animaciones para las transiciones */
   /*.slider-owl .single-slide:not(:first-child) {
     animation: slide-animation 5s infinite;
   }
-  
+
  /* @keyframes slide-animation {
     0% {
       transform: translateX(0);
@@ -1316,7 +1316,7 @@ textarea {
     color: #364c59;
     text-transform: uppercase;
     margin-bottom: 15.5px;
-    font-size: 700; 
+    font-size: 700;
 }
 .video-icon a i{
     font-size: 38px;
@@ -1443,7 +1443,7 @@ textarea {
     text-transform: uppercase;
     background-color: #254C5A;
     position: relative;
-        
+
 }
 .rowtrans-title h2{
     font-size: 34px;
@@ -1455,7 +1455,7 @@ textarea {
     background: linear-gradient(50deg, #031820,#254C5A,#3c5d69);
     position: relative;
     animation: trans 10s ease infinite;
-        
+
 }
 @keyframes trans{
     0%{background-position: 0 50%;}
@@ -1468,9 +1468,9 @@ textarea {
     margin-bottom: 2px;
 }
 .course-content{
-    padding: 22px 30px 25px; 
+    padding: 22px 30px 25px;
     text-align: left;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
     overflow-y: scroll;
     height: 300px;
 }
@@ -1490,7 +1490,7 @@ textarea {
     color: #606060;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
-    
+
 }
 .course-content .default-btn {
     font-size: 14px;
@@ -1839,7 +1839,7 @@ textarea {
     text-transform: uppercase;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;  
+    transition: all 0.5s ease 0s;
 }
 .event-area.three .event-content h4:hover a{color: #FCC42E}
 .event-area.three .event-content{
@@ -1885,7 +1885,7 @@ textarea {
 }
 .event-details-content ul{margin-bottom: 28px}
 .event-details-content ul li{
-    display: inline-block; 
+    display: inline-block;
     margin-right: 15px;
     color: #606060;
     font-size: 14px;
@@ -1994,7 +1994,7 @@ textarea {
     margin-bottom: 4px;
 }
 .testimonial-owl .owl-nav{display: none}
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  9. Blog CSS
 /*----------------------------------------*/
 .single-blog{
@@ -2028,7 +2028,7 @@ textarea {
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
-    
+
 }
 
 .blog-img img {
@@ -2060,7 +2060,7 @@ textarea {
     color: #606060;
     font-family: 'Montserrat', sans-serif;
     padding: 15px 20px 10px 25px;
-    
+
 }
 .blog-top p i{
     font-size: 16px;
@@ -2227,13 +2227,13 @@ textarea {
     margin-bottom: 0px;
 }
 .single-tag a{
-    float: left; 
+    float: left;
     text-transform: capitalize;
     border: 1px solid #E1E1E1;
     padding: 6px 14px;
     font-size: 14px;
     font-weight: 300;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     display: block;
     color: #606060;
     -webkit-transition: all 0.5s ease 0s;
@@ -2271,13 +2271,13 @@ textarea {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #606060;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
 }
 .blog-details-content p.quote{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #606060;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
     font-style: italic;
     line-height: 25px;
     margin-top: 35px;
@@ -2345,7 +2345,7 @@ textarea {
 #malla-dialog{
     width: 100% !important;
 }
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  10. Subscribe CSS
 /*----------------------------------------*/
 .subscribe-area{background: #FAFAFA}
@@ -2381,7 +2381,7 @@ textarea {
     left: -5000px;
     position: absolute;
 }
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  11. Scrollup CSS
 /*----------------------------------------*/
 #scrollUp {
@@ -2459,7 +2459,7 @@ textarea {
 #scrollUp {
     background: #364c59 none repeat scroll 0 0;
 }
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  12. Footer CSS
 /*----------------------------------------*/
 .main-footer {
@@ -2507,10 +2507,10 @@ textarea {
 .single-widget ul{margin-top: 25px}
 .footer-social ul li {
     display: inline-block;
-    margin-right: 13px; 
+    margin-right: 13px;
 }
 .footer-social ul li:last-child {
-    margin-right: 0px; 
+    margin-right: 0px;
 }
 .single-widget ul li {
     color: #7d7d7d;
@@ -2616,12 +2616,12 @@ textarea {
     opacity: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  13. Service CSS
 /*----------------------------------------*/
 .single-service{padding: 40px 40px; box-shadow: 0 0 4px 0 #ddd;}
@@ -2638,7 +2638,7 @@ textarea {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 0px;
 }
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  14. About CSS
 /*----------------------------------------*/
 .about-content h2{
@@ -2669,7 +2669,7 @@ textarea {
 }
 .about-content a:hover{
     color: #fff;
-    background: #254C5A;  
+    background: #254C5A;
 }
 .lineamientos{
     color: #666666;
@@ -2684,7 +2684,7 @@ textarea {
     left: 50px;
 }
 .about-img{
-    position: relative; 
+    position: relative;
     z-index: 1;
     margin-right: -30px;
     padding: 0 20px;
@@ -2699,7 +2699,7 @@ textarea {
     height: 88%;
     z-index: -1;
 }
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  15. Teacher CSS
 /*----------------------------------------*/
 .single-teacher{
@@ -2711,7 +2711,7 @@ textarea {
     line-height: 0;
     padding-bottom: 91px;
 }
-.single-teacher-img a{ 
+.single-teacher-img a{
     position: relative;
     display: block;
 }
@@ -2783,7 +2783,7 @@ textarea {
 .pagination ul{margin-top: 24px}
 .pagination ul li{display: inline-block; margin-right: 12px}
 .pagination ul li:last-child{margin-right: 0px}
-.pagination ul li a{    
+.pagination ul li a{
     font-size: 18px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
@@ -2791,17 +2791,17 @@ textarea {
     background: #fff;
     text-align: center;
     line-height: 36px;
-    height: 38px; 
+    height: 38px;
     width: 38px;
-    display: block; 
+    display: block;
     border: 1px solid #EBEBEB;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
-.pagination ul li:hover a{    
+.pagination ul li:hover a{
     color: #fff;
-    background: #364c59;  
+    background: #364c59;
 }
 .teacher-details-content{width: 50%;}
 .teacher-details-img{
@@ -2878,7 +2878,7 @@ textarea {
     font-weight: 600;
     color: #606060;
     display: inline-block;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 .teacher-contact ul li a i{
     font-size: 15px;
@@ -2948,11 +2948,11 @@ textarea {
     width: 0;
 }
 
-/*----------------------------------------*/ 
+/*----------------------------------------*/
 /*  16. Contact CSS
 /*----------------------------------------*/
 .contact-contents{
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13); 
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
     padding: 55px 0;
     margin-right: 65px;
 }
@@ -3089,7 +3089,7 @@ textarea {
 	.sesion--fiuda{
         display: grid;
         grid-template-columns: repeat(2, 50%);
-        
+
     }
 }
 
@@ -3104,17 +3104,17 @@ textarea {
         display: grid;
         grid-template-columns: repeat(2, 50%);
         text-align: center;
-        
+
     }
     .tvideos video{
         width: 600px;
         height: 400px;
     }
-}  
+}
 .rows{
     width: 100%;
-   
-}  
+
+}
 /*----------------------------------------*/
 /*  4. Notice carrusel
 /*----------------------------------------*/
@@ -3129,7 +3129,7 @@ textarea {
     box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
     overflow: hidden;
   }
-  
+
   .carrousel .grande {
     width: 400%;
     height: 500px;
@@ -3146,7 +3146,7 @@ textarea {
     transition: all 0.5s ease;
     transform: translateX(0%);
   }
-  
+
   .carrousel .img {
     width: calc( 100% / 2 - 2em);
     min-height: 10vh;
@@ -3156,7 +3156,7 @@ textarea {
     background-color: var(--blanco);
     box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
   }
-  
+
   .carrousel .puntos {
     width: 100%;
     margin: 1em 0 0;
@@ -3166,7 +3166,7 @@ textarea {
     justify-content: center;
     align-items: center;
   }
-  
+
   .carrousel .punto {
     width: 2em;
     height: 2em;
@@ -3177,11 +3177,194 @@ textarea {
     background-color: #dbca11;
     box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
   }
-  
+
   .carrousel .punto.activo {
     background-color: #364c59;
   }
 
+  /* #MYCarousel .carousel {
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+  }
+
+  #MYCarousel .carousel .grande {
+    width: 400%;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 2em;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+  }
+
+  #MYCarousel .carousel .img {
+    width: calc( 100% / 2 - 2em);
+    min-height: 10vh;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+
+  #MYCarousel .carousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #MYCarousel .carousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    color: var(--negro);
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: #dbca11;
+    box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+  }
+
+  #MYCarousel .carousel .punto.activo {
+    background-color: #364c59;
+  } */
+
+  #MYcontainer {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 1.5em;
+    overflow: hidden;
+  }
+  
+  #MYCarousel .carousel {
+    width: 90%;
+    max-width: 1200px;
+    padding: 2em;
+    color: var(--negro);
+    transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+    border-radius: 1.5em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+    scrollbar-color: transparent;
+  }
+  
+  #MYCarousel .carousel .item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  #MYCarousel .carousel .item.active {
+    opacity: 1;
+  }
+  
+  @keyframes slideAnimation {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  #MYCarousel .carousel .item.active .notice-left {
+    animation-name: slideAnimation;
+    animation-duration: 2s;
+  }
+  
+  #MYCarousel .carousel .grande {
+    width: 400%;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: var(--negro);
+    transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+    border-radius: 1.5em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    padding: 2em;
+    transform: translateX(0%);
+    scrollbar-color: transparent;
+  }
+  
+  #MYCarousel .carousel .img {
+    width: calc(50% - 1em);
+    min-height: 10vh;
+    color: var(--negro);
+    transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+    border-radius: 1em;
+    background-color: var(--blanco);
+    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+    border: 4px solid #254C5A;
+  }
+  
+  #MYCarousel .carousel .puntos {
+    width: 100%;
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #MYCarousel .carousel .punto {
+    width: 2em;
+    height: 2em;
+    margin: 0.4em;
+    background-color: #254C5A;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #MYCarousel .carousel .punto.active {
+    background-color: #F9A826;
+  }
+  
+  #MYCarousel .carousel::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  #MYCarousel .carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #MYCarousel .carousel::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  #MYCarousel .carousel::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
   /*------------------------------*/
   .card {
     position: relative;
@@ -3195,6 +3378,8 @@ textarea {
 }
 
 .card:hover {
+    filter: blur(0px);
+    opacity: 1;
     box-shadow: 0 5px 15px rgba(3, 89, 92, .5);
     transform: translateY(-15px);
 }
@@ -3273,10 +3458,11 @@ textarea {
 }
 
 .card .contact a:hover {
-    
+
     background: #364c59;
-   
+
 }
+
 
 /*------------------------------*/
 /*---------galeria-------------*/
@@ -3346,7 +3532,7 @@ textarea {
     height: 40px;
     text-align: center;
     line-height: 40px;
-    
+
 }
 
 .next{
@@ -3612,6 +3798,332 @@ textarea {
     }
 }
 
+/* #MYwrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 1.5em;
+    overflow: hidden;
+  }
+  
+  #teacher-carousel .single-teacher {
+    position: relative;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    perspective: 1000px;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  #teacher-carousel .single-teacher .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  #teacher-carousel .single-teacher .card-inner:not(.flipped) .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  #teacher-carousel .single-teacher .card-inner:not(.flipped) .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  #teacher-carousel .single-teacher .card-inner.flipped .card-front {
+    transform: rotateY(-180deg);
+  }
+  
+  #teacher-carousel .single-teacher .card-inner.flipped .card-back {
+    transform: rotateY(0deg);
+  }
+  
+  #teacher-carousel .single-teacher .card-front,
+  #teacher-carousel .single-teacher .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+  
+  #teacher-carousel .single-teacher .card-back {
+    background-color: #fff;
+    color: #303030;
+    padding: 20px;
+  }
+  
+  #teacher-carousel .single-teacher .card-back h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  #teacher-carousel .single-teacher .card-back h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  #teacher-carousel .single-teacher .card-back p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  } */
 
+
+  #teacher-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 1.5em;
+    overflow: hidden;
+  }
+  
+  .single-teacher {
+    position: relative;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  
+  .single-teacher .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .single-teacher .card-inner:not(.flipped) .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .single-teacher .card-inner:not(.flipped) .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .single-teacher .card-inner.flipped .card-front {
+    transform: rotateY(-180deg);
+  }
+  
+  .single-teacher .card-inner.flipped .card-back {
+    transform: rotateY(0deg);
+  }
+  
+  .single-teacher .card-front,
+  .single-teacher .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+  
+  .single-teacher .card-back {
+    background-color: #fff;
+    color: #303030;
+    padding: 20px;
+  }
+  
+  .single-teacher .card-back h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+  
+  .single-teacher .card-back h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+
+
+  #card-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1vh;
+    background: white;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  #card1:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #card2:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  #card3:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #f107ba;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .flip-card-back {
+    background-color: #434343;
+    color: white;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .description {
+    padding: 20px;
+  }
+  
+  .description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .description p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .contact {
+    padding: 20px;
+  }
+
+
+  /* <--depto css--> */
+
+  .data{
+    color:white;
+    font-family:'Poppins',sans-serif;
+    font-weight:500;
+    text-align:centre;
+    letter-spacing:.5rem;
+    font-size:31px;
+  }
+
+  
+#mision-card:hover,
+#vision-card:hover {
+  height: 400px;
+}
+
+.card__top {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: #eee;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  background: #434343;
+  transition: 0.8s;
+}
+
+.card__top > h1 {
+  font-size: 24px;
+}
+
+.fas {
+  font-size: 50px;
+  text-align: center;
+}
+
+#mision-card:hover .card__top,
+#vision-card:hover .card__top {
+  background: #eee;
+  color: #364c59;
+}
+
+.card__bottom {
+  box-sizing: border-box;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 16px;
+  background: #364c59;
+}
+
+.card__bottom > p {
+  color: #eee;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.card__bottom a {
+  background: #fff;
+  color: #364c59;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: 0.5s;
+}
+
+.card__bottom a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
 
 

@@ -17,7 +17,6 @@
     include_once "include/head.php";
 ?>
  <meta charset="UTF-8">
-<body>
 
     <body>
         <!-- Header -->
@@ -115,14 +114,6 @@
                         </div>
                     </div>
                 </div>
-                        <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>-->
             </div>
         </div>
         </section>
@@ -134,14 +125,142 @@
                 <h2>NOTICIAS</h2>
             </div>                
         </div> 
+         <!-- Panel de noticias -->
+            
+        <div class="container" id="MYcontainer">
+            <div class="row">            
+                <div id="MYCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicadores -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#MYCarousel" data-slide-to="0" class="active" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#MYCarousel" data-slide-to="1" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#MYCarousel" data-slide-to="2" style="border:1px solid #254C5A;"></li>
+                                                              
+                    </ol>
 
-        <!-- Panel de noticias 2.0-->
-        <?php include_once "include/slider3_noticias.php"; ?>
+                            <!-- Diapositivas -->
+                    <div class="carousel-inner">
+                        <div class="item active" >
+                            <div class="notice-left">
+                        
+                                <?php
+                                    $sql = "SELECT titulo,descripcion,img_path,fecha FROM noticias ORDER BY id DESC LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                    $resultado = mysqli_query($conexion, $sql);
+                                               
+                                    while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 
-        <!-- fin de noticias -->
-           
-        
-        
+                                        if (strlen($mostrar['descripcion']) > 250 ){
+                                            $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
+                                        }
+                                    ?>
+                                    <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
+                                        <div class="row pt-100 pb-105">
+                                            <div class="col-md-3">                                                                                                                                        
+                                                <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="let card-body">
+                                                    <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                                    <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                                    <div class="d-flex flex-row justify-content-between">
+                                                        <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <?php } ?>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="notice-left">
+                        
+                                <?php
+                                $sql = "SELECT titulo,descripcion,img_path,correo,fecha FROM noticias WHERE id=10 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                                   
+                                while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+
+                                    if (strlen($mostrar['descripcion']) > 250 ){
+                                        $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
+                                    }
+                                        ?>
+                                    <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=10"');?>>
+                                        <div class="row pt-100 pb-105">
+                                            <div class="col-md-3">                                                                                                                                        
+                                                <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="let card-body">
+                                                    <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                                    <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                                    <div class="d-flex flex-row justify-content-between">
+                                                        <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                        <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                <?php } ?>
+                            </div>  
+                        </div>
+                                    
+                                
+
+                        <div class="item">
+                            <div class="notice-left">
+                        
+                                <?php
+                                $sql = "SELECT titulo,descripcion,img_path,correo,fecha FROM noticias WHERE id=9 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                   
+                                    while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+
+                                        if (strlen($mostrar['descripcion']) > 250 ){
+                                            $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
+                                        }
+                                            ?>
+                                        <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=9"');?>>
+                                            <div class="row pt-100 pb-105">
+                                                <div class="col-md-3">                                                                                                                                        
+                                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="let card-body">
+                                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                                        <div class="d-flex flex-row justify-content-between">
+                                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                                <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    <?php } ?>
+                            </div>
+                    
+                        </div>
+                             
+                                
+                    </div> <!--cierre notice-->
+                        <!-- Controles Izquierda y Derecha-->
+                        <a class="left carousel-control" href="#MYCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#MYCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Notice End -->    
         
         <!-- Courses Area Start -->
 
@@ -151,62 +270,129 @@
                         <h2>ÁREAS DE DESARROLLO</h2>
                     </div>                
             </div>
+        </div>
 
-            <div class="container">
-
-                <div class="container" style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
-                    <div class="row" style="display: flex; align-items: center; justify-content: center; min-height: 1vh; background: white; flex-wrap: wrap;">
-                        <div class="card">
-                            <div class="head">
-                                <div class="circle"></div>
-                                <div class="img">
-                                    <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
-                                </div>
-                            </div>
-
-                            <div class="description">
-                                <h3>Inteligencia de Máquinas</h3>
-                                <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
-                                </div>
-                            <div class="contact">
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="head">
-                                <div class="circle"></div>
-                                    <div class="img">
-                                        <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
-                                    </div>
-                            </div>
-                            <div class="description">
-                                <h3>Ingeniería de Software</h3>
-                                <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
-                            </div>
-                            <div class="contact">
-                                
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="head">
-                                <div class="circle"></div>
-                                <div class="img">
-                                        <img src="img/areas/GestionTI/img1.jpg" alt="course">
-                                </div>
-                            </div>
-                            <div class="description">
-                                <h3>Gestión TI</h3>
-                                <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
-                            </div>
-                            <div class="contact">
-                                
-                            </div>
+        <div class="container">
+            <div class="row" id="card-row">
+                <div class="card" id="card1">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <div class="head">
+                        <div class="circle"></div>
+                        <div class="img">
+                        <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
                         </div>
                     </div>
+                    </div>
+                    <div class="flip-card-back">
+                    <div class="description">
+                        <h3>Inteligencia de Máquinas</h3>
+                        <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
+                    </div>
+                    <div class="contact">
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="card" id="card2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <div class="head">
+                        <div class="circle"></div>
+                        <div class="img">
+                        <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="flip-card-back">
+                    <div class="description">
+                        <h3>Ingeniería de Software</h3>
+                        <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
+                    </div>
+                    <div class="contact">
+                        
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="card" id="card3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <div class="head">
+                        <div class="circle"></div>
+                        <div class="img">
+                        <img src="img/areas/GestionTI/img1.jpg" alt="course">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="flip-card-back">
+                    <div class="description">
+                        <h3>Gestión TI</h3>
+                        <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
+                    </div>
+                    <div class="contact">
+                        
+                    </div>
+                    </div>
+                </div>
                 </div>
             </div>
+        </div>
 
-          
+                    <!-- <div class="container">
+                        <div class="container" style = "margin: 0; padding: 0; box-sizing: border-box; font-family: 'Baloo 2', cursive;">
+                            <div class="row" style="display: flex; align-items: center; justify-content: center; min-height: 1vh; background: white; flex-wrap: wrap;">
+                                <div class="card">
+                                    <div class="head">
+                                        <div class="circle"></div>
+                                        <div class="img">
+                                            <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
+                                        </div>
+                                    </div>
+
+                                    <div class="description">
+                                        <h3>Inteligencia de Máquinas</h3>
+                                        <p>La ciencia de computación ha facilitado la creación de tecnologías con capacidades de procesamiento.</p>
+                                        </div>
+                                    <div class="contact">
+                                        
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="head">
+                                        <div class="circle"></div>
+                                            <div class="img">
+                                                <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
+                                            </div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Ingeniería de Software</h3>
+                                        <p>La Ingeniería de Software comprende procesos, metodologías, métodos, herramientas, y personas.</p>
+                                    </div>
+                                    <div class="contact">
+                                        
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="head">
+                                        <div class="circle"></div>
+                                        <div class="img">
+                                                <img src="img/areas/GestionTI/img1.jpg" alt="course">
+                                        </div>
+                                    </div>
+                                    <div class="description">
+                                        <h3>Gestión TI</h3>
+                                        <p>La información cada vez más valiosa en las organizaciones requiere de procesos, tecnologías y técnicas adecuadas para su procesamiento.</p>
+                                    </div>
+                                    <div class="contact">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+  
          <!-- Testimonial Area Start -->
         <div class="testimonial-area pt-110 pb-105 text-center">
             <div class="container tres-columnas">
@@ -254,36 +440,101 @@
             </div>
         </div>
         <!-- Testimonial Area End -->
+       
 
-        <!-- Testimonial Area Start -->
-       <!--<div class="testimonial-area pt-110 pb-105 text-center">
+
+        <!-- Event Area Start -->
+        <div class="event-area one text-center pt-140 pb-50" id="eventos">
+            <div class="rowtrans">
+                <div class="rowtrans-title">
+                    <h2>PRÓXIMOS EVENTOS</h2>
+                </div>                
+            </div>
+            
             <div class="container">
+               
                 <div class="row">
-                    <div class="testimonial-owl owl-theme owl-carousel">
-                        <div class="col-md-8 col-md-offset-2 col-sm-12">
-                            <div class="single-testimonial">
-                                <div class="testimonial-info">
-                                    <div class="testimonial-img">
-                                        <img src="img/academicos/code.jpg" alt="academicos">
+                    <?php
+                        date_default_timezone_set('UTC');
+                        setlocale(LC_ALL, 'ES');
+                        $sql = "SELECT * FROM eventos WHERE fecha < CURDATE() ORDER BY id ASC LIMIT 6"; // mejorar query falta nombre del que subio la noticia
+                        $resultado = mysqli_query($conexion, $sql);
+                        $i = 0;
+                        $data = array();
+                        while ($mostrar = mysqli_fetch_array($resultado)){
+                           
+                            #$mostrar['fecha'] = new DateTime($mostrar['fecha']);
+                            $mostrar['hora_inicio'] = new DateTime($mostrar['hora_inicio']);
+                            $mostrar['hora_termino'] = new DateTime($mostrar['hora_termino']);
+                            array_push($data, $mostrar);
+                        }
+
+                    ?>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <?php 
+                        foreach(array_slice($data, 0 ,count($data)/2) as $m){ 
+                            echo sprintf(
+                                '
+                                <div class="single-event mb-35">
+                                    <div class="event-date">
+                                        <h3><a>%s<span>%s</span></a></h3>
                                     </div>
-                                    <div class="testimonial-content">
-                                        <h4>Code Club UDA</h4>
-                                        <p>Code Club UDA privilegió a niñas en talleres de fundamentos en programación de este 2022</p>
-                                        
-                                        <p>Iniciativa que impulsa el departamento de Ingeniería en Informática y Ciencias de la 
-                                            Computación desde el año 2014, para educar a escolares en lenguaje de programación en esta edición se 
-                                            impartió exclusivamente para niñas a fin de minimizar brechas de género que se perciben en la disciplina.</p>
+                                    <div class="event-content text-left">
+                                        <div class="event-content-left">
+                                            <h4><a href="http://www.diicc.uda.cl/noticias.php">%s</a></h4>
+                                            <ul>
+                                                <li><i class="bi bi-clock-fill"></i>%s - %s</li>
+                                                <li><i class="bi bi-pin-map-fill"></i>%s</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                        </div>
+                                ',
+                                strftime('%d',strtotime ($m['fecha'])),
+                                strftime('%B',strtotime($m['fecha'])),
+                                ($m['nombre']),
+                                $m['hora_inicio']->format('H:i'),
+                                $m['hora_termino']->format('H:i'),
+                                ($m['lugar'])
+                            );
+                        }
+                        ?>
+                    </div>
+                    <div class="col-md-6 hidden-sm hidden-xs">
+                    <?php 
+                        foreach(array_slice($data,count($data)/2) as $m){
+                            echo sprintf(
+                                '
+                                <div class="single-event mb-35">
+                                    <div class="event-date">
+                                        <h3><a>%s<span>%s</span></a></h3>
+                                    </div>
+                                    <div class="event-content text-left">
+                                        <div class="event-content-left">
+                                            <h4><a href="http://www.diicc.uda.cl/noticias.php">%s</a></h4>
+                                            <ul>
+                                                <li><i class="bi bi-clock-fill"></i>%s - %s</li>
+                                                <li><i class="bi bi-pin-map-fill"></i>%s</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                ',
+                                strftime('%d',strtotime($m['fecha'])),
+                                strftime('%B',strtotime($m['fecha'])),
+                                ($m['nombre']),
+                                $m['hora_inicio']->format('H:i'),
+                                $m['hora_termino']->format('H:i'),
+                                ($m['lugar'])
+                            );
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
-        </div>-->
-        <!-- Testimonial Area End -->
-
+        </div>
+        <!-- Event Area End -->
+        
          <!-- Blog Area Start -->
          <div class="rowtrans">
             <div class="rowtrans-title text-center">
@@ -322,11 +573,11 @@
                                 ',
                                 $mostrar['acceso'],
                                 fromroot($file, $mostrar["img_path"], true),
-                                utf8_encode($mostrar['acceso']),
-                                utf8_encode($mostrar['autor']),
+                                ($mostrar['acceso']),
+                                ($mostrar['autor']),
                                 $mostrar['fecha'],
                                 $mostrar['acceso'],
-                                utf8_encode($mostrar['titulo']),
+                                ($mostrar['titulo']),
                                 $mostrar['acceso']
                             );
                         }
