@@ -1,5 +1,5 @@
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $pagetitle?></title>
     <meta name="description" content="">
@@ -39,11 +39,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
 
-    <!-- slider noticias -->
-    <link rel="stylesheet" href="css/slider.css">
-
-    <!-- cards academicos -->
-    <link rel="stylesheet" href="css/academicoscards.css">
-    <script src="js/academicoscards.js"></script>
 
 </head>

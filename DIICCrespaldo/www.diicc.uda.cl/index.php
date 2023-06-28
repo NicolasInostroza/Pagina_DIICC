@@ -128,11 +128,147 @@
                 <h2>NOTICIAS</h2>
             </div>                
         </div> 
+         <!-- Panel de noticias -->
+            
+        <div class="container">
+            <div class="row">            
+                        
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicadores -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#myCarousel" data-slide-to="1" style="border:1px solid #254C5A;"></li>
+                        <li data-target="#myCarousel" data-slide-to="2" style="border:1px solid #254C5A;"></li>
+                                                              
+                    </ol>
 
-        <!-- Panel de noticias 2.0-->
-        <?php include_once "include/slider3_noticias.php"; ?>
+                            <!-- Diapositivas -->
+                    <div class="carousel-inner">
+                        <div class="item active" >
+                            <div class="notice-left">
+                        
+                                <?php
+                                    $sql = "SELECT titulo,descripcion,img_path,fecha FROM noticias ORDER BY id DESC LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                    $resultado = mysqli_query($conexion, $sql);
+                                               
+                                    while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
 
-        <!-- fin de noticias -->
+                                        if (strlen($mostrar['descripcion']) > 250 ){
+                                            $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
+                                        }
+                                    ?>
+                                    <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
+                                        <div class="row pt-100 pb-105">
+                                            <div class="col-md-3">                                                                                                                                        
+                                                <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="let card-body">
+                                                    <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
+                                                    <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                                    <div class="d-flex flex-row justify-content-between">
+                                                        <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                            <!--<p class="card-text"><small class="text-muted"><?php# echo "correo: ",$mostrar['correo']; ?></small></p>-->
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                        <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->
+                                    <?php } ?>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="notice-left">
+                        
+                                <?php
+                                $sql = "SELECT titulo,descripcion,img_path,correo FROM noticias WHERE id=10 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                                   
+                                while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+
+                                    if (strlen($mostrar['descripcion']) > 250 ){
+                                        $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
+                                    }
+                                        ?>
+                                    <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=10"');?>>
+                                        <div class="row pt-100 pb-105">
+                                            <div class="col-md-3">                                                                                                                                        
+                                                <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="let card-body">
+                                                    <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
+                                                    <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                                    <div class="d-flex flex-row justify-content-between">
+                                                        <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                        <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                <?php } ?>
+                            </div>
+                                    <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->     
+                        </div>
+                                    
+                                
+
+                        <div class="item">
+                            <div class="notice-left">
+                        
+                                <?php
+                                $sql = "SELECT titulo,descripcion,img_path,correo FROM noticias WHERE id=9 LIMIT 1 ";  // mejorar query falta nombre del que subio la noticia
+                                $resultado = mysqli_query($conexion, $sql);
+                   
+                                    while ($mostrar = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+
+                                        if (strlen($mostrar['descripcion']) > 250 ){
+                                            $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
+                                        }
+                                            ?>
+                                        <a class="card mb-3" style="width: 60%; height: 400px;" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=9"');?>>
+                                            <div class="row pt-100 pb-105">
+                                                <div class="col-md-3">                                                                                                                                        
+                                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="let card-body">
+                                                        <h4 class="card-title"><?php echo utf8_encode($mostrar['titulo']); ?> </h4>
+                                                        <p class="card-text"><?php echo utf8_encode($mostrar['descripcion']); ?></p>
+                                                        <div class="d-flex flex-row justify-content-between">
+                                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                                <!--<p class="card-text"><small class="text-muted"><?php #echo "correo: ",$mostrar['correo']; ?></small></p>-->
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!--<hr class="solid" style="border-top: 3px solid #bbb;">-->
+                                    <?php } ?>
+                            </div>
+                    
+                        </div>
+                             
+                                
+                    </div> <!--cierre notice-->
+                        <!-- Controles Izquierda y Derecha-->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Notice End -->    
            
         
         
