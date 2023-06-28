@@ -93,7 +93,8 @@
                         <div>
                             <label>Titulo:</label>
                             <input type="text" name="titulo">
-                            
+                            <label>Año:</label>
+                            <input type="year" name="fecha">
                             
                             <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
                             <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorPublicaciones.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
@@ -119,13 +120,19 @@
                             <?php
                             if(isset($_POST['enviar'])){
                                 $titulo=$_POST['titulo'];
-                                
-                                if(empty($_POST['titulo'])){
+                                $fecha=$_POST['fecha'];
+
+                                if(empty($_POST['titulo']) && empty($_POST['fecha'])){
                                     $sql="SELECT p.*, f.Nombre as autor from publicaciones as p INNER JOIN funcionarios as f ON p.id_academico = f.id where titulo like '%".$titulo."%' ORDER BY fecha DESC";
                                 }else{
-                                    
-                                    if(!empty($_POST['titulo'])){
+                                    if(empty($_POST['titulo'])){
+                                        $sql="SELECT p.*, f.Nombre as autor from publicaciones as p INNER JOIN funcionarios as f ON p.id_academico = f.id where fecha <= '$fecha' ORDER BY fecha DESC";
+                                    }
+                                    if(empty($_POST['fecha'])){
                                         $sql="SELECT p.*, f.Nombre as autor from publicaciones as p INNER JOIN funcionarios as f ON p.id_academico = f.id where titulo like '%".$titulo."%' ORDER BY fecha DESC";
+                                    }
+                                    if(!empty($_POST['titulo']) && !empty($_POST['fecha'])){
+                                        $sql="SELECT p.*, f.Nombre as autor from publicaciones as p INNER JOIN funcionarios as f ON p.id_academico = f.id where titulo like '%".$titulo."%' and fecha <= '$fecha' ORDER BY fecha DESC";
                                     }
                                 }
                                 $resultado = mysqli_query($conexion, $sql);

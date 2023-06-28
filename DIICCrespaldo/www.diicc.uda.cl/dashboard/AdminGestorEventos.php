@@ -102,7 +102,8 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                             <div>
                                 <label>Nombre:</label>
                                 <input type="text" name="nombre">
-                                
+                                <label>Fecha:</label>
+                                <input type="date" name="fecha">
                                 
                                 <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
                                 <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorEventos.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
@@ -128,13 +129,18 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                             <?php
                             if(isset($_POST['enviar'])){
                                 $nombre=$_POST['nombre'];
-                                
-                                if(empty($_POST['nombre'])){
+                                $fecha=$_POST['fecha'];
+                                if(empty($_POST['nombre']) && empty($_POST['fecha'])){
                                     $sql="SELECT * from eventos where nombre like '%".$nombre."%' ORDER BY fecha DESC ";
                                 }else{
-                                    
-                                    if(!empty($_POST['nombre'])){
+                                    if(empty($_POST['nombre'])){
+                                        $sql="SELECT * from eventos where fecha <= '$fecha' ORDER BY fecha DESC ";
+                                    }
+                                    if(empty($_POST['fecha'])){
                                         $sql="SELECT * from eventos where nombre like '%".$nombre."%' ORDER BY fecha DESC ";
+                                    }
+                                    if(!empty($_POST['nombre']) && !empty($_POST['fecha'])){
+                                        $sql="SELECT * from eventos where nombre like '%".$nombre."%' and fecha <= '$fecha' ORDER BY fecha DESC ";
                                     }
                                 }
                                 $resultado = mysqli_query($conexion, $sql);

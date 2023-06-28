@@ -77,7 +77,8 @@
                         <div>
                             <label>Nombre:</label>
                             <input type="text" name="nombre">
-                            
+                            <label>Año:</label>
+                            <input type="year" name="year">
                             
                             <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
                             <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorProyectos.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
@@ -101,13 +102,18 @@
                             <?php
                             if(isset($_POST['enviar'])){
                                 $nombre=$_POST['nombre'];
-                                
-                                if(empty($_POST['nombre'])){
+                                $year=$_POST['year'];
+                                if(empty($_POST['nombre']) && empty($_POST['year'])){
                                     $sql="SELECT * from proyectos where nombre like '%".$nombre."%' ORDER BY year DESC ";
                                 }else{
-                                    
-                                    if(!empty($_POST['nombre'])){
+                                    if(empty($_POST['nombre'])){
+                                        $sql="SELECT * from proyectos where year <= '$year' ORDER BY year DESC ";
+                                    }
+                                    if(empty($_POST['year'])){
                                         $sql="SELECT * from proyectos where nombre like '%".$nombre."%' ORDER BY year DESC ";
+                                    }
+                                    if(!empty($_POST['nombre']) && !empty($_POST['year'])){
+                                        $sql="SELECT * from proyectos where nombre like '%".$nombre."%' and year <= '$year' ORDER BY year DESC ";
                                     }
                                 }
                                 $resultado = mysqli_query($conexion, $sql);

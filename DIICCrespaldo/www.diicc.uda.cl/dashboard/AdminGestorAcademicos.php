@@ -90,6 +90,8 @@
                         <div>
                             <label>Nombre:</label>
                             <input type="text" name="Nombre">
+                            <label> Cargo:</label>
+                            <input type="text" name="cargo">
                             
                             
                             <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
@@ -119,13 +121,22 @@
                             <?php
                             if(isset($_POST['enviar'])){
                                 $nombre=$_POST['Nombre'];
+                                $cargo=$_POST['cargo'];
                                 
-                                if(empty($_POST['Nombre'])){
+                                if(empty($_POST['Nombre']) && empty($_POST['cargo'])){
                                     $sql="SELECT * FROM funcionarios WHERE Nombre like '%".$nombre."%' and es_academico = 1 order by Nombre";
                                 }else{
-                                    
-                                    if(!empty($_POST['Nombre'])){
+                                    if(empty($_POST['Nombre'])){
+                                        $sql="SELECT * FROM funcionarios WHERE cargo like '%".$cargo."%' and es_academico = 1 order by Nombre";
+
+                                    }
+                                    if(empty($_POST['cargo'])){
                                         $sql="SELECT * FROM funcionarios WHERE Nombre like '%".$nombre."%' and es_academico = 1 order by Nombre";
+
+                                    }
+                                    
+                                    if(!empty($_POST['Nombre']) && !empty($_POST['cargo'])){
+                                        $sql="SELECT * FROM funcionarios WHERE Nombre like '%".$nombre."%' and cargo like '%".$cargo."%' and es_academico = 1 order by Nombre";
                                     }
                                 }
                                 $resultado = mysqli_query($conexion, $sql);
