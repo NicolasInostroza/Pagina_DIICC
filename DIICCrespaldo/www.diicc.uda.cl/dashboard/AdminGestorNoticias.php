@@ -78,6 +78,8 @@
                             <div>
                                 <label>Título:</label>
                                 <input type="text" name="titulo">
+                                <label>Fecha:</label>
+                                <input type="date" name="fecha">
                                 
                                 
                                 <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
@@ -102,13 +104,19 @@
                             <?php
                             if(isset($_POST['enviar'])){
                                 $titulo=$_POST['titulo'];
+                                $fecha=$_POST['fecha'];
                                 
-                                if(empty($_POST['titulo'])){
+                                if(empty($_POST['titulo']) && empty($_POST['fecha'])){
                                     $sql="SELECT * from noticias where titulo like '%".$titulo."%' ORDER BY fecha DESC";
                                 }else{
-                                    
-                                    if(!empty($_POST['titulo'])){
+                                    if(empty($_POST['titulo'])){
+                                        $sql="SELECT * from noticias where DATE(fecha) <= '$fecha' ORDER BY fecha DESC";
+                                    }
+                                    if(empty($_POST['fecha'])){
                                         $sql="SELECT * from noticias where titulo like '%".$titulo."%' ORDER BY fecha DESC";
+                                    }
+                                    if(!empty($_POST['titulo']) && !empty($_POST['fecha'])){
+                                        $sql="SELECT * from noticias where titulo like '%".$titulo."%' and DATE(fecha) <= '$fecha' ORDER BY fecha DESC";
                                     }
                                 }
                                 $resultado = mysqli_query($conexion, $sql);
