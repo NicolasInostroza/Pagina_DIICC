@@ -29,39 +29,13 @@
             </div>
         </div>    
 		<!-- Banner Area End -->
-        <!-- Teacher Start -->
-        <div class="teacher-area pt-150 pb-105">
-            <div class="container">
-                <div class="row">
-                    <?php
-                            $sql = "select * from funcionarios WHERE es_academico = 0";
-                            $resultado = mysqli_query($conexion, $sql);
-                            while($mostrar = mysqli_fetch_array($resultado)):
-                        ?>
-                        <div class="col-md-3 col-sm-4 col-xs-12">
-                            <div class="single-teacher mb-45">
-                                <div class="single-teacher-img">
-                                    <a><img src=<?php echo fromroot($file, $mostrar['img_path']);?> alt="teacher"></a>  
-                                </div>
-                                <div class="single-teacher-content text-center">
-                                    <h2><a><?php echo utf8_encode($mostrar['Nombre']);?></a></h2>
-                                    <h4><?php echo $mostrar['cargo'];?></h4>
-                                    <h4><?php echo $mostrar['correo'];?></h4>
-                                    <h4><?php echo $mostrar['fono'];?></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <?php endwhile ?>
-                </div>
-            </div>
-        </div>
-
+        
         <!-- nuevas tarjetas de administrativos -->
         <div id="espacio"></div>
         <section class="container">
             <div class="row active-with-click">
                 <?php
-                    $sql = "SELECT * FROM funcionarios WHERE es_academico = 0   ";
+                    $sql = "SELECT * FROM funcionarios WHERE es_academico = 0";
                     $resultado = mysqli_query($conexion, $sql);
                     $consecutivo = 1;
                     while ($mostrar = mysqli_fetch_array($resultado)) {
@@ -99,9 +73,7 @@
             ?>
             </div>
         </section>
-                    
-        
-        <!-- FOOTER -->
+
         <!-- FOOTER -->
         <?php include_once "include/footer.php"; ?>
         <!-- FOOTER -->
