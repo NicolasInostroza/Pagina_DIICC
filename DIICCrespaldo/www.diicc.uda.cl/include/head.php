@@ -39,6 +39,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
 
+    <!-- slider noticias -->
+    <link rel="stylesheet" href="css/slider.css">
+
+    <!-- cards academicos -->
+    <link rel="stylesheet" href="css/academicoscards.css">
+    <script src="js/academicoscards.js"></script>
+
+    <!-- cards galerias -->
+    <link rel="stylesheet" href="css/galeriascards.css">
 
     <!-- cards galerias -->
     <link rel="stylesheet" href="css/galeriascards.css">
