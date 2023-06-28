@@ -23,7 +23,7 @@
             $mostrar = mysqli_fetch_array($resultado); 
         ?>
         <div class="teacher-details-area pt-150 pb-60">
-            <div class="container">
+            <div class="container" style="margin-bottom: 20px">
                 <div class="col">
                     <div class="row-flex">
 
