@@ -78,7 +78,8 @@
                             <div>
                                 <label>Cargo:</label>
                                 <input type="text" name="cargo">
-                                
+                                <label>Empresa:</label>
+                                <input type="text" name="empresa">
                                 
                                 <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
                                 <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorBT.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
@@ -103,13 +104,18 @@
                             <?php
                             if(isset($_POST['enviar'])){
                                 $cargo=$_POST['cargo'];
-                                
-                                if(empty($_POST['cargo'])){
+                                $empresa=$_POST['empresa'];
+                                if(empty($_POST['cargo']) && empty($_POST['empresa'])){
                                     $sql="SELECT * from trabajos where cargo like '%".$cargo."%' ORDER BY fecha DESC";
                                 }else{
-                                    
-                                    if(!empty($_POST['cargo'])){
+                                    if(empty($_POST['cargo'])){
+                                        $sql="SELECT * from trabajos where empresa like '%".$empresa."%' ORDER BY fecha DESC";
+                                    }
+                                    if(empty($_POST['empresa'])){
                                         $sql="SELECT * from trabajos where cargo like '%".$cargo."%' ORDER BY fecha DESC";
+                                    }
+                                    if(!empty($_POST['cargo']) && !empty($_POST['empresa'])){
+                                        $sql="SELECT * from trabajos where cargo like '%".$cargo."%' and empresa like '%".$empresa."%' ORDER BY fecha DESC";
                                     }
                                 }
                                 $resultado = mysqli_query($conexion, $sql);
