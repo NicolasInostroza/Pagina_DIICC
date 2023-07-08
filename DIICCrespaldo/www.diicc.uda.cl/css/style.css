@@ -272,6 +272,7 @@ textarea {
 .mt-60 { margin-top: 60px }
 .mt-65 { margin-top: 65px }
 .mt-70 { margin-top: 70px }
+.mt-73 { margin-top: 73px }
 .mt-75 { margin-top: 75px }
 .mt-80 { margin-top: 80px }
 .mt-85 { margin-top: 85px }
@@ -333,7 +334,8 @@ textarea {
 .mb-45 { margin-bottom: 45px }
 .mb-47 { margin-bottom: 47px }
 .mb-48 { margin-bottom: 48px }
-.mb-50 { margin-bottom: 50px }
+.mb-55 { margin-bottom: 55px }
+.mb-54 { margin-bottom: 54px }
 .mb-55 { margin-bottom: 55px }
 .mb-58 { margin-bottom: 58px }
 .mb-60 { margin-bottom: 60px }
@@ -1670,7 +1672,7 @@ textarea {
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
-.event-date h3{
+.h3{
     color: #fefefe;
     font-size: 30px;
     line-height: 32px;
@@ -2281,6 +2283,15 @@ textarea {
     font-style: italic;
     line-height: 25px;
     margin-top: 35px;
+}
+.blog-details-content p.quote1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #606060;
+    margin-bottom: 25px; 
+    font-style: italic;
+    line-height: 25px;
+    margin-top: 15px;
 }
 .blog-details-content li{
     text-align: justify;
@@ -3387,7 +3398,4 @@ textarea {
         grid-gap: 30px;
     }
 }
-
-
-
 

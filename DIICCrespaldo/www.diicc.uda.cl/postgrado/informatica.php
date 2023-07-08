@@ -186,14 +186,14 @@
 <div class="blog-details-area pt-150 pb-140">
     <div class="container">
         <div class="row">
+            
             <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
-                <div class="blog-details">
-                    <div class="blog-details-content">
+                <div class="blog-details pt-0">
+                    <div class="blog-details-content ">
                         <h2>Magíster en Informática y Ciencias de la Computación.</h2>
-                        <h1>eeeehhehehehhj</h1>
                         <hr>
-                        <div class="blog-details-content">
-                            <div class="single-course-left">
+                        <div class=" blog-details-content " style="padding-top:0px;">
+                            <div class=" single-course-left">
                                 <h3>Grado</h3>
                                 <p>Magíster en Informática y Ciencias de la Computación.</p>
                             </div>
@@ -221,7 +221,7 @@
                             </div>
                             <hr>
                             
-                            <div class="row">
+                            <!--<div class="row">
                                 <div class="col-md-7">
                                     <div class="course-details-left ">
                                         <h3>Requisitos de postulación</h3>
@@ -246,7 +246,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="single-course-left" ><!-- direccionamiento pagina magister-->
                                 <h3>Página Magíster</h3>
                                 <p>Visita nuestra web oficial: Magíster en Informática y Ciencias de la Computación. Click en la imagen.</p>
@@ -262,9 +262,10 @@
                 <div class="blog-details">
                     <div class="blog-details-content">
                        
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="course-details-left ">
+                            <div class="row ">
+                                <div class="col-md-12 mb-0">
+                                    <div class="course-details-left mt-73 mb-0 " style="margin-top:73px;">
+                                        <hr>
                                         <h3>Requisitos de postulación</h3>
                                         <p style="font-size: 14px;">
                                             1.- Estar en posesión del grado académico de Licenciado en Ciencias de la Ingeniería y 
@@ -278,7 +279,7 @@
                                     </div>
                                 </div>
                                 <div class=" col-md-12">
-                                    <div class="course-details-right">
+                                    <div class="course-details-right mt-50 mb-54" style="margin-bottom:54px">
                                         <ul>
                                             <li>DURACIÓN<span>4 Semestres</span></li>
                                             <li>MODALIDAD<span>Diurna</span></li>
@@ -287,7 +288,12 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <hr>
+                                <div class="col-md-12">
+                                    
+                                </div>
                             </div>
+                            
                             <!-- <div class="single-course-left" >
                                 <h3>Página Magíster</h3>
                                 <p>Visita nuestra web oficial: Magíster en Informática y Ciencias de la Computación. Click en la imagen.</p>
@@ -295,92 +301,97 @@
                                 <img src="https://diicc.uda.cl/Magister/images/Magister2023_1.png" align="right" width="500" height="500" alt="Magíster" /></a>
                             </div> -->
                             <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!--Aside-->
+                                    <div class="col-md-12">
+                                        <div class="blog-sidebar right text-left">
+                                            
+                                            <div class="text-center notice-left-wrapper">
+                                                <h3 src="https://diicc.uda.cl/Magister">Admisión 2023</h3>
+                                            </div>
+                                            <div class="single-blog-widget mb-50 mt-50">
+                                                <iframe
+                                                    src="https://docs.google.com/forms/d/e/1FAIpQLSeyx_wzjjKyzxFdX34nvpQFQoC9hvuZQ21aXlxYRnfjju5e6g/viewform?embedded=true"
+                                                    width="450" height="500" frameborder="0" marginheight="0"
+                                                    marginwidth="0">Cargando…</iframe>
+                                            </div>
+                                            <!--<div class="notice-left-wrapper">
+                                                <h3>Bolsa de Trabajos</h3>
+                                                <div class="notice-left" tabindex="1" style="overflow: hidden; outline: none;">
+                                                    <div class="single-notice-left mb-23 pb-20">
+                                                        <h4 style="font-size: 14px;">Practica de verano 2020</h4>
+                                                        <p style="font-size: 12px;">La Comunidad de Aguas Subterráneas Copiapó-Piedra
+                                                            Colgada; Piedra
+                                                            Colgada-Dese    mbocadura (CASUB) abre su proceso de postulación para practica de
+                                                            verano periodo 2020 a la comunidad Universitaria. <br> En esta ocasión, la
+                                                            práctica
+                                                            estará orientada hacia el manejo de datos y documentación de la comunidad.
+                                                            <br><br> Si estás interesado en explorar el mundo del agua, y en específico en
+                                                            su ámbito
+                                                            de agua subterránea, esta es una excelente oportunidad para ampliar tus
+                                                            horizontes.
+                                                            <br><br> Para mayor información dirigirse los días Lunes 07 y Martes 08 de Enero
+                                                            en la
+                                                            jornada de la mañana a la dirección calle El Cedro #0626, La Arboleda o bien
+                                                            comunicarse al numero 52 2240282 o al correo secretaria@casub.cl </p>
+                                                    </div>
+                                                    <div class="single-notice-left mb-23 pb-20">
+                                                        <h4 style="font-size: 14px;">Se requieren servicios informáticos con experiencia en:
+                                                        </h4>
+                                                        <ul style="font-size: 12px;">
+                                                            <li>-Trabajo en equipo.</li>
+                                                            <li>-Comunicación efectiva con el cliente.</li>
+                                                            <li>Para mayor información contactar a: Manuel Morales</li>
+                                                            <li>Correo: <a href="mailto:mmorales@cmp.cl">mmorales@cmp.cl</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="single-notice-left pb-20">
+                                                        <h4 style="font-size: 14px;">Se requiere programador:</h4>
+                                                        <ul style="font-size: 12px;">
+                                                            <li>-Experiencia en desarrollo de software.</li>
+                                                            <li>-Empresa: AMFFAL, Gestión en desarrollo Ambiental.</li><br>
+                                                            <li>Contacto: jneyra@amffal.cl vcicardini@amffal.cl</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="single-notice-left mb-23 pb-20">
+                                                        <h4 style="font-size: 14px;">Jefe Informática</h4>
+                                                        <p style="font-size: 12px;">Importante empresa minera ubicada en la III Región
+                                                            requiere un “JEFE
+                                                            INFORMÁTICA”, quien será responsable de organizar y gestionar el área de
+                                                            Informática, procurando el uso óptimo y eficiente de los recursos. Además,
+                                                            debemos liderar proyectos de desarrollo tecnológico para mejorar los procesos en
+                                                            terreno y administrativos de la empresa, tomando las decisiones operativas
+                                                            necesarias en tiempo, alcances y costos.</p>
+                                                    </div>
+                                                    <div class="single-notice-left mb-23 pb-20">
+                                                        <h4 style="font-size: 14px;">Práctica de verano en minera Candelaria 1 cupo,
+                                                            requisitos:</h4>
+                                                        <ul style="font-size: 12px;">
+                                                            <li>-Excelencia académica práctica como requisito de titulación</li><br>
+                                                            <li>-Documentos requeridos: Currículum Certificado Alumno Regular. <br>
+                                                                Concentración
+                                                                de notas los 2 últimos semestres cursados.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="single-notice-left pb-20">
+                                                        <h4 style="font-size: 14px;">Alumnos en práctica</h4>
+                                                        <p style="font-size: 12px;">Empresa requiere alumno en práctica con conocimiento en
+                                                            base de datos no relacionales, sistema operativo operativo linux consultas y
+                                                            envío de currículum a: nvillarroel@cmp.cl nvillarroel@normine.cl</p>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--Aside-->
-            <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
-                <div class="blog-sidebar right text-left">
-                    
-                    <div class="text-center notice-left-wrapper">
-                        <h3 src="https://diicc.uda.cl/Magister">Admisión 2023</h3>
-                    </div>
-                    <div class="single-blog-widget mb-50">
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSeyx_wzjjKyzxFdX34nvpQFQoC9hvuZQ21aXlxYRnfjju5e6g/viewform?embedded=true"
-                            width="300" height="340" frameborder="0" marginheight="0"
-                            marginwidth="0">Cargando…</iframe>
-                    </div>
-                    <!--<div class="notice-left-wrapper">
-                        <h3>Bolsa de Trabajos</h3>
-                        <div class="notice-left" tabindex="1" style="overflow: hidden; outline: none;">
-                            <div class="single-notice-left mb-23 pb-20">
-                                <h4 style="font-size: 14px;">Practica de verano 2020</h4>
-                                <p style="font-size: 12px;">La Comunidad de Aguas Subterráneas Copiapó-Piedra
-                                    Colgada; Piedra
-                                    Colgada-Dese    mbocadura (CASUB) abre su proceso de postulación para practica de
-                                    verano periodo 2020 a la comunidad Universitaria. <br> En esta ocasión, la
-                                    práctica
-                                    estará orientada hacia el manejo de datos y documentación de la comunidad.
-                                    <br><br> Si estás interesado en explorar el mundo del agua, y en específico en
-                                    su ámbito
-                                    de agua subterránea, esta es una excelente oportunidad para ampliar tus
-                                    horizontes.
-                                    <br><br> Para mayor información dirigirse los días Lunes 07 y Martes 08 de Enero
-                                    en la
-                                    jornada de la mañana a la dirección calle El Cedro #0626, La Arboleda o bien
-                                    comunicarse al numero 52 2240282 o al correo secretaria@casub.cl </p>
-                            </div>
-                            <div class="single-notice-left mb-23 pb-20">
-                                <h4 style="font-size: 14px;">Se requieren servicios informáticos con experiencia en:
-                                </h4>
-                                <ul style="font-size: 12px;">
-                                    <li>-Trabajo en equipo.</li>
-                                    <li>-Comunicación efectiva con el cliente.</li>
-                                    <li>Para mayor información contactar a: Manuel Morales</li>
-                                    <li>Correo: <a href="mailto:mmorales@cmp.cl">mmorales@cmp.cl</a></li>
-                                </ul>
-                            </div>
-                            <div class="single-notice-left pb-20">
-                                <h4 style="font-size: 14px;">Se requiere programador:</h4>
-                                <ul style="font-size: 12px;">
-                                    <li>-Experiencia en desarrollo de software.</li>
-                                    <li>-Empresa: AMFFAL, Gestión en desarrollo Ambiental.</li><br>
-                                    <li>Contacto: jneyra@amffal.cl vcicardini@amffal.cl</li>
-                                </ul>
-                            </div>
-                            <div class="single-notice-left mb-23 pb-20">
-                                <h4 style="font-size: 14px;">Jefe Informática</h4>
-                                <p style="font-size: 12px;">Importante empresa minera ubicada en la III Región
-                                    requiere un “JEFE
-                                    INFORMÁTICA”, quien será responsable de organizar y gestionar el área de
-                                    Informática, procurando el uso óptimo y eficiente de los recursos. Además,
-                                    debemos liderar proyectos de desarrollo tecnológico para mejorar los procesos en
-                                    terreno y administrativos de la empresa, tomando las decisiones operativas
-                                    necesarias en tiempo, alcances y costos.</p>
-                            </div>
-                            <div class="single-notice-left mb-23 pb-20">
-                                <h4 style="font-size: 14px;">Práctica de verano en minera Candelaria 1 cupo,
-                                    requisitos:</h4>
-                                <ul style="font-size: 12px;">
-                                    <li>-Excelencia académica práctica como requisito de titulación</li><br>
-                                    <li>-Documentos requeridos: Currículum Certificado Alumno Regular. <br>
-                                        Concentración
-                                        de notas los 2 últimos semestres cursados.</li>
-                                </ul>
-                            </div>
-                            <div class="single-notice-left pb-20">
-                                <h4 style="font-size: 14px;">Alumnos en práctica</h4>
-                                <p style="font-size: 12px;">Empresa requiere alumno en práctica con conocimiento en
-                                    base de datos no relacionales, sistema operativo operativo linux consultas y
-                                    envío de currículum a: nvillarroel@cmp.cl nvillarroel@normine.cl</p>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-            </div>
+            
 
         </div>
     </div>
