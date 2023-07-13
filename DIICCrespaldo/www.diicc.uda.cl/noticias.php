@@ -45,15 +45,16 @@
         <div class="container">
             <div>
                 <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                    <div>
-                        <label>Buscar por año:</label>
-                        <input type="number" name="fecha">
-                        
-                        
-                        <input class="bb btn btn-primary" type="submit" name="enviar" value="BUSCAR">
-                        <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/noticias.php" class="bb btn btn-primary justify-content-end">Mostrar todo</a>
+                    <div align="right" class="noti">
+                        <div>
+                            <input type="number" class="form-control" placeholder="Buscar por año" style="width: 150px;" name="fecha">
+                        </div>
+                        <div>
+                            <input class="btn" style="background-color: rgb(40, 57, 72); color: white;" type="submit" name="enviar" value="🔍︎">
+                        </div>
 
                     </div>
+                    
                     
                     
                 </form>
