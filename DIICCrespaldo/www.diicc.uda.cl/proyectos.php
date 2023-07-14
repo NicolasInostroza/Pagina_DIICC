@@ -7,12 +7,21 @@ $pagetitle = "Proyectos - DIICC UDA";
 include_once "config/config.php";
 include_once "include/functions.php";
 include_once "include/head.php";
-if (!isset($_GET['page'])){
-    $page = 0;
+$registro_por_pagina = 6;
+$pagina = '';
+if(isset($_GET["pagina"]))
+{
+$pagina = $_GET["pagina"];
 }
-else{
-    $page = $_GET['page'];
+else
+{
+$pagina = 1;
 }
+
+$start_from = ($pagina-1)*$registro_por_pagina;
+
+$query = "SELECT * FROM proyectos order by 'year' DESC LIMIT $start_from, $registro_por_pagina";
+$result = mysqli_query($conexion, $query);
 ?>
 
 <body>
@@ -43,7 +52,7 @@ else{
                 <?php
                             date_default_timezone_set('UTC');
                             setlocale(LC_ALL, 'ES');
-                            $sql =  sprintf("SELECT * FROM `proyectos` ORDER BY year DESC LIMIT 10 OFFSET %d",$page*10); // mejorar query falta nombre del que subio la noticia
+                            $sql =  sprintf("SELECT * FROM `proyectos` ORDER BY year DESC LIMIT $start_from, $registro_por_pagina"); // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
                             while ($mostrar = mysqli_fetch_array($resultado)) { ?>
 
@@ -71,26 +80,49 @@ else{
                                     </div>
                                 </div>
                                 <?php } ?>
-                                
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="pagination">
+
+               <div class="row">
+                <div class="col-xs-12">
+                    <div class="pagination">
                         <ul>
-                            <?php 
-                            $total = mysqli_query($conexion, 'SELECT count(*) from proyectos;');
-                            
-                                $page = $page + 1;
-                                echo '<li><a href="proyectos.php">1</a></li>';
-                                if ($resultado->num_rows != 0){
-                                    if($page > 1){
-                                        echo sprintf('<li><a href="proyectos.php?page=%d">%d</a></li>', $page, $page);}
+                            <?php
+
+                                $page_query = "SELECT * FROM proyectos ORDER BY year DESC";
+                                $page_result = mysqli_query($conexion, $page_query);
+                                $total_records = mysqli_num_rows($page_result);
+                                $total_pages = ceil($total_records/$registro_por_pagina);
+                                $start_loop = $pagina;
+                                $diferencia = $total_pages - $pagina;
+                                if($total_pages == 1){
+                                    echo "<li><a class='pagina' href='proyectos.php'>1</a></li>";
+                                }
+                                else{
+                                    if($diferencia <= 6)
+                                    {
+                                    $start_loop = $total_pages - 6;
+                                    }
+                                    $end_loop = $start_loop + 5;
+                                    if($pagina > 1)
+                                    {
+                                    echo "<li><a class='pagina' href='proyectos.php?pagina=1'>In</a></li>";
+                                    echo "<li><a class='pagina' href='proyectos.php?pagina=".($pagina - 1)."'><</a></li>";
+                                    }
+                                    for($i=$start_loop; $i<=$end_loop; $i++)
+                                    {     
+                                    echo "<li><a class='pagina' href='proyectos.php?pagina=".$i."'>".$i."</a></li>";
+                                    }
+                                    if($pagina <= $end_loop)
+                                    {
+                                    echo "<li><a class='pagina' href='proyectos.php?pagina=".($pagina + 1)."'>></a></li>";
+                                    echo "<li><a class='pagina' href='proyectos.php?pagina=".$total_pages."'>Úl</a></li>";
+                                    }
                                 }
                             
                             ?>
                         </ul>
-                        </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
