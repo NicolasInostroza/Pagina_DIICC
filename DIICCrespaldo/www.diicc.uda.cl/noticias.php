@@ -58,6 +58,7 @@
                     
                     
                 </form>
+                
             </div><br>
             <div class="row">
             <?php
@@ -131,24 +132,37 @@
             
             </div>
 
-            <div class="row">
+            <div class="row" align="center">
                 <div class="col-xs-12">
                     <div class="pagination">
                         <ul>
-                            <?php 
-                            $total = mysqli_query($conexion, 'SELECT count(*) from noticias;');
-                            if ($page == 0){
-                                ++$page;
-                            }
+                            <?php
 
-                           
-                                $page = $page + 1; 
-                                echo '<li><a href="noticias.php">1</a></li>';
-
-                               
-                            if ($resultado->num_rows != 0){
-                                echo sprintf('<li><a href="noticias.php?page=%d">%d</a></li>', $page, $page);
-                            }
+                                $page_query = "SELECT * FROM noticias ORDER BY fecha DESC";
+                                $page_result = mysqli_query($conexion, $page_query);
+                                $total_records = mysqli_num_rows($page_result);
+                                $total_pages = ceil($total_records/$registro_por_pagina);
+                                $start_loop = $pagina;
+                                $diferencia = $total_pages - $pagina;
+                                if($diferencia <= 12)
+                                {
+                                $start_loop = $total_pages - 12;
+                                }
+                                $end_loop = $start_loop + 11;
+                                if($pagina > 1)
+                                {
+                                echo "<li><a class='pagina' href='noticias.php?pagina=1'>In</a></li>";
+                                echo "<li><a class='pagina' href='noticias.php?pagina=".($pagina - 1)."'><</a></li>";
+                                }
+                                for($i=$start_loop; $i<=$end_loop; $i++)
+                                {     
+                                echo "<li><a class='pagina' href='noticias.php?pagina=".$i."'>".$i."</a></li>";
+                                }
+                                if($pagina <= $end_loop)
+                                {
+                                echo "<li><a class='pagina' href='noticias.php?pagina=".($pagina + 1)."'>></a></li>";
+                                echo "<li><a class='pagina' href='noticias.php?pagina=".$total_pages."'>>></a></li>";
+                                }
                             
                             ?>
                         </ul>
