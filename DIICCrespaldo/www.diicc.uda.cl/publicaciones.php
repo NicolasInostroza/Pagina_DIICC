@@ -8,12 +8,21 @@
     include_once "config/config.php";
     include_once "include/functions.php";
     include_once "include/head.php";
-    if (!isset($_GET['page'])){
-        $page = 0;
+    $registro_por_pagina = 12;
+    $pagina = '';
+    if(isset($_GET["pagina"]))
+    {
+    $pagina = $_GET["pagina"];
     }
-    else{
-        $page = $_GET['page'];
+    else
+    {
+    $pagina = 1;
     }
+
+    $start_from = ($pagina-1)*$registro_por_pagina;
+
+    $query = "SELECT * FROM publicaciones order by fecha DESC LIMIT $start_from, $registro_por_pagina";
+    $result = mysqli_query($conexion, $query);
 ?>
 
 <body>
@@ -45,7 +54,7 @@
                    <?php
                         date_default_timezone_set('UTC');
                         setlocale(LC_ALL, 'ES');
-                        $sql = sprintf("SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY p.fecha DESC LIMIT 12 OFFSET %d",$page*12);
+                        $sql = sprintf("SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY p.fecha DESC LIMIT $start_from, $registro_por_pagina");
                         $resultado = mysqli_query($conexion, $sql);
                         while ($mostrar = mysqli_fetch_array($resultado)){ ?>
 
@@ -75,18 +84,34 @@
            
             <div class="row">
                 <div class="col-xs-12">
-                <div class="pagination">
+                    <div class="pagination">
                         <ul>
-                            <?php 
-                            $total = mysqli_query($conexion, 'SELECT count(*) from publicaciones;');
-                            
-                                if ($page == 0){
-                                    ++$page;
+                            <?php
+
+                                $page_query = "SELECT * FROM publicaciones ORDER BY fecha DESC";
+                                $page_result = mysqli_query($conexion, $page_query);
+                                $total_records = mysqli_num_rows($page_result);
+                                $total_pages = ceil($total_records/$registro_por_pagina);
+                                $start_loop = $pagina;
+                                $diferencia = $total_pages - $pagina;
+                                if($diferencia <= 12)
+                                {
+                                $start_loop = $total_pages - 12;
                                 }
-                                    $page = $page + 1;
-                                    echo '<li><a href="publicaciones.php">1</a></li>';
-                                if ($resultado->num_rows != 0){
-                                    echo sprintf('<li><a href="publicaciones.php?page=%d">%d</a></li>', $page, $page);
+                                $end_loop = $start_loop + 11;
+                                if($pagina > 1)
+                                {
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=1'>In</a></li>";
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina - 1)."'><</a></li>";
+                                }
+                                for($i=$start_loop; $i<=$end_loop; $i++)
+                                {     
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".$i."'>".$i."</a></li>";
+                                }
+                                if($pagina <= $end_loop)
+                                {
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina + 1)."'>></a></li>";
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".$total_pages."'>Úl</a></li>";
                                 }
                             
                             ?>
