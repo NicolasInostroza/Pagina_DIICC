@@ -20,12 +20,7 @@
     }
 
     $start_from = ($pagina-1)*$registro_por_pagina;
-    if (!isset($_GET['page'])){
-        $page = 0;
-    }
-    else{
-        $page = $_GET['page'];
-    }
+    
 ?>
 
 <body>
@@ -88,23 +83,39 @@
                 <div class="col-xs-12">
                     <div class="pagination">
                         <ul>
-                            <?php 
-                            $total = mysqli_query($conexion, 'SELECT count(*) from publicaciones;');
-                            
-                                if ($page == 0){
-                                    ++$page;
+                            <?php
+
+                                $page_query = "SELECT * FROM publicaciones ORDER BY fecha DESC";
+                                $page_result = mysqli_query($conexion, $page_query);
+                                $total_records = mysqli_num_rows($page_result);
+                                $total_pages = ceil($total_records/$registro_por_pagina);
+                                $start_loop = $pagina;
+                                $diferencia = $total_pages - $pagina;
+                                if($diferencia <= 12)
+                                {
+                                $start_loop = $total_pages - 12;
                                 }
-                                    $page = $page + 1;
-                                    echo '<li><a href="publicaciones.php">1</a></li>';
-                                if ($resultado->num_rows != 0){
-                                    echo sprintf('<li><a href="publicaciones.php?page=%d">%d</a></li>', $page, $page);
+                                $end_loop = $start_loop + 11;
+                                if($pagina > 1)
+                                {
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=1'>In</a></li>";
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina - 1)."'><</a></li>";
+                                }
+                                for($i=$start_loop; $i<=$end_loop; $i++)
+                                {     
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".$i."'>".$i."</a></li>";
+                                }
+                                if($pagina <= $end_loop)
+                                {
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina + 1)."'>></a></li>";
+                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".$total_pages."'>Úl</a></li>";
                                 }
                             
                             ?>
                         </ul>
                     </div>
                 </div>
-            </div><br>
+            </div>
             
             
 
