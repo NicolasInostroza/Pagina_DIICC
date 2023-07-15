@@ -94,6 +94,10 @@
                                 $total_pages = ceil($total_records/$registro_por_pagina);
                                 $start_loop = $pagina;
                                 $diferencia = $total_pages - $pagina;
+
+                                if($total_pages == 1){
+                                    echo "<li><a class='pagina' href='proyectos.php'>1</a></li>";
+                                }
                                 if($diferencia <= 12)
                                 {
                                 $start_loop = $total_pages - 12;
