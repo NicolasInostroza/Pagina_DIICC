@@ -52,35 +52,35 @@
     <div class="blog-area pt-150 pb-150">
         <div class="container">
             <div class="row d-flex">
-                   <?php
-                        date_default_timezone_set('UTC');
-                        setlocale(LC_ALL, 'ES');
-                        $sql = sprintf("SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY p.fecha DESC LIMIT 12 OFFSET %d",$page*12);
-                        $resultado = mysqli_query($conexion, $sql);
-                        while ($mostrar = mysqli_fetch_array($resultado)){ ?>
+                <?php
+                    date_default_timezone_set('UTC');
+                    setlocale(LC_ALL, 'ES');
+                    $sql = sprintf("SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY p.fecha DESC LIMIT 12 OFFSET %d",$page*12);
+                    $resultado = mysqli_query($conexion, $sql);
+                    while ($mostrar = mysqli_fetch_array($resultado)){ ?>
 
 
-                        <div class="col-md-4 col-sm-6" >
-                            <div class="single-blog mb-60" >
-                                <div class="blog-img">
-                                    <?php echo '<a href="publicaciones.php?id=' . $mostrar["id"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></a>
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
+                    <div class="col-md-4 col-sm-6" >
+                        <div class="single-blog mb-60" >
+                            <div class="blog-img">
+                                <?php echo '<a href="publicaciones.php?id=' . $mostrar["id"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar["img_path"]); ?>></a>
+                                <div class="blog-hover">
+                                    <i class="fa fa-link"></i>
                                 </div>
-                                <div class="blog-content">
-                                    <div class="blog-top">
-                                        <p><?php echo utf8_encode($mostrar['autor']); ?> / <?php echo $mostrar['fecha'];?> / <?php echo $mostrar['revision'];?></p>
-                                    </div>
-                             <div class="blog-bottom">
-                                <h2><?php echo '<a href="' . $mostrar["acceso"] . '">' . utf8_encode($mostrar['titulo']) . '</a>'; ?></h2>
-                                <?php echo '<a href="' . $mostrar["acceso"] . '">Seguir Leyendo</a>'; ?>
-                                </div>
-                                 </div>
                             </div>
-                        </div>                         
-
-                    <?php  }?>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p><?php echo utf8_encode($mostrar['autor']); ?> / <?php echo $mostrar['fecha'];?> / <?php echo $mostrar['revision'];?></p>
+                                </div>
+                            <div class="blog-bottom">
+                            <h2><?php echo '<a href="' . $mostrar["acceso"] . '">' . utf8_encode($mostrar['titulo']) . '</a>'; ?></h2>
+                            <?php echo '<a href="' . $mostrar["acceso"] . '">Seguir Leyendo</a>'; ?>
+                            </div>
+                                </div>
+                        </div>
+                    </div>                         
+                <?php  }?>
+            </div>
                
             <div class="row" align="center">
                 <div class="col-xs-12">
