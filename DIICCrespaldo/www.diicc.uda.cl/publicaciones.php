@@ -54,7 +54,7 @@
                 <?php
                     date_default_timezone_set('UTC');
                     setlocale(LC_ALL, 'ES');
-                    $sql = sprintf("SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY p.fecha DESC LIMIT 12 OFFSET %d",$page*12);
+                    $sql = sprintf("SELECT p.*, f.Nombre AS autor FROM publicaciones AS p INNER JOIN funcionarios AS f ON p.id_academico = f.id ORDER BY p.fecha DESC LIMIT $start_from, $registro_por_pagina");
                     $resultado = mysqli_query($conexion, $sql);
                     while ($mostrar = mysqli_fetch_array($resultado)){ ?>
 
