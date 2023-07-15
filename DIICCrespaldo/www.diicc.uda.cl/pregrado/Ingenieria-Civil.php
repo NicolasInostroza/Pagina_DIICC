@@ -16,7 +16,7 @@ echo '<script src="../js/malla.js"></script>';
     <!-- HEADER -->
     <!-- Blog Start -->
     <div class="blog-details-area pt-150 pb-140">
-        <div class="container">
+        <div class="container"> <!--
             <div class="row">
                 <div class="col-md-8">
                     <div class="blog-details">
@@ -66,10 +66,10 @@ echo '<script src="../js/malla.js"></script>';
                 </div>
                 <div class="col-md-4">
                     <div class="blog-sidebar right">
-
+-->
                         <!-- <div class="single-blog-widget mb-47">
                                 imagen
-                            </div> -->
+                            </div> --> <!--
                         <div class="single-blog-widget mb-47">
                             <div class="single-blog-banner">
                                 <a href="https://admision.uda.cl/index.php/ingenieria-civil-en-computacion-e-informatica/" id="blog"><img src=<?php echo fromroot($file, "img/blog/blogImg1.JPG"); ?> alt="blog"></a>
@@ -81,7 +81,7 @@ echo '<script src="../js/malla.js"></script>';
 
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-6">
                     <div class="blog-details">
