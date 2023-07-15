@@ -179,6 +179,134 @@
 </div>
 <!-- Blog End -->
 
+
+
+
+<!-- Blog Start -->
+<!--
+
+<div class="blog-details-area pt-150 pb-140">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
+                <div class="blog-details pt-0">
+                    <div class="blog-details-content ">
+                        <h2>Magíster en Informática y Ciencias de la Computación.</h2>
+                        <hr>
+                        <div class=" blog-details-content " style="padding-top:0px;">
+                            <div class=" single-course-left">
+                                <h3>Grado</h3>
+                                <p>Magíster en Informática y Ciencias de la Computación.</p>
+                            </div>
+                            <hr>
+                            <div class="single-course-left">
+                                <h3>Objetivo</h3>
+                                <p>El objetivo del programa es formar capital humano con conocimientos sólidos y avanzados en computación e informática y 
+                                    en metodología de investigación que lo capaciten para impulsar y desarrollar investigación fundamental y aplicada en forma autónoma, 
+                                    y prestar asesoría especializada en lo referente a la comprensión y aplicación de la computación.</p>
+                            </div>
+                            <hr>
+                            <div class="single-course-left">
+                                <h3>Perfil del Egreso</h3>
+                                <p class="margin">Los graduados del programa serán profesionales de alto nivel de especialización,
+                                     con capacidad y autonomía para emprender proyectos de investigación fundamental y aplicada en diversas 
+                                     líneas de investigación de la informática y la computación. Las líneas de investigación comprenden, en principio y 
+                                     en forma no exclusiva, inteligencia de máquinas, ingeniería de software, sistemas y tecnologías de información.</p>
+                            </div>
+                            <hr>
+                            <div class="single-course-left">
+                                <h3>Perfil Profesional:</h3>
+                                <p class="margin">El egresado del Programa estará capacitado para: continuar estudios de doctorado en Ciencias de la Informática o de 
+                                    la Computación; para incorporarse a equipos académicos de educación superior; para integrar equipos de investigación en centros de 
+                                    ámbito público y privado; o para realizar investigación,  innovación y transferencia tecnológica en el sector productivo.</p>
+                            </div>
+                            <hr>
+                            
+                            
+                            <div class="single-course-left" >
+                                <h3>Página Magíster</h3>
+                                <p>Visita nuestra web oficial: Magíster en Informática y Ciencias de la Computación. Click en la imagen.</p>
+                                <a title="Magíster" href="https://diicc.uda.cl/Magister/" target="_blank">
+                                <img src="https://diicc.uda.cl/Magister/images/Magister2023_1.png" align="right" width="500" height="500" alt="Magíster" /></a>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
+                <div class="blog-details">
+                    <div class="blog-details-content">
+                       
+                            <div class="row ">
+                                <div class="col-md-12 mb-0">
+                                    <div class="course-details-left mt-73 mb-0 " style="margin-top:73px;">
+                                        <hr>
+                                        <h3>Requisitos de postulación</h3>
+                                        <p style="font-size: 14px;">
+                                            1.- Estar en posesión del grado académico de Licenciado en Ciencias de la Ingeniería y 
+                                            un título profesional universitario en el área de la computación e informática o afín, con un mínimo de cuatro 
+                                            años de estudio, y con nivel medio de lectura en inglés.
+                                            <br>
+                                            <br>
+                                            2.- Los estudiantes del plan de la carrera de Ingeniería civil en computación e informática de la Universidad de 
+                                            Atacama podrán postular al programa si han cursado completamente el quinto año de la carrera.</p>
+        
+                                    </div>
+                                </div>
+                                <div class=" col-md-12">
+                                    <div class="course-details-right mt-50 mb-54" style="margin-bottom:54px">
+                                        <ul>
+                                            <li>DURACIÓN<span>4 Semestres</span></li>
+                                            <li>MODALIDAD<span>Diurna</span></li>
+                                            <li>HORARIOS<span>Lunes a Viernes</li>
+                                            <li>CREDITOS<span>60 SCT /1440 hrs.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-md-12">
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                    <div class="col-md-12">
+                                        <div class="blog-sidebar right text-left">
+                                            
+                                            <div class="text-center notice-left-wrapper">
+                                                <h3 src="https://diicc.uda.cl/Magister">Admisión 2023</h3>
+                                            </div>
+                                            <div class="single-blog-widget mb-50 mt-50">
+                                                <iframe
+                                                    src="https://docs.google.com/forms/d/e/1FAIpQLSeyx_wzjjKyzxFdX34nvpQFQoC9hvuZQ21aXlxYRnfjju5e6g/viewform?embedded=true"
+                                                    width="450" height="500" frameborder="0" marginheight="0"
+                                                    marginwidth="0">Cargando…</iframe>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+
+                                -->
+<!-- Blog End -->
+
     <!-- FOOTER -->
     <?php include_once "../include/footer.php";?>
     <!-- FOOTER -->
