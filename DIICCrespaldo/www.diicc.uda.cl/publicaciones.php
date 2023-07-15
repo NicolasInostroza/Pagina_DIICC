@@ -20,6 +20,9 @@
     }
 
     $start_from = ($pagina-1)*$registro_por_pagina;
+
+    $query = "SELECT * FROM publicaciones order by fecha DESC LIMIT $start_from, $registro_por_pagina";
+    $result = mysqli_query($conexion, $query);
     
 ?>
 
