@@ -183,6 +183,8 @@
 
 
 <!-- Blog Start -->
+<!--
+
 <div class="blog-details-area pt-150 pb-140">
     <div class="container">
         <div class="row">
@@ -221,33 +223,8 @@
                             </div>
                             <hr>
                             
-                            <!--<div class="row">
-                                <div class="col-md-7">
-                                    <div class="course-details-left ">
-                                        <h3>Requisitos de postulación</h3>
-                                        <p style="font-size: 14px;">
-                                            1.- Estar en posesión del grado académico de Licenciado en Ciencias de la Ingeniería y 
-                                            un título profesional universitario en el área de la computación e informática o afín, con un mínimo de cuatro 
-                                            años de estudio, y con nivel medio de lectura en inglés.
-                                            <br>
-                                            <br>
-                                            2.- Los estudiantes del plan de la carrera de Ingeniería civil en computación e informática de la Universidad de 
-                                            Atacama podrán postular al programa si han cursado completamente el quinto año de la carrera.</p>
-        
-                                    </div>
-                                </div>
-                                <div class=" col-md-5">
-                                    <div class="course-details-right">
-                                        <ul>
-                                            <li>DURACIÓN<span>4 Semestres</span></li>
-                                            <li>MODALIDAD<span>Diurna</span></li>
-                                            <li>HORARIOS<span>Lunes a Viernes</li>
-                                            <li>CREDITOS<span>60 SCT /1440 hrs.</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="single-course-left" ><!-- direccionamiento pagina magister-->
+                            
+                            <div class="single-course-left" >
                                 <h3>Página Magíster</h3>
                                 <p>Visita nuestra web oficial: Magíster en Informática y Ciencias de la Computación. Click en la imagen.</p>
                                 <a title="Magíster" href="https://diicc.uda.cl/Magister/" target="_blank">
@@ -294,16 +271,11 @@
                                 </div>
                             </div>
                             
-                            <!-- <div class="single-course-left" >
-                                <h3>Página Magíster</h3>
-                                <p>Visita nuestra web oficial: Magíster en Informática y Ciencias de la Computación. Click en la imagen.</p>
-                                <a title="Magíster" href="https://diicc.uda.cl/Magister/" target="_blank">
-                                <img src="https://diicc.uda.cl/Magister/images/Magister2023_1.png" align="right" width="500" height="500" alt="Magíster" /></a>
-                            </div> -->
+                            
                             <hr>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <!--Aside-->
+                                    
                                     <div class="col-md-12">
                                         <div class="blog-sidebar right text-left">
                                             
@@ -316,72 +288,7 @@
                                                     width="450" height="500" frameborder="0" marginheight="0"
                                                     marginwidth="0">Cargando…</iframe>
                                             </div>
-                                            <!--<div class="notice-left-wrapper">
-                                                <h3>Bolsa de Trabajos</h3>
-                                                <div class="notice-left" tabindex="1" style="overflow: hidden; outline: none;">
-                                                    <div class="single-notice-left mb-23 pb-20">
-                                                        <h4 style="font-size: 14px;">Practica de verano 2020</h4>
-                                                        <p style="font-size: 12px;">La Comunidad de Aguas Subterráneas Copiapó-Piedra
-                                                            Colgada; Piedra
-                                                            Colgada-Dese    mbocadura (CASUB) abre su proceso de postulación para practica de
-                                                            verano periodo 2020 a la comunidad Universitaria. <br> En esta ocasión, la
-                                                            práctica
-                                                            estará orientada hacia el manejo de datos y documentación de la comunidad.
-                                                            <br><br> Si estás interesado en explorar el mundo del agua, y en específico en
-                                                            su ámbito
-                                                            de agua subterránea, esta es una excelente oportunidad para ampliar tus
-                                                            horizontes.
-                                                            <br><br> Para mayor información dirigirse los días Lunes 07 y Martes 08 de Enero
-                                                            en la
-                                                            jornada de la mañana a la dirección calle El Cedro #0626, La Arboleda o bien
-                                                            comunicarse al numero 52 2240282 o al correo secretaria@casub.cl </p>
-                                                    </div>
-                                                    <div class="single-notice-left mb-23 pb-20">
-                                                        <h4 style="font-size: 14px;">Se requieren servicios informáticos con experiencia en:
-                                                        </h4>
-                                                        <ul style="font-size: 12px;">
-                                                            <li>-Trabajo en equipo.</li>
-                                                            <li>-Comunicación efectiva con el cliente.</li>
-                                                            <li>Para mayor información contactar a: Manuel Morales</li>
-                                                            <li>Correo: <a href="mailto:mmorales@cmp.cl">mmorales@cmp.cl</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="single-notice-left pb-20">
-                                                        <h4 style="font-size: 14px;">Se requiere programador:</h4>
-                                                        <ul style="font-size: 12px;">
-                                                            <li>-Experiencia en desarrollo de software.</li>
-                                                            <li>-Empresa: AMFFAL, Gestión en desarrollo Ambiental.</li><br>
-                                                            <li>Contacto: jneyra@amffal.cl vcicardini@amffal.cl</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="single-notice-left mb-23 pb-20">
-                                                        <h4 style="font-size: 14px;">Jefe Informática</h4>
-                                                        <p style="font-size: 12px;">Importante empresa minera ubicada en la III Región
-                                                            requiere un “JEFE
-                                                            INFORMÁTICA”, quien será responsable de organizar y gestionar el área de
-                                                            Informática, procurando el uso óptimo y eficiente de los recursos. Además,
-                                                            debemos liderar proyectos de desarrollo tecnológico para mejorar los procesos en
-                                                            terreno y administrativos de la empresa, tomando las decisiones operativas
-                                                            necesarias en tiempo, alcances y costos.</p>
-                                                    </div>
-                                                    <div class="single-notice-left mb-23 pb-20">
-                                                        <h4 style="font-size: 14px;">Práctica de verano en minera Candelaria 1 cupo,
-                                                            requisitos:</h4>
-                                                        <ul style="font-size: 12px;">
-                                                            <li>-Excelencia académica práctica como requisito de titulación</li><br>
-                                                            <li>-Documentos requeridos: Currículum Certificado Alumno Regular. <br>
-                                                                Concentración
-                                                                de notas los 2 últimos semestres cursados.</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="single-notice-left pb-20">
-                                                        <h4 style="font-size: 14px;">Alumnos en práctica</h4>
-                                                        <p style="font-size: 12px;">Empresa requiere alumno en práctica con conocimiento en
-                                                            base de datos no relacionales, sistema operativo operativo linux consultas y
-                                                            envío de currículum a: nvillarroel@cmp.cl nvillarroel@normine.cl</p>
-                                                    </div>
-                                                </div>
-                                            </div>-->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -396,6 +303,8 @@
         </div>
     </div>
 </div>
+
+                                -->
 <!-- Blog End -->
 
     <!-- FOOTER -->
