@@ -8,6 +8,18 @@
     include_once "config/config.php";
     include_once "include/functions.php";
     include_once "include/head.php";
+    $registro_por_pagina = 12;
+    $pagina = '';
+    if(isset($_GET["pagina"]))
+    {
+    $pagina = $_GET["pagina"];
+    }
+    else
+    {
+    $pagina = 1;
+    }
+
+    $start_from = ($pagina-1)*$registro_por_pagina;
     if (!isset($_GET['page'])){
         $page = 0;
     }
