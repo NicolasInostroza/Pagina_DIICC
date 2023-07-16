@@ -97,11 +97,11 @@ $result = mysqli_query($conexion, $query);
                                     echo "<li><a class='pagina' href='proyectos.php'>1</a></li>";
                                 }
                                 else{
-                                    if($diferencia <= 6)
+                                    if($diferencia <= ($total_pages - 1))
                                     {
-                                    $start_loop = $total_pages - 6;
+                                    $start_loop = $total_pages - ($total_pages - 1);
                                     }
-                                    $end_loop = $start_loop + 5;
+                                    $end_loop = $start_loop + ($total_pages - 2);
                                     if($pagina > 1)
                                     {
                                     echo "<li><a class='pagina' href='proyectos.php?pagina=1'>In</a></li>";
