@@ -52,34 +52,31 @@ $result = mysqli_query($conexion, $query);
                 <?php
                             date_default_timezone_set('UTC');
                             setlocale(LC_ALL, 'ES');
-                            $sql =  sprintf("SELECT * FROM `proyectos` ORDER BY year DESC LIMIT $start_from, $registro_por_pagina"); // mejorar query falta nombre del que subio la noticia
+                            $sql =  sprintf("SELECT pr.* , f.Nombre AS autor FROM proyectos pr, funcionarios f WHERE pr.id_academicos = f.id ORDER BY year DESC LIMIT $start_from, $registro_por_pagina"); // mejorar query falta nombre del que subio la noticia
                             $resultado = mysqli_query($conexion, $sql);
                             while ($mostrar = mysqli_fetch_array($resultado)) { ?>
 
-                                <div class="col-md-4 col-sm-8">
-                                    <div class="single-blog mb-60 text-center">
-                                            <div class="blog-img">
-                                                <?php echo '<a href="' . $mostrar["link"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']); ?>>
-                                                <div class="blog-hover">
-                                                    <i class="fa fa-link"></i>
-                                                </div>
-                                            </div>
-                                            <div class="blog-content">
-                                                <div class="blog-content" style="margin: 10px">
-                                                    <div class="badge badge-primary badge-sm" style="font-size: 15px"><?php echo $mostrar['year']; ?></div>
-                                                    <div class="card-title" style="font-size: 15px; padding-top: 8px"><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></div>
-                                                    <p style="padding: 5px; font-size: 20px"><?php echo $mostrar['descripcion']; ?></p>
-                                                </div>
-                                            </div>
-                                            <div class="blog-bottom">
-                                            <?php echo '<a href="' . $mostrar["link"] . '"><span>LEER MÁS
-                                                    <img src="https://static3.avast.com/1/web/i/v2/components/arrow-m-right-orange.png" height="24">
-                                                </span>
-                                                </a>'; ?>
-                                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="single-blog mb-60">
+                                    <div class="blog-img">
+                                        <?php echo '<a href="proyectos.php?id=', $mostrar["id"] . $mostrar["link"] . '"></a>'; ?><img src=<?php echo fromroot($file, $mostrar['img_path']); ?>>
+                                        <div class="blog-hover">
+                                            <i class="fa fa-link"></i>
+                                        </div>
+                                    </div>
+                                    <div class="blog-content">
+                                        <div class="blog-top">
+                                            <p><?php echo utf8_encode($mostrar['autor']); ?> / <?php echo $mostrar['year'];?></p>
+                                        </div>
+                                        <div class="blog-bottom">
+                                            <h3><?php echo $mostrar['descripcion'];?></h3>
+                                            <h4><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></h4>
+                                            <?php echo '<a href="' . $mostrar["link"] . '">Seguir Leyendo</a>'; ?>
+                                        </div>
                                     </div>
                                 </div>
-                                <?php } ?>
+                            </div>
+                    <?php } ?>
 
                <div class="row">
                 <div class="col-xs-12">
