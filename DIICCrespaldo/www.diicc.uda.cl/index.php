@@ -122,12 +122,12 @@
         <!-- carrusel -->
         <div class="rowtrans">
             <div class="rowtrans-title text-center">
-                <h2>NOTICIAS</h2>
+                <h2 style="padding: 20px">NOTICIAS</h2>
             </div>                
         </div> 
          <!-- Panel de noticias -->
             
-        <div class="container" id="MYcontainer">
+        <div class="container" id="MYcontainer" style="margin-bottom: 20px">
             <div class="row">            
                 <div id="MYCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicadores -->
@@ -267,13 +267,13 @@
         <div class="courses-area pt-30 pb-40 text-center">
             <div class="rowtrans">
                     <div class="rowtrans-title">
-                        <h2>ÁREAS DE DESARROLLO</h2>
+                        <h2 style="padding: 20px">ÁREAS DE DESARROLLO</h2>
                     </div>                
             </div>
         </div>
 
         <div class="container">
-            <div class="row" id="card-row">
+            <div class="row" id="card-row" style="margin-top: -50px; margin-bottom: 30px">
                 <div class="card" id="card1">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -453,7 +453,7 @@
          <!-- Blog Area Start -->
          <div class="rowtrans">
             <div class="rowtrans-title text-center">
-                <h2>ÚLTIMAS PUBLICACIONES Y TÉSIS</h2>
+                <h2 style="padding: 20px">ÚLTIMAS PUBLICACIONES Y TÉSIS</h2>
             </div>                
         </div> 
          <div class="blog-area pt-50 pb-50">
@@ -507,10 +507,10 @@
 
 
         <!-- Event Area Start -->
-        <div class="event-area one text-center pt-140 pb-50" id="eventos">
+        <div class="event-area one text-center pt-140 pb-50" id="eventos" style="margin-top: -80px">
             <div class="rowtrans">
                 <div class="rowtrans-title">
-                    <h2>PRÓXIMOS EVENTOS</h2>
+                    <h2 style="padding: 20px">PRÓXIMOS EVENTOS</h2>
                 </div>                
             </div>
             

@@ -7,7 +7,7 @@ $pagetitle = "Proyectos - DIICC UDA";
 include_once "config/config.php";
 include_once "include/functions.php";
 include_once "include/head.php";
-$registro_por_pagina = 6;
+$registro_por_pagina = 12;
 $pagina = '';
 if(isset($_GET["pagina"]))
 {
