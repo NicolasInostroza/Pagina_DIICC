@@ -13,7 +13,15 @@
     if(isset($_GET["pagina"]))
     {
     $pagina = $_GET["pagina"];
+    $registro_por_pagina = 12;
+    $pagina = '';
+    if(isset($_GET["pagina"]))
+    {
+    $pagina = $_GET["pagina"];
     }
+    else
+    {
+    $pagina = 1;
     else
     {
     $pagina = 1;
@@ -85,6 +93,7 @@
             <div class="row" align="center" style="margin-bottom: 30px">
                 <div class="col-xs-12">
                     <div class="pagination">
+                    <div class="pagination">
                         <ul>
                             <?php
 
@@ -130,6 +139,7 @@
                     </div>
                 </div>
             </div>
+            
             
 
             
