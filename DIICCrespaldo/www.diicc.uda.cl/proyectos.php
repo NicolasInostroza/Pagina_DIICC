@@ -66,11 +66,11 @@ $result = mysqli_query($conexion, $query);
                                     </div>
                                     <div class="blog-content">
                                         <div class="blog-top">
-                                            <p><?php echo utf8_encode($mostrar['autor']); ?> / <?php echo $mostrar['year'];?></p>
+                                            <p><?php echo ($mostrar['autor']); ?> / <?php echo $mostrar['year'];?></p>
                                         </div>
                                         <div class="blog-bottom">
                                             <h3><?php echo $mostrar['descripcion'];?></h3>
-                                            <h4><?php echo '<a href="' . $mostrar["link"] . '">' . utf8_encode($mostrar['nombre']) . '</a>'; ?></h4>
+                                            <h4><?php echo '<a href="' . $mostrar["link"] . '">' . ($mostrar['nombre']) . '</a>'; ?></h4>
                                             <?php echo '<a href="' . $mostrar["link"] . '">Seguir Leyendo</a>'; ?>
                                         </div>
                                     </div>

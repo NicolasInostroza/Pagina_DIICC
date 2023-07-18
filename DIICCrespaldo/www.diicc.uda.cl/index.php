@@ -130,7 +130,7 @@
          <!-- Panel de noticias -->
         
          <div class="container">
-            <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicadores -->
                 <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -162,7 +162,7 @@
                                             <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
                                             <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
                                             <div class="d-flex flex-row justify-content-between">
-                                                <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                <p class="card-text"><small class="text-muted"><?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></small></p>
                                             </div>    
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
                                             <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
                                             <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
                                             <div class="d-flex flex-row justify-content-between">
-                                                <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                <p class="card-text"><small class="text-muted"><?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></small></p>
                                             </div>    
                                         </div>
                                     </div>
@@ -226,7 +226,7 @@
                                             <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
                                             <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
                                             <div class="d-flex flex-row justify-content-between">
-                                                <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                                <p class="card-text"><small class="text-muted"><?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></small></p>
                                             </div>    
                                         </div>
                                     </div>

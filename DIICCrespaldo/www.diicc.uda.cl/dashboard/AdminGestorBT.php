@@ -73,19 +73,18 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="adminforms">
                         <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
                             <div>
-                                <label>Cargo:</label>
+                                <label style="color: white;">Cargo:</label>
                                 <input type="text" name="cargo">
-                                <label>Empresa:</label>
+                                <label style="color: white;">Empresa:</label>
                                 <input type="text" name="empresa">
                                 
                                 <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
-                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorBT.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorBT.php" class="bb btn btn-danger justify-content-end">MOSTRAR A TODOS</a>
 
                             </div>
-                            
                             
                         </form>
                     </div><br>
