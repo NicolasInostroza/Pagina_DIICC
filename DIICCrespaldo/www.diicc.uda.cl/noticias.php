@@ -100,11 +100,11 @@
                                 $total_pages = ceil($total_records/$registro_por_pagina);
                                 $start_loop = $pagina;
                                 $diferencia = $total_pages - $pagina;
-                                if($diferencia <= -1)
+                                if($diferencia <= ($total_pages - 1))
                                 {
-                                $start_loop = $total_pages + 1;
+                                $start_loop = $total_pages - ($total_pages - 1);
                                 }
-                                $end_loop = $start_loop + 2;
+                                $end_loop = $start_loop + ($total_pages - 2);
                                 if($pagina > 1)
                                 {
                                 echo "<li><a class='pagina' href='noticias.php?pagina=1'>In</a></li>";
