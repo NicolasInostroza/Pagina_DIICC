@@ -94,31 +94,41 @@
                         <ul>
                             <?php
 
-                                $page_query = "SELECT * FROM noticias ORDER BY fecha DESC";
-                                $page_result = mysqli_query($conexion, $page_query);
-                                $total_records = mysqli_num_rows($page_result);
-                                $total_pages = ceil($total_records/$registro_por_pagina);
-                                $start_loop = $pagina;
-                                $diferencia = $total_pages - $pagina;
-                                if($diferencia <= ($total_pages - 1))
+                            $page_query = "SELECT * FROM noticias ORDER BY fecha DESC";
+                            $page_result = mysqli_query($conexion, $page_query);
+                            $total_records = mysqli_num_rows($page_result);
+                            $total_pages = ceil($total_records/$registro_por_pagina);
+                            $start_loop = $pagina;
+                            $diferencia = $total_pages - $pagina;   
+                            if($total_pages == 1){
+                                echo "<li><a class='selected' href='noticias.php'>1</a></li>";
+                            }
+                            else{
+                                if($diferencia <= $total_pages)
                                 {
                                 $start_loop = $total_pages - ($total_pages - 1);
                                 }
-                                $end_loop = $start_loop + ($total_pages - 2);
+                                $end_loop = $start_loop + ($total_pages - 1);
                                 if($pagina > 1)
                                 {
-                                echo "<li><a class='pagina' href='noticias.php?pagina=1'><<</a></li>";
-                                echo "<li><a class='pagina' href='noticias.php?pagina=".($pagina - 1)."'><</a></li>";
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=1'>In</a></li>";
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".($pagina - 1)."'><</a></li>";
                                 }
                                 for($i=$start_loop; $i<=$end_loop; $i++)
-                                {     
-                                echo "<li><a class='pagina' href='noticias.php?pagina=".$i."'>".$i."</a></li>";
-                                }
-                                if($pagina <= $end_loop)
                                 {
-                                echo "<li><a class='pagina' href='noticias.php?pagina=".($pagina + 1)."'>></a></li>";
-                                echo "<li><a class='pagina' href='noticias.php?pagina=".$total_pages."'>>></a></li>";
+                                    if($pagina == $i){
+                                        echo "<li><a style='color: #fff; background: #364c59;' href='noticias.php?pagina=".$i."'>".$i."</a></li>";
+                                    }
+                                    else{
+                                        echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$i."'>".$i."</a></li>";
+                                    }
                                 }
+                                if($pagina < $end_loop)
+                                {
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$pagina."'>></a></li>";
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$total_pages."'>Úl</a></li>";
+                                }
+                            }
                             
                             ?>
                         </ul>

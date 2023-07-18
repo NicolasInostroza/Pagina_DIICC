@@ -13,15 +13,7 @@
     if(isset($_GET["pagina"]))
     {
     $pagina = $_GET["pagina"];
-    $registro_por_pagina = 12;
-    $pagina = '';
-    if(isset($_GET["pagina"]))
-    {
-    $pagina = $_GET["pagina"];
     }
-    else
-    {
-    $pagina = 1;
     else
     {
     $pagina = 1;
