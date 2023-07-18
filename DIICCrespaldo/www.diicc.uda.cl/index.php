@@ -130,7 +130,7 @@
          <!-- Panel de noticias -->
         
          <div class="container">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
                 <!-- Indicadores -->
                 <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -151,22 +151,24 @@
                                 $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
                             }
                         ?>
-                        <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>                           
-                            <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
-                                <div class="col-md-3">                                                                                                                                        
-                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="let card-body">
-                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
-                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                        </div>    
+                        <div style="margin-left: 80px; margin-right: 80px">
+                            <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>                           
+                                <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
+                                    <div class="col-md-3">                                                                                                                                        
+                                        <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="let card-body">
+                                            <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                            <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                            </div>    
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         <?php } ?>
                     </div>
 
@@ -181,22 +183,24 @@
                                 $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
                             }
                         ?>
-                        <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
-                            <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
-                                <div class="col-md-3">                                                                                                                                        
-                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="let card-body">
-                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
-                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                        </div>    
+                        <div style="margin-left: 80px; margin-right: 80px">
+                            <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
+                                <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
+                                    <div class="col-md-3">                                                                                                                                        
+                                        <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="let card-body">
+                                            <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                            <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                            </div>    
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         <?php } ?>
                 </div>
 
@@ -211,34 +215,36 @@
                                 $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
                             }
                         ?>
-                        <a class="card mb-3"<?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
-                            <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
-                                <div class="col-md-3">                                                                                                                                        
-                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="let card-body">
-                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
-                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                        </div>    
+                        <div style="margin-left: 80px; margin-right: 80px">
+                            <a class="card mb-3"<?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
+                                <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
+                                    <div class="col-md-3">                                                                                                                                        
+                                        <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="let card-body">
+                                            <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                            <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
+                                            </div>    
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                        <?php} ?>
+                            </a>
+                        </div>
+                        <?php } ?>
                 </div>
                 </div>
 
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="background-image: none;">
+                <span class="glyphicon glyphicon-chevron-left icon-black" aria-hidden="true" style="color: black; border-color: white; border: 0.1px;"></span>
                 <span class="sr-only">Previous</span>
                 </a>
 
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="background-image: none;">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color: black; border-color: white; border: 0.1px;"></span>
                 <span class="sr-only">Next</span>
                 </a>
             </div>
