@@ -227,7 +227,7 @@
                                 </div>
                             </div>
                         </a>
-                        <?php } ?>
+                        <?php} ?>
                 </div>
                 </div>
 
@@ -526,10 +526,10 @@
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
-                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(utf8_encode($m['nombre'])) ?></a ></h4>
+                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(($m['nombre'])) ?></a ></h4>
                                             <ul>
                                                 <li><i class="bi bi-clock-fill"></i><?php echo( $m['hora_inicio']->format('H:i'))?> - <?php echo( $m['hora_termino']->format('H:i')) ?></li>
-                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( utf8_encode($m['lugar'])) ?></li>
+                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( ($m['lugar'])) ?></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -538,10 +538,10 @@
 
                                 strftime('%d',strtotime ($m['fecha']));
                                 strftime('%B',strtotime($m['fecha']));
-                                utf8_encode($m['nombre']);
+                                ($m['nombre']);
                                 $m['hora_inicio']->format('H:i');
                                 $m['hora_termino']->format('H:i');
-                                utf8_encode($m['lugar']);
+                                ($m['lugar']);
                         }
                         ?>
                     </div>
@@ -554,10 +554,10 @@
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
-                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(utf8_encode($m['nombre'])) ?></a ></h4>
+                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(($m['nombre'])) ?></a ></h4>
                                             <ul>
                                                 <li><i class="bi bi-clock-fill"></i><?php echo( $m['hora_inicio']->format('H:i'))?> - <?php echo( $m['hora_termino']->format('H:i')) ?></li>
-                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( utf8_encode($m['lugar'])) ?></li>
+                                                <li><i class="bi bi-pin-map-fill"></i><?php echo(($m['lugar'])) ?></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -566,10 +566,10 @@
 
                                 strftime('%d',strtotime ($m['fecha']));
                                 strftime('%B',strtotime($m['fecha']));
-                                utf8_encode($m['nombre']);
+                                ($m['nombre']);
                                 $m['hora_inicio']->format('H:i');
                                 $m['hora_termino']->format('H:i');
-                                utf8_encode($m['lugar']);
+                                ($m['lugar']);
                         }
                         ?>
                     </div>
