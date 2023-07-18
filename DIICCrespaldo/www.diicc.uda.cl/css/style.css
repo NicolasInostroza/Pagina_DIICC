@@ -2804,11 +2804,6 @@ textarea {
     background: #364c59;
 }
 
-.pagination a.selected::after{
-    color: #fff;
-    background: #364c59;
-}
-
 .teacher-details-content{width: 50%;}
 .teacher-details-img{
     margin-right: 10px;
