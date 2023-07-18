@@ -90,14 +90,14 @@
                 </div>
                 <div>
                     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                        <div>
-                            <label>Titulo:</label>
+                        <div class="adminforms">
+                            <label style="color: white;">Titulo:</label>
                             <input type="text" name="titulo">
-                            <label>Año:</label>
+                            <label style="color: white;">Año:</label>
                             <input type="year" name="fecha">
                             
                             <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
-                            <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorPublicaciones.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+                            <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorPublicaciones.php" class="bb btn btn-danger justify-content-end">MOSTRAR A TODOS</a>
 
                         </div>
                         

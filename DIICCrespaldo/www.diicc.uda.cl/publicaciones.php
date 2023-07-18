@@ -69,10 +69,10 @@
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-top">
-                                        <p><?php echo utf8_encode($mostrar['autor']); ?> / <?php echo $mostrar['fecha'];?> / <?php echo $mostrar['revision'];?></p>
+                                        <p><?php echo ($mostrar['autor']); ?> / <?php echo $mostrar['fecha'];?> / <?php echo $mostrar['revision'];?></p>
                                     </div>
                                     <div class="blog-bottom">
-                                        <h2><?php echo '<a href="' . $mostrar["acceso"] . '">' . utf8_encode($mostrar['titulo']) . '</a>'; ?></h2>
+                                        <h2><?php echo '<a href="' . $mostrar["acceso"] . '">' . ($mostrar['titulo']) . '</a>'; ?></h2>
                                         <?php echo '<a href="' . $mostrar["acceso"] . '">Seguir Leyendo</a>'; ?>
                                     </div>
                                 </div>

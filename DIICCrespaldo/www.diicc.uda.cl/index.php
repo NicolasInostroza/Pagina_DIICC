@@ -151,22 +151,25 @@
                                 $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
                             }
                         ?>
-                        <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>                           
-                            <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
-                                <div class="col-md-3">                                                                                                                                        
-                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="let card-body">
-                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
-                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                        </div>    
+                        <div style="margin-left: 80px; margin-right: 80px">
+                            <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>                           
+                                <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
+                                    <div class="col-md-3">                                                                                                                                        
+                                        <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="let card-body">
+                                            <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                            <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><small class="text-muted"><?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></small></p>
+                                            </div>    
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                                <hr style="margin-top: -90px">
+                            </a>
+                        </div>
                         <?php } ?>
                     </div>
 
@@ -181,22 +184,25 @@
                                 $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
                             }
                         ?>
-                        <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
-                            <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
-                                <div class="col-md-3">                                                                                                                                        
-                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="let card-body">
-                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
-                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                        </div>    
+                        <div style="margin-left: 80px; margin-right: 80px">
+                            <a class="card mb-3" <?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
+                                <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
+                                    <div class="col-md-3">                                                                                                                                        
+                                        <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="let card-body">
+                                            <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                            <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><small class="text-muted"><?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></small></p>
+                                            </div>    
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                                <hr style="margin-top: -90px">
+                            </a>
+                        </div>
                         <?php } ?>
                 </div>
 
@@ -211,34 +217,37 @@
                                 $mostrar['descripcion'] = substr($mostrar['descripcion'],0, 250)."...";
                             }
                         ?>
-                        <a class="card mb-3"<?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
-                            <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
-                                <div class="col-md-3">                                                                                                                                        
-                                    <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="let card-body">
-                                        <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
-                                        <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <p class="card-text"><small class="text-muted"><?php echo $mostrar['fecha']; ?></small></p>
-                                        </div>    
+                        <div style="margin-left: 80px; margin-right: 80px">
+                            <a class="card mb-3"<?php echo sprintf('href="https://diicc.uda.cl/noticia.php?id=12"');?>>
+                                <div class="row pt-100 pb-105" style="margin-top: -40px; margin-bottom: -60px">
+                                    <div class="col-md-3">                                                                                                                                        
+                                        <img style="width: 200px; height: 200px;" path="*.woff" src=<?php echo fromroot($file, $mostrar["img_path"]); ?>>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="let card-body">
+                                            <h4 class="card-title"><?php echo ($mostrar['titulo']); ?> </h4>
+                                            <p class="card-text"><?php echo ($mostrar['descripcion']); ?></p>
+                                            <div class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><small class="text-muted"><?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></small></p>
+                                            </div>    
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                                <hr style="margin-top: -90px">
+                            </a>
+                        </div>
                         <?php } ?>
                 </div>
                 </div>
 
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="background-image: none;">
+                <span class="glyphicon glyphicon-chevron-left icon-black" aria-hidden="true" style="color: black; border-color: white; border: 0.1px;"></span>
                 <span class="sr-only">Previous</span>
                 </a>
 
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="background-image: none;">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color: black; border-color: white; border: 0.1px;"></span>
                 <span class="sr-only">Next</span>
                 </a>
             </div>
@@ -526,10 +535,10 @@
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
-                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(utf8_encode($m['nombre'])) ?></a ></h4>
+                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(($m['nombre'])) ?></a ></h4>
                                             <ul>
                                                 <li><i class="bi bi-clock-fill"></i><?php echo( $m['hora_inicio']->format('H:i'))?> - <?php echo( $m['hora_termino']->format('H:i')) ?></li>
-                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( utf8_encode($m['lugar'])) ?></li>
+                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( ($m['lugar'])) ?></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -538,10 +547,10 @@
 
                                 strftime('%d',strtotime ($m['fecha']));
                                 strftime('%B',strtotime($m['fecha']));
-                                utf8_encode($m['nombre']);
+                                ($m['nombre']);
                                 $m['hora_inicio']->format('H:i');
                                 $m['hora_termino']->format('H:i');
-                                utf8_encode($m['lugar']);
+                                ($m['lugar']);
                         }
                         ?>
                     </div>
@@ -554,10 +563,10 @@
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
-                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(utf8_encode($m['nombre'])) ?></a ></h4>
+                                            <h4><a href="" data-toggle="modal" data-target="#myModal<?php echo($m['id'])?>"><?php echo(($m['nombre'])) ?></a ></h4>
                                             <ul>
                                                 <li><i class="bi bi-clock-fill"></i><?php echo( $m['hora_inicio']->format('H:i'))?> - <?php echo( $m['hora_termino']->format('H:i')) ?></li>
-                                                <li><i class="bi bi-pin-map-fill"></i><?php echo( utf8_encode($m['lugar'])) ?></li>
+                                                <li><i class="bi bi-pin-map-fill"></i><?php echo(($m['lugar'])) ?></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -566,10 +575,10 @@
 
                                 strftime('%d',strtotime ($m['fecha']));
                                 strftime('%B',strtotime($m['fecha']));
-                                utf8_encode($m['nombre']);
+                                ($m['nombre']);
                                 $m['hora_inicio']->format('H:i');
                                 $m['hora_termino']->format('H:i');
-                                utf8_encode($m['lugar']);
+                                ($m['lugar']);
                         }
                         ?>
                     </div>

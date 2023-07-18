@@ -73,15 +73,15 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="adminforms">
                     <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
                         <div>
-                            <label>Nombre:</label>
+                            <label style="color: white;">Nombre:</label>
                             <input type="text" name="nombre">
                             
                             
                             <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
-                            <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorProyectosa.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+                            <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorProyectosa.php" class="bb btn btn-danger justify-content-end">MOSTRAR A TODOS</a>
 
                         </div>
                         

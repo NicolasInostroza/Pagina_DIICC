@@ -72,11 +72,11 @@
                         </div>
                     </div>
                     <div>
-                        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                            <div>
-                                <label>Nombre:</label>
+                        <form style="text align: center;" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                            <div class="adminforms">
+                                <label style="color: white;">Nombre:</label>
                                 <input type="text" name="Nombre">
-                                <label> Cargo:</label>
+                                <label style="color: white;"> Cargo:</label>
                                 <input type="text" name="cargo">
                                 
                                 <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">

@@ -75,18 +75,17 @@
                     </div>
                     <div>
                         <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                            <div>
-                                <label>Título:</label>
+                            <div class="adminforms">
+                                <label style="color: white;">Título:</label>
                                 <input type="text" name="titulo">
-                                <label>Fecha:</label>
+                                <label style="color: white;">Fecha:</label>
                                 <input type="date" name="fecha">
                                 
                                 
                                 <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
-                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorNoticias.php" class="bb btn btn-danger justify-content-end">Mostrar a todos</a>
+                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorNoticias.php" class="bb btn btn-danger justify-content-end">MOSTRAR A TODOS</a>
 
                             </div>
-                            
                             
                         </form>
                     </div><br>
