@@ -167,6 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr style="margin-top: -90px">
                             </a>
                         </div>
                         <?php } ?>
@@ -199,6 +200,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr style="margin-top: -90px">
                             </a>
                         </div>
                         <?php } ?>
@@ -231,6 +233,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr style="margin-top: -90px">
                             </a>
                         </div>
                         <?php } ?>
