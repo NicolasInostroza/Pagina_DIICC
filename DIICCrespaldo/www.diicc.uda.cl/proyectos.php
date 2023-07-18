@@ -78,7 +78,7 @@ $result = mysqli_query($conexion, $query);
                             </div>
                     <?php } ?>
 
-               <div class="row">
+               <div class="row" align="center">
                 <div class="col-xs-12">
                     <div class="pagination">
                         <ul>

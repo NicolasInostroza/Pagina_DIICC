@@ -82,7 +82,7 @@
                     <?php  }?>
                
            
-            <div class="row">
+            <div class="row" align="center" style="margin-bottom: 30px">
                 <div class="col-xs-12">
                     <div class="pagination">
                         <ul>
@@ -95,24 +95,29 @@
                                 $start_loop = $pagina;
                                 $diferencia = $total_pages - $pagina;
 
-                                if($diferencia <= ($total_pages - 1))
-                                {
-                                $start_loop = $total_pages - ($total_pages - 1);
+                                if($total_pages == 1){
+                                    echo "<li><a class='pagina' href='publicaciones.php'>1</a></li>";
                                 }
-                                $end_loop = $start_loop + ($total_pages - 2);
-                                if($pagina > 1)
-                                {
-                                echo "<li><a class='pagina' href='publicaciones.php?pagina=1'>In</a></li>";
-                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina - 1)."'><</a></li>";
-                                }
-                                for($i=$start_loop; $i<=$end_loop; $i++)
-                                {     
-                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".$i."'>".$i."</a></li>";
-                                }
-                                if($pagina <= $end_loop)
-                                {
-                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina + 1)."'>></a></li>";
-                                echo "<li><a class='pagina' href='publicaciones.php?pagina=".$total_pages."'>Úl</a></li>";
+                                else{
+                                    if($diferencia <= $total_pages)
+                                    {
+                                    $start_loop = $total_pages - ($total_pages - 1);
+                                    }
+                                    $end_loop = $start_loop + ($total_pages - 1);
+                                    if($pagina > 1)
+                                    {
+                                    echo "<li><a class='pagina' href='publicaciones.php?pagina=1'>In</a></li>";
+                                    echo "<li><a class='pagina' href='publicaciones.php?pagina=".($pagina - 1)."'><</a></li>";
+                                    }
+                                    for($i=$start_loop; $i<=$end_loop; $i++)
+                                    {     
+                                    echo "<li><a class='pagina' href='publicaciones.php?pagina=".$i."'>".$i."</a></li>";
+                                    }
+                                    if($pagina < $end_loop)
+                                    {
+                                    echo "<li><a class='pagina' href='publicaciones.php?pagina=".$pagina."'>></a></li>";
+                                    echo "<li><a class='pagina' href='publicaciones.php?pagina=".$total_pages."'>Úl</a></li>";
+                                    }
                                 }
                             
                             ?>
