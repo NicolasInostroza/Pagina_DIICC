@@ -375,11 +375,15 @@
             </div>
         </div>
     </div>
+    <div >
 
-    <!-- FOOTER -->
-    <?php include_once "include/footer.php";?>
-    <!-- FOOTER -->
+        <?php include_once "include/footer.php";?>
+    </div>
+        <!-- FOOTER -->
+        
+        <!-- FOOTER -->
 
+    
 
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
