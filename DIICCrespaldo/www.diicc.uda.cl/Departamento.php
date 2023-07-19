@@ -24,7 +24,7 @@
                         <div class="banner-content-wrapper">
 
                             <div class="banner-content">
-                                <h2>DEPARTAMENTO</h2> 
+                                <h2 style="text-decoration:underline;">DEPARTAMENTO</h2>
                             </div>
                         </div>
                     </div>
@@ -37,10 +37,14 @@
     <div class="historia-area pt-25 pb-70">
         <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="row">
+                <div class="row" style="border: .3px; border-color:darkgrey;" >
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="about-content">
-                            <h2>Historia</h2>
+                            <p class="glitch" style="font-size:50px; margin-top:20px; margin-bottom:20px">
+                                <span aria-hidden="true">Hístoria</span>
+                                Hístoria
+                                <span aria-hidden="true">Hístoria</span>
+                            </p>
                         </div>
                     </div>
 
@@ -104,7 +108,7 @@
                                 <div class="flip-card-front" id="deptoback" >
                                 <div class="head">
                                     <div style="padding-top: 20px; font-weight: bold;">
-                                        <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Misión</h3>
+                                        <h3 style=" font-weight: bold; color: black; font-size:50px;">Misión</h3>
                                     </div>
                                 </div>
                                 </div>
@@ -127,7 +131,7 @@
                             <div class="flip-card-front" id="deptoback">
                             <div class="head">
                                 <div style="padding-top: 20px;">
-                                    <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Visión</h3>
+                                    <h3 style=" font-weight: bold; color: black; font-size:50px;">Visión</h3>
                                 </div>
                             </div>
                             </div>
@@ -376,7 +380,6 @@
         </div>
     </div>
     <div >
-
         <?php include_once "include/footer.php";?>
     </div>
         <!-- FOOTER -->
