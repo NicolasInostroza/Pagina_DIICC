@@ -101,7 +101,7 @@ $result = mysqli_query($conexion, $query);
                                     $end_loop = $start_loop + ($total_pages - 1);
                                     if($pagina > 1)
                                     {
-                                    echo "<li><a class='pagina-actual' href='proyectos.php?pagina=1'>In</a></li>";
+                                    echo "<li><a class='pagina-actual' href='proyectos.php?pagina=1'><<</a></li>";
                                     echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".($pagina - 1)."'><</a></li>";
                                     }
                                     for($i=$start_loop; $i<=$end_loop; $i++)
@@ -116,7 +116,7 @@ $result = mysqli_query($conexion, $query);
                                     if($pagina < $end_loop)
                                     {
                                     echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".($pagina + 1)."'>></a></li>";
-                                    echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".$total_pages."'>Úl</a></li>";
+                                    echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".$total_pages."'>>></a></li>";
                                     }
                                 }
                             

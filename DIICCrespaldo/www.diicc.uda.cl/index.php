@@ -531,7 +531,7 @@
                         foreach(array_slice($data, 0 ,count($data)/2) as $m){  ?>
                             <div class="single-event mb-35 ">
                                     <div class="event-date" style="height:100px;">
-                                        <h3 style="padding: 5px 18px 11px;"><a><?php echo(strftime('%d',strtotime ($m['fecha'])))?><span><?php echo( strftime('%B',strtotime($m['fecha'])))?></span></a></h3>
+                                        <h3 style="padding: 5px 18px 11px; color:white"><a><?php echo(strftime('%d',strtotime ($m['fecha'])))?><span><?php echo( strftime('%B',strtotime($m['fecha'])))?></span></a></h3>
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">
@@ -559,7 +559,7 @@
                         foreach(array_slice($data,count($data)/2) as $m){ ?>
                             <div class="single-event mb-35 ">
                                     <div class="event-date" style="height:100px;">
-                                        <h3 style="padding: 5px 18px 11px;"><a><?php echo(strftime('%d',strtotime ($m['fecha'])))?><span><?php echo( strftime('%B',strtotime($m['fecha'])))?></span></a></h3>
+                                        <h3 style="padding: 5px 18px 11px; color: white"><a><?php echo(strftime('%d',strtotime ($m['fecha'])))?><span><?php echo( strftime('%B',strtotime($m['fecha'])))?></span></a></h3>
                                     </div>
                                     <div class="event-content text-left">
                                         <div class="event-content-left">

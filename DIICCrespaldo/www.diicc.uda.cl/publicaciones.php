@@ -85,7 +85,6 @@
             <div class="row" align="center" style="margin-bottom: 30px">
                 <div class="col-xs-12">
                     <div class="pagination">
-                    <div class="pagination">
                         <ul>
                             <?php
 
@@ -107,7 +106,7 @@
                                     $end_loop = $start_loop + ($total_pages - 1);
                                     if($pagina > 1)
                                     {
-                                    echo "<li><a class='pagina-actual' href='publicaciones.php?pagina=1'>In</a></li>";
+                                    echo "<li><a class='pagina-actual' href='publicaciones.php?pagina=1'><<</a></li>";
                                     echo "<li><a class='pagina-actual' href='publicaciones.php?pagina=".($pagina - 1)."'><</a></li>";
                                     }
                                     for($i=$start_loop; $i<=$end_loop; $i++)
@@ -122,7 +121,7 @@
                                     if($pagina < $end_loop)
                                     {
                                     echo "<li><a class='pagina-actual' href='publicaciones.php?pagina=".($pagina + 1)."'>></a></li>";
-                                    echo "<li><a class='pagina-actual' href='publicaciones.php?pagina=".$total_pages."'>Úl</a></li>";
+                                    echo "<li><a class='pagina-actual' href='publicaciones.php?pagina=".$total_pages."'>>></a></li>";
                                     }
                                 }
                             
@@ -131,14 +130,8 @@
                     </div>
                 </div>
             </div>
-            
-            
-
-            
-
-
         </div>
-
+    </div>
     </div>
     <!-- Blog End -->
     <!-- FOOTER -->
