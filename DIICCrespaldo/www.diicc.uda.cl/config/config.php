@@ -2,7 +2,7 @@
 
 $servidor = "localhost";
 $usuario  = "root";
-$password = "";
+$password = "1234";
 $database = "paginadiicc";
 
 // // Crear conexión
