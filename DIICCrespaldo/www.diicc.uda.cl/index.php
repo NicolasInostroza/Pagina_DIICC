@@ -276,7 +276,7 @@
                         <img src="img/areas/SoftwareEngineering/img1.jpg" alt="course">
                         </div>
                         <div style="padding-top: 280px; font-weight: bold;">
-                            <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Inteligencia de Máquinas</h3>
+                            <h3 style=" font-weight: bold; color: black; ">Inteligencia de Máquinas</h3>
                         </div>
                     </div>
                     </div>
@@ -300,7 +300,7 @@
                         <img src="img/areas/ArtificialIntelligent/img1.jpg" alt="course">
                         </div>
                         <div style="padding-top: 280px;">
-                            <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Ingeniería de Software</h3>
+                            <h3 style=" font-weight: bold; color: black; ">Ingeniería de Software</h3>
                         </div>
                     </div>
                     </div>
@@ -323,7 +323,7 @@
                         <img src="img/areas/GestionTI/img1.jpg" alt="course">
                         </div>
                         <div style="padding-top: 280px;">
-                            <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Gestión TI</h3>
+                            <h3 style=" font-weight: bold; color: black; ">Gestión TI</h3>
                         </div>
                         
                     </div>

@@ -24,7 +24,7 @@
                         <div class="banner-content-wrapper">
 
                             <div class="banner-content">
-                                <h2 style="text-decoration:underline;">DEPARTAMENTO</h2>
+                                <h2>DEPARTAMENTO</h2>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                     </div>
 
                     <!--Imagen del frontis del departamento-->
-                    <div id="img_dpto" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="width:600px;">
+                    <div id="img_dpto" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="width:530px;">
 
                         <img id="img_old" src="img/dpto/old.png" class="img-responsive">
                         <h5 >El departamento hasta el 2015.</h5>
@@ -103,12 +103,13 @@
 
                 <div class="container" style="margin-top:20px;">
                     <div class="row" id="card-row">
-                        <div class="card" id="card1" style="width: 400px; height:270px;box-shadow: 15px 10px 6px lightgrey;">
+
+                        <div class="card" id="card1" style="width: 450px; height:270px;box-shadow: 15px 10px 6px lightgrey;">
                             <div class="flip-card-inner">
-                                <div class="flip-card-front" id="deptoback" >
+                                <div class="flip-card-front" id="deptoback">
                                 <div class="head">
                                     <div style="padding-top: 20px; font-weight: bold;">
-                                        <h3 style=" font-weight: bold; color: black; font-size:50px;">Misión</h3>
+                                        <h3 style=" font-weight: bold; color: white; font-size:50px;text-shadow: 8px 6px 4px black;">Misión</h3>
                                     </div>
                                 </div>
                                 </div>
@@ -126,12 +127,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card" id="card2" style="width: 400px; height:270px; margin-left:150px; box-shadow: 15px 10px 6px lightgrey;">
+
+                        <div class="card" id="card2" style="width: 450px; height:270px; margin-left:150px; box-shadow: 15px 10px 6px lightgrey;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front" id="deptoback">
                             <div class="head">
                                 <div style="padding-top: 20px;">
-                                    <h3 style=" font-weight: bold; color: black; font-size:50px;">Visión</h3>
+                                    <h3 style=" font-weight: bold; color: white; font-size:50px; text-shadow: 8px 6px 4px black;">Visión</h3>
                                 </div>
                             </div>
                             </div>
@@ -294,7 +296,7 @@
                         </div>
 
 
-                        <div class="table-bordered">
+                        <div class="table">
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -303,37 +305,37 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td style="border-top:none;">
                                             <p><span class="glyphicon glyphicon-chevron-right"></span> Auditorio Dra Karina Carvajal Cuello</p>
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="border-top:none;">
                                             <p><span class="glyphicon glyphicon-chevron-right"></span> Sala Multimedia</p>
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="border-top:none;">
                                             <p><span class="glyphicon glyphicon-chevron-right"></span> Sala de Estudios</p>
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="border-top:none;">
                                             <p><span class="glyphicon glyphicon-chevron-right"></span> Sala Modular de Estudios</p>
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="border-top:none;">
                                             <p><span class="glyphicon glyphicon-chevron-right"></span> Tres Salas de Clases</p>
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td style="border-top:none;">
                                             <p><span class="glyphicon glyphicon-chevron-right"></span> Cuatro Laboratorios</p>
                                             </span>
                                             <div class="laboratorios">
