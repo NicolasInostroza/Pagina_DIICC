@@ -103,7 +103,7 @@
 
                 <div class="container" style="margin-top:20px;">
                     <div class="row" id="card-row">
-                        <div class="card" id="card1" style="width: 400px; height:270px;">
+                        <div class="card" id="card1" style="width: 400px; height:270px;box-shadow: 15px 10px 6px lightgrey;">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front" id="deptoback" >
                                 <div class="head">
@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card" id="card2" style="width: 400px; height:270px; margin-left:150px;">
+                        <div class="card" id="card2" style="width: 400px; height:270px; margin-left:150px; box-shadow: 15px 10px 6px lightgrey;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front" id="deptoback">
                             <div class="head">
