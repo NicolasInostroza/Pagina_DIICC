@@ -24,7 +24,7 @@
                         <div class="banner-content-wrapper">
 
                             <div class="banner-content">
-                                <h2>DEPARTAMENTO</h2>
+                                <h2 style="text-decoration:underline;">DEPARTAMENTO</h2>
                             </div>
                         </div>
                     </div>
@@ -37,10 +37,14 @@
     <div class="historia-area pt-25 pb-70">
         <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="row">
+                <div class="row" style="border: .3px; border-color:darkgrey;" >
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="about-content">
-                            <h2>Historia</h2>
+                            <p class="glitch" style="font-size:50px; margin-top:20px; margin-bottom:20px">
+                                <span aria-hidden="true">Hístoria</span>
+                                Hístoria
+                                <span aria-hidden="true">Hístoria</span>
+                            </p>
                         </div>
                     </div>
 
@@ -97,8 +101,58 @@
                 </div>
                 <!--Mision y Vision de la Carrera,junto a los Lineamientos Estrategicos-->
 
-                <div class="row">
-                    <!--MISION-->
+                <div class="container" style="margin-top:20px;">
+                    <div class="row" id="card-row">
+                        <div class="card" id="card1" style="width: 400px; height:270px;">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front" id="deptoback" >
+                                <div class="head">
+                                    <div style="padding-top: 20px; font-weight: bold;">
+                                        <h3 style=" font-weight: bold; color: black; font-size:50px;">Misión</h3>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="description" style="margin-top:-55px">
+                                        <p>Cultivar el desarrollo de la ciencia de la computación e informática mediante la docencia
+                                            de pre y postgrado, investigación aplicada y vinculación con la comunidad, formando 
+                                            profesionales e investigadores altamente calificados que se desempeñan tanto en el 
+                                            ámbito público como privado para contribuir al progreso de nuestra región y país. 
+                                            Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
+                                        </p>
+                                    </div>
+                                    <div class="contact">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="card2" style="width: 400px; height:270px; margin-left:150px;">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" id="deptoback">
+                            <div class="head">
+                                <div style="padding-top: 20px;">
+                                    <h3 style=" font-weight: bold; color: black; font-size:50px;">Visión</h3>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="flip-card-back">
+                            <div class="description">
+                                <p>Ser un referente en las actividades de docencia de pre y postgrado, investigación aplicada, 
+                                    vinculación con el medio, innovación y transferencia tecnológica en la ciencia de la computación 
+                                    e informática de la macro zona norte, así como también a nivel nacional e internacional.
+                                </p>
+                            </div>
+                            <div class="contact">
+                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="row">
+
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div id="mision-diicc" class="about-content">
                             <h2>Misión</h2>
@@ -326,10 +380,12 @@
             </div>
         </div>
     </div>
-
-    <!-- FOOTER -->
-    <?php include_once "include/footer.php";?>
-    <!-- FOOTER -->
+    <div >
+        <?php include_once "include/footer.php";?>
+    </div>
+        <!-- FOOTER -->
+        
+        <!-- FOOTER -->
 
 
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
