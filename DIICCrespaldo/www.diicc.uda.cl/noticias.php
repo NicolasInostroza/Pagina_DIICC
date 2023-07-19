@@ -69,7 +69,7 @@
                             </div>
                             <div class="blog-content">
                                 <div class="blog-top">
-                                    <p>Escrito por <?php echo $mostrar['correo']; ?> / <?php echo $mostrar['fecha']; ?></p>
+                                    <p>Escrito por <?php echo $mostrar['correo']; ?> / <?php echo date('d/m/Y', strtotime($mostrar['fecha'])); ?></p>
                                 </div>
                                 <div class="blog-bottom">
                                     <?php
