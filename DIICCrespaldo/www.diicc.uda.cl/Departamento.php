@@ -164,17 +164,8 @@
                             Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
                         </p>
                     </div>
-                    <!--FIN MISION-->
+                    <--FIN MISION-->
                     <!--VISION-->
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div id="vision-diicc" class="about-content">
-                            <h2>Visión</h2>
-                        </div>
-                        <p>Ser un referente en las actividades de docencia de pre y postgrado, investigación aplicada, 
-                        vinculación con el medio, innovación y transferencia tecnológica en la ciencia de la computación 
-                        e informática de la macro zona norte, así como también a nivel nacional e internacional.
-                        </p>
-                    </div>
                 </div>
                 <!--FIN VISION-->
                 <!--LINEAMIENTOS-->
