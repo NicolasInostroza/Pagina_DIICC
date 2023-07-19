@@ -128,11 +128,3 @@ $(".notice-left").niceScroll({
         });
 
 })(jQuery);	
-
-$(document).ready(function() {
-    $('tr[data-target]').on('click', function() {
-      var target = $(this).data('target');
-      $('.collapsible-content.show').not(target).removeClass('show');
-      $(target).collapse('toggle');
-    });
-  });

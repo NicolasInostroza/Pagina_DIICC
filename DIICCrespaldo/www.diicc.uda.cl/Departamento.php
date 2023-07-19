@@ -24,7 +24,7 @@
                         <div class="banner-content-wrapper">
 
                             <div class="banner-content">
-                                <h2>DEPARTAMENTO</h2> 
+                                <h2>DEPARTAMENTO</h2>
                             </div>
                         </div>
                     </div>
@@ -44,9 +44,9 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="width:520px;">
+                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                         <div class="about-content">
-                            <p style="font-weight:bold; color:black;">En el año 1986, el Departamento de Matemáticas y Ciencias de la Computación, 
+                            <p>En el año 1986, el Departamento de Matemáticas y Ciencias de la Computación, 
                                 propone la creación de la carrera de Ingeniería Ejecución en Computación e 
                                 Informática. En esos años, otras universidades del país ya impartían la 
                                 carrera. En esos momentos se percibía una gran masa crítica de interesados 
@@ -60,7 +60,7 @@
                                 tecnología de punta de la época, conectados en red.
                             </p>
 
-                            <p style="font-weight:bold; color:black;">El año 2000, se creó el Departamento de Ingeniería Informática y Ciencias de la
+                            <p>El año 2000, se creó el Departamento de Ingeniería Informática y Ciencias de la
                                 Computación (DIICC, de acá en adelante), a partir de la separación de las 
                                 áreas de Computación e Industria del Departamento de Matemáticas y Ciencias de
                                 la Computación. Paralelamente, ese mismo año se crearon los nuevos planes de 
@@ -68,7 +68,7 @@
                                 que comienza a recibir sus primeros alumnos a partir del año 2001.
                             </p>
 
-                            <p style="font-weight:bold; color:black;">Actualmente, el DIICC dicta las carreras de Ingeniería Civil en Computación e 
+                            <p>Actualmente, el DIICC dicta las carreras de Ingeniería Civil en Computación e 
                                 Informática; Ingeniería de Ejecución en Computación (Continuidad de Estudios 
                                 – Vespertino); Magíster en Informática y Ciencias de la Computación (Magíster 
                                 Investigación); Magíster en Tecnologías de la Información e Innovación 
@@ -82,13 +82,13 @@
                     </div>
 
                     <!--Imagen del frontis del departamento-->
-                    <div id="img_dpto" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="width:600px;">
+                    <div id="img_dpto" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
                         <img id="img_old" src="img/dpto/old.png" class="img-responsive">
-                        <h5 >El departamento hasta el 2015.</h5>
+                        <h5>El departamento hasta el 2015.</h5>
 
                         <img id="img_new" src="img/dpto/about1.png" class="img-responsive">
-                        <h5 >El departamento actualmente.</h5>
+                        <h5>El departamento actualmente.</h5>
 
 
                     </div>
@@ -97,58 +97,8 @@
                 </div>
                 <!--Mision y Vision de la Carrera,junto a los Lineamientos Estrategicos-->
 
-                <div class="container" style="margin-top:20px;">
-                    <div class="row" id="card-row">
-                        <div class="card" id="card1" style="width: 400px; height:270px;">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front" id="deptoback" >
-                                <div class="head">
-                                    <div style="padding-top: 20px; font-weight: bold;">
-                                        <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Misión</h3>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="flip-card-back">
-                                    <div class="description" style="margin-top:-55px">
-                                        <p>Cultivar el desarrollo de la ciencia de la computación e informática mediante la docencia
-                                            de pre y postgrado, investigación aplicada y vinculación con la comunidad, formando 
-                                            profesionales e investigadores altamente calificados que se desempeñan tanto en el 
-                                            ámbito público como privado para contribuir al progreso de nuestra región y país. 
-                                            Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
-                                        </p>
-                                    </div>
-                                    <div class="contact">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" id="card2" style="width: 400px; height:270px; margin-left:150px;">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front" id="deptoback">
-                            <div class="head">
-                                <div style="padding-top: 20px;">
-                                    <h3 style=" font-weight: bold; color: black; text-decoration: underline;">Visión</h3>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="flip-card-back">
-                            <div class="description">
-                                <p>Ser un referente en las actividades de docencia de pre y postgrado, investigación aplicada, 
-                                    vinculación con el medio, innovación y transferencia tecnológica en la ciencia de la computación 
-                                    e informática de la macro zona norte, así como también a nivel nacional e internacional.
-                                </p>
-                            </div>
-                            <div class="contact">
-                                
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="row">
-
+                <div class="row">
+                    <!--MISION-->
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div id="mision-diicc" class="about-content">
                             <h2>Misión</h2>
@@ -160,7 +110,8 @@
                             Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
                         </p>
                     </div>
-
+                    <!--FIN MISION-->
+                    <!--VISION-->
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div id="vision-diicc" class="about-content">
                             <h2>Visión</h2>
@@ -170,7 +121,7 @@
                         e informática de la macro zona norte, así como también a nivel nacional e internacional.
                         </p>
                     </div>
-                </div> -->
+                </div>
                 <!--FIN VISION-->
                 <!--LINEAMIENTOS-->
                 <div class="row">
@@ -375,15 +326,11 @@
             </div>
         </div>
     </div>
-    <div >
 
-        <?php include_once "include/footer.php";?>
-    </div>
-        <!-- FOOTER -->
-        
-        <!-- FOOTER -->
+    <!-- FOOTER -->
+    <?php include_once "include/footer.php";?>
+    <!-- FOOTER -->
 
-    
 
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
