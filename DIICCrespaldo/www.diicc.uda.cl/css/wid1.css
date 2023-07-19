@@ -6,3 +6,7 @@
     color: rgb(44, 44, 57);
     font-family:'Courier New', Courier, monospace;
 }
+.noti {
+    display: grid;
+    grid-template-columns: auto 50px;
+}

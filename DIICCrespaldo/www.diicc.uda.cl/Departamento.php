@@ -103,6 +103,7 @@
 
                 <div class="container" style="margin-top:20px;">
                     <div class="row" id="card-row">
+
                         <div class="card" id="card1" style="width: 450px; height:270px;box-shadow: 15px 10px 6px lightgrey;">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front" id="deptoback">
@@ -126,6 +127,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="card" id="card2" style="width: 450px; height:270px; margin-left:150px; box-shadow: 15px 10px 6px lightgrey;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front" id="deptoback">
@@ -151,31 +153,6 @@
                     </div>
                 </div>
 
-                <!-- <div class="row">
-
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div id="mision-diicc" class="about-content">
-                            <h2>Misión</h2>
-                        </div>
-                        <p> Cultivar el desarrollo de la ciencia de la computación e informática mediante la docencia
-                            de pre y postgrado, investigación aplicada y vinculación con la comunidad, formando 
-                            profesionales e investigadores altamente calificados que se desempeñan tanto en el 
-                            ámbito público como privado para contribuir al progreso de nuestra región y país. 
-                            Promovemos los principios y valores declarados e impulsados por la Universidad de Atacama.
-                        </p>
-                    </div>
-
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div id="vision-diicc" class="about-content">
-                            <h2>Visión</h2>
-                        </div>
-                        <p>Ser un referente en las actividades de docencia de pre y postgrado, investigación aplicada, 
-                        vinculación con el medio, innovación y transferencia tecnológica en la ciencia de la computación 
-                        e informática de la macro zona norte, así como también a nivel nacional e internacional.
-                        </p>
-                    </div>
-                </div> -->
-                <!--FIN VISION-->
                 <!--LINEAMIENTOS-->
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

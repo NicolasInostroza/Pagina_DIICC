@@ -35,7 +35,7 @@
     
     <link rel="stylesheet" href="css/app.css">
 
-    <link rel="stylesheet" href="css/wid.css">
+    <link rel="stylesheet" href="css/wid1.css">
 
     <script defer src="js/app.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

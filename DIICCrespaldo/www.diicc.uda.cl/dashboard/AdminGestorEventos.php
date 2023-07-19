@@ -35,9 +35,23 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
             <section class="seccion">
                 <div class="container-Noticias">
                     <div class="container-boton">
-                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
-                            Añadir Evento
-                        </button>
+                        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                            <div class="adminforms" style="text-align: left">
+                                <label style="color: white;">Nombre:</label>
+                                <input type="text" name="nombre">
+                                <label style="color: white;">Fecha:</label>
+                                <input type="date" name="fecha">
+                                
+                                <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
+                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorEventos.php" class="bb btn btn-danger justify-content-end">MOSTRAR A TODOS</a>
+
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" style="color: white;">
+                                Añadir Evento
+                                </button>
+                            </div>
+                            
+                            
+                        </form>
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -97,22 +111,6 @@ include_once fromroot($file, "include/dashboard/head.php", TRUE);
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                            <div class="adminforms">
-                                <label style="color: white;">Nombre:</label>
-                                <input type="text" name="nombre">
-                                <label style="color: white;">Fecha:</label>
-                                <input type="date" name="fecha">
-                                
-                                <input class="bb btn btn-danger" type="submit" name="enviar" value="BUSCAR">
-                                <a href="http://localhost/Pagina_DIICC/DIICCrespaldo/www.diicc.uda.cl/dashboard/AdminGestorEventos.php" class="bb btn btn-danger justify-content-end">MOSTRAR A TODOS</a>
-
-                            </div>
-                            
-                            
-                        </form>
-                    </div><br>
                     <table class="table">
                         <thead style="background-color: steelblue;">
                             <tr style="height: 40px;">
