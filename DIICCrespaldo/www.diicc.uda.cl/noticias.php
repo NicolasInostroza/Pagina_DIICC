@@ -125,7 +125,7 @@
                                 }
                                 if($pagina < $end_loop)
                                 {
-                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$pagina."'>></a></li>";
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".($pagina + 1)."'>></a></li>";
                                 echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$total_pages."'>Úl</a></li>";
                                 }
                             }

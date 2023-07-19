@@ -115,7 +115,7 @@ $result = mysqli_query($conexion, $query);
                                     }
                                     if($pagina < $end_loop)
                                     {
-                                    echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".$pagina."'>></a></li>";
+                                    echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".($pagina + 1)."'>></a></li>";
                                     echo "<li><a class='pagina-actual' href='proyectos.php?pagina=".$total_pages."'>Úl</a></li>";
                                     }
                                 }
