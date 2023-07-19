@@ -111,7 +111,7 @@
                                 $end_loop = $start_loop + ($total_pages - 1);
                                 if($pagina > 1)
                                 {
-                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=1'><<</a></li>";
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=1'>In</a></li>";
                                 echo "<li><a class='pagina-actual' href='noticias.php?pagina=".($pagina - 1)."'><</a></li>";
                                 }
                                 for($i=$start_loop; $i<=$end_loop; $i++)
@@ -126,7 +126,7 @@
                                 if($pagina < $end_loop)
                                 {
                                 echo "<li><a class='pagina-actual' href='noticias.php?pagina=".($pagina + 1)."'>></a></li>";
-                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$total_pages."'>>></a></li>";
+                                echo "<li><a class='pagina-actual' href='noticias.php?pagina=".$total_pages."'>Úl</a></li>";
                                 }
                             }
                             
